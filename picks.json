@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-26 19:20:50",
+  "generated_at": "2026-08-26 19:37:45",
   "source": "WORKBUDDY 统一投资数据库 (NeoData / 腾讯自选股 / 通达信 实拉)",
   "levels_rule": "动态买卖点每日 17:15 按最新收盘价重算，且按【个股实际波动率 ATR14 + MA10 支撑 + 计划位】自适应：止损宽度=低波动 7%/中波动 10%/高波动 13%（不低于原硬止损，站上 MA10 抬至其下 1.5%）；目标=10% 底线，高波动放宽至 12%，且不低于自动化计划目标。",
   "account": {
@@ -12362,16 +12362,7 @@
       "level": "中性",
       "note": "多空均衡"
     },
-    "source": "东方财富 push2delay",
-    "northbound": {
-      "date": "2026-08-26",
-      "net_in_yi": 49447.44,
-      "day_valid": false,
-      "sh_net_yi": 25653.35,
-      "sz_net_yi": 23794.09,
-      "cumulative_yi": 49447.44,
-      "source": "东方财富 push2 kamt"
-    }
+    "source": "东方财富 push2delay"
   },
   "risk": {
     "rules": {
