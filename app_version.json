@@ -1,6 +1,6 @@
 {
-  "build": "v21-20260827-acctcompact",
-  "data_file": "picks.20260827_193110.json",
-  "generated_at": "2026-08-27 19:31:11",
+  "build": "v22-20260827-acctcompact2",
+  "data_file": "picks.20260828_014925.json",
+  "generated_at": "2026-08-28 01:49:35",
   "note": "看板部署版本标记，index.html 比对 build 不一致则自动重载；data_file 为本次带时间戳的数据文件"
 }
