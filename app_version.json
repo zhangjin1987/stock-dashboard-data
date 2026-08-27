@@ -1,5 +1,6 @@
 {
-  "build": "v18-20260827-recentfix",
-  "generated_at": "2026-08-27 18:28:11",
-  "note": "看板部署版本标记，index.html 比对 build 不一致则自动重载"
+  "build": "v19-20260827-datavfile",
+  "data_file": "picks.20260827_184013.json",
+  "generated_at": "2026-08-27 18:40:14",
+  "note": "看板部署版本标记，index.html 比对 build 不一致则自动重载；data_file 为本次带时间戳的数据文件"
 }
