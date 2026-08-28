@@ -1,6 +1,6 @@
 {
-  "build": "v23-20260828-syncmid",
-  "data_file": "picks.20260829_004212.json",
-  "generated_at": "2026-08-29 00:42:23",
+  "build": "v24-20260829-perfguard",
+  "data_file": "picks.20260829_014014.json",
+  "generated_at": "2026-08-29 01:40:25",
   "note": "看板部署版本标记，index.html 比对 build 不一致则自动重载；data_file 为本次带时间戳的数据文件"
 }
