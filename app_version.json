@@ -1,6 +1,6 @@
 {
-  "build": "v25-20260829-midline",
-  "data_file": "picks.20260829_021922.json",
-  "generated_at": "2026-08-29 02:19:32",
+  "build": "v26-20260829-perf-fold",
+  "data_file": "picks.20260829_024457.json",
+  "generated_at": "2026-08-29 02:45:07",
   "note": "看板部署版本标记，index.html 比对 build 不一致则自动重载；data_file 为本次带时间戳的数据文件"
 }
