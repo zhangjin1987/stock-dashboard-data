@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-29 01:49:36",
+  "generated_at": "2026-08-29 02:13:12",
   "source": "WORKBUDDY 统一投资数据库 (NeoData / 腾讯自选股 / 通达信 实拉)",
   "levels_rule": "动态买卖点每日 17:15 按最新收盘价重算，且按【个股实际波动率 ATR14 + MA10 支撑 + 计划位】自适应：止损宽度=低波动 7%/中波动 10%/高波动 13%（不低于原硬止损，站上 MA10 抬至其下 1.5%）；目标=10% 底线，高波动放宽至 12%，且不低于自动化计划目标。",
   "account": {
@@ -9697,7 +9697,7 @@
       "ref_close": 27.23,
       "pick_date": "2026-08-28",
       "next_day": "2026-08-28",
-      "lesson": "HOLD纪律否决: 目标①空间(最近目标) 7.3% < 10%",
+      "lesson": "",
       "d_entry_lo": 26.82,
       "d_entry_hi": 27.23,
       "d_stop": 25.92,
@@ -14773,7 +14773,7 @@
     ]
   },
   "stats": {
-    "total": 15,
+    "total": 16,
     "mid_verified": 6,
     "mid_hit": 4,
     "mid_hit_rate": 66.7,
@@ -15564,7 +15564,7 @@
         "code": "sz000807",
         "quote_code": "sz000807",
         "pick_date": "2026-08-28",
-        "signal": "HOLD",
+        "signal": "BUY",
         "automation": "主板三层过滤",
         "ref_close": 27.23,
         "current_signal": "HOLD",
@@ -30074,7 +30074,7 @@
     }
   },
   "midline": {
-    "generated_at": "2026-08-29 01:47:53",
+    "generated_at": "2026-08-29 01:58:46",
     "config": {
       "hold_days": 22,
       "flat_band": 0.5,
