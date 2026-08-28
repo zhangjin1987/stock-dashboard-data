@@ -1,6 +1,6 @@
 {
   "build": "v23-20260828-syncmid",
-  "data_file": "picks.20260828_021840.json",
-  "generated_at": "2026-08-28 02:18:49",
+  "data_file": "picks.20260829_004212.json",
+  "generated_at": "2026-08-29 00:42:23",
   "note": "看板部署版本标记，index.html 比对 build 不一致则自动重载；data_file 为本次带时间戳的数据文件"
 }
