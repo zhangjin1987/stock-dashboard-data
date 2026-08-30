@@ -1,6 +1,6 @@
 {
-  "build": "v26-20260829-perf-fold",
-  "data_file": "picks.20260830_020716.json",
-  "generated_at": "2026-08-30 02:07:37",
+  "build": "v27-20260830-disciplineB",
+  "data_file": "picks.20260830_180725.json",
+  "generated_at": "2026-08-30 18:07:39",
   "note": "看板部署版本标记，index.html 比对 build 不一致则自动重载；data_file 为本次带时间戳的数据文件"
 }
