@@ -1,6 +1,6 @@
 {
-  "build": "v28-20260830-reloadfix",
-  "data_file": "picks.20260901_174222.json",
-  "generated_at": "2026-09-01 17:42:24",
+  "build": "v29-20260901-alertfix",
+  "data_file": "picks.20260901_181431.json",
+  "generated_at": "2026-09-01 18:14:32",
   "note": "看板部署版本标记，index.html 比对 build 不一致则自动重载；data_file 为本次带时间戳的数据文件"
 }
