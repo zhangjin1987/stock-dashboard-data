@@ -1,6 +1,6 @@
 {
-  "build": "v30-20260901-livenote",
-  "data_file": "picks.20260902_004958.json",
-  "generated_at": "2026-09-02 00:50:11",
+  "build": "v31-20260902-datasrc",
+  "data_file": "picks.20260902_012712.json",
+  "generated_at": "2026-09-02 01:27:25",
   "note": "看板部署版本标记，index.html 比对 build 不一致则自动重载；data_file 为本次带时间戳的数据文件"
 }
