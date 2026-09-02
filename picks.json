@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-03 02:30:36",
+  "generated_at": "2026-09-03 03:04:26",
   "source": "WORKBUDDY 统一投资数据库 (NeoData / 腾讯自选股 / 通达信 实拉)",
   "levels_rule": "动态买卖点每日 17:15 按最新收盘价重算，且按【个股实际波动率 ATR14 + MA10 支撑 + 计划位】自适应：止损宽度=低波动 7%/中波动 10%/高波动 13%（不低于原硬止损，站上 MA10 抬至其下 1.5%）；目标=纪律B +8% 上限（高波动放宽至 +10%/+12%，且不低于自动化计划目标）。",
   "account": {
@@ -9,7 +9,9 @@
     "float_pnl": -1473.8,
     "float_pnl_pct": -8.22,
     "position_ratio": 16.45,
-    "available_cash": 83551.0
+    "available_cash": 75558.4,
+    "realized_total": -6518.8,
+    "equity": 92007.4
   },
   "holdings": [
     {
@@ -18711,8 +18713,8 @@
       }
     ],
     "breadth": {
-      "up": 1647,
-      "down": 4947,
+      "up": 1272,
+      "down": 3901,
       "flat": null,
       "limit_up": null,
       "limit_down": null,
@@ -18886,7 +18888,7 @@
       "note": "近5日持续上榜≥3日视为走强"
     },
     "sentiment": {
-      "temp": 15.0,
+      "temp": 14.8,
       "level": "谨慎",
       "note": "跌多涨少，注意风险"
     },
@@ -18899,11 +18901,11 @@
       "daily_drawdown_max": -5.0,
       "max_drawdown_max": -15.0
     },
-    "level": "high",
+    "level": "ok",
     "flags": [
       {
-        "lvl": "high",
-        "msg": "单日回撤触发熔断，暂停开新仓"
+        "lvl": "ok",
+        "msg": "各项风控指标均在硬规则内"
       }
     ],
     "total_pos": 16.45,
@@ -18919,7 +18921,8 @@
         "shares": 200,
         "d_stop": 43.5,
         "stop": 43.5,
-        "basis_price": 45.57
+        "basis_price": 45.57,
+        "cur_price": 45.57
       },
       {
         "name": "TCL科技",
@@ -18931,23 +18934,26 @@
         "shares": 1500,
         "d_stop": 4.65,
         "stop": 4.65,
-        "basis_price": 4.89
+        "basis_price": 4.89,
+        "cur_price": 4.89
       }
     ],
     "over_single": [],
-    "drawdown_pct": -1.47,
+    "drawdown_pct": -9.47,
     "max_dd_est": -0.77,
     "dd_over": false,
     "circuit_breaker": {
-      "triggered": true,
-      "daily_dd": -8.22,
+      "triggered": false,
+      "daily_dd": -0.33,
       "threshold": -5.0,
-      "action": "暂停开新仓，仅执行既有止损/止盈"
+      "action": "正常交易"
     },
-    "stop_hit": 1,
+    "daily_pnl": -297.0,
+    "stop_hit": 0,
     "stop_near": 1,
-    "available_cash": 83551.0,
-    "total_capital": 100000.0
+    "available_cash": 75558.4,
+    "total_capital": 100000.0,
+    "equity": 90533.6
   },
   "alerts": {
     "items": [
@@ -18976,18 +18982,6 @@
         "days": 1
       },
       {
-        "type": "大盘熔断",
-        "lvl": "red",
-        "kind": "market",
-        "name": "账户",
-        "code": "",
-        "price": null,
-        "trig": null,
-        "msg": "单日回撤 -8.22% 触发熔断（阈值 -5.0%），暂停开新仓，仅执行止损/止盈",
-        "is_new": false,
-        "days": 3
-      },
-      {
         "type": "大盘风险",
         "lvl": "red",
         "kind": "market",
@@ -19001,7 +18995,7 @@
       }
     ],
     "level": "red",
-    "count": 3,
+    "count": 2,
     "new_count": 1,
     "push": {
       "channel": "wecom",
@@ -19125,15 +19119,15 @@
     ]
   },
   "stats": {
-    "total": 19,
+    "total": 18,
     "mid_verified": 13,
     "mid_hit": 4,
     "mid_hit_rate": 30.8,
     "legacy_hit_rate": 30.8,
-    "t1_verified": 18,
-    "t1_hit": 11,
-    "t1_hit_rate": 61.1,
-    "avg_outcome_pct": 1.93,
+    "t1_verified": 17,
+    "t1_hit": 10,
+    "t1_hit_rate": 58.8,
+    "avg_outcome_pct": 1.65,
     "pending": 0,
     "by_automation": [
       {
@@ -19513,16 +19507,6 @@
         "correct": false,
         "reviewed": true,
         "lesson": "失败案例：共进股份(sh603118) next-day HOLD，ref17.56→16.25(-7.46%)，未达≥10%纪律/方向错。六指标印证：DIF>DEA，红柱运行，多头动能；运行于布林带内（12.49–19.31，中轨 15.90），中性；K<D死叉状态，短线偏弱；量能平稳 1.1×均量；ATR7.2%。价格行为：现价16.25 较 ref17.56 -7.46%；距目标19.32 还差 18.9%；止损12.73 未破。教训：严格执行止损/买入区上沿≤选股日收盘/趋势前置于资金，避免接飞刀与追高。"
-      },
-      {
-        "date": "2026-08-17",
-        "name": "苏州银行",
-        "code": "sz002966",
-        "signal": "BUY",
-        "outcome_pct": 3.42,
-        "correct": true,
-        "reviewed": true,
-        "lesson": "8/18收8.54(+0.83% from 8.47);未放量破8.74,幅度微弱,方向对但未达10%目标,待突破确认。"
       },
       {
         "date": "2026-08-17",
@@ -32955,79 +32939,6 @@
         "outcome_pct": 6.14
       },
       {
-        "name": "苏州银行",
-        "code": "sz002966",
-        "quote_code": "sz002966",
-        "pick_date": "2026-08-17",
-        "signal": "BUY",
-        "automation": "主板三层过滤",
-        "ref_close": 8.47,
-        "current_signal": "REJECT",
-        "conflict": false,
-        "conflict_dates": [
-          "2026-08-17"
-        ],
-        "select_count": 2,
-        "history": [
-          {
-            "date": "2026-08-17",
-            "signal": "BUY",
-            "ref_close": 8.47,
-            "automation_name": "主板三层过滤",
-            "automation_id": "A1",
-            "lesson": "8/18收8.54(+0.83% from 8.47);未放量破8.74,幅度微弱,方向对但未达10%目标,待突破确认。",
-            "reviewed": true,
-            "outcome_pct": 0.83
-          },
-          {
-            "date": "2026-08-17",
-            "signal": "REJECT",
-            "ref_close": 8.53,
-            "automation_name": "投资大师圆桌·基本面",
-            "automation_id": "A4",
-            "lesson": "8/18收8.54(+0.12%,高8.64未破8.74);突破未果,观察有效,非买点。待放量破8.74看9.32再议。",
-            "reviewed": true,
-            "outcome_pct": 0.12
-          }
-        ],
-        "td_pct": -0.22,
-        "detail": null,
-        "days": 17,
-        "period_returns": {
-          "T1": 0.83,
-          "T3": 2.13,
-          "T5": 2.72,
-          "T7": 2.83,
-          "T10": 4.96,
-          "T15": null,
-          "T22": null,
-          "now_pct": 6.73,
-          "max_gain": 6.97,
-          "min_ret": 0.83,
-          "max_drawdown": 0.12,
-          "t1_reached": false,
-          "stop_hit": false,
-          "win_days": 12,
-          "span_calendar": 16,
-          "exit_type": null,
-          "exit_day": null,
-          "exit_pct": null,
-          "peak_pct": 8.5,
-          "be_armed": true
-        },
-        "mid_target_hit": false,
-        "mid_partial": true,
-        "exit_type": null,
-        "exit_day": null,
-        "exit_pct": null,
-        "tgt_pct": 10.04,
-        "reviewed": true,
-        "correct": true,
-        "lesson": "8/18收8.54(+0.83% from 8.47);未放量破8.74,幅度微弱,方向对但未达10%目标,待突破确认。",
-        "status": "win",
-        "outcome_pct": 3.42
-      },
-      {
         "name": "招金黄金",
         "code": "sz000506",
         "quote_code": "sz000506",
@@ -38426,9 +38337,9 @@
     "rows": [
       {
         "name": "主板三层过滤",
-        "total": 11,
-        "win_rate": 72.7,
-        "avg_pct": 1.99,
+        "total": 10,
+        "win_rate": 70.0,
+        "avg_pct": 1.84,
         "worst": -3.24,
         "best": 9.2
       },
@@ -38457,8 +38368,8 @@
       },
       {
         "m": "2026-08",
-        "avg_pct": 1.31,
-        "win_rate": 71.4
+        "avg_pct": 1.15,
+        "win_rate": 69.2
       }
     ],
     "monthly_dd": 0.0,
@@ -38661,7 +38572,7 @@
       },
       {
         "date": "2026-09-02",
-        "nav": 98923.2
+        "nav": 92007.4
       }
     ],
     "bench_series": [
@@ -38840,14 +38751,14 @@
     ],
     "bench_start": 3779.88,
     "metrics": {
-      "total_return_pct": -1.08,
-      "annualized_return_pct": -6.15,
-      "annualized_vol_pct": 3.7,
-      "sharpe": -1.735,
-      "max_drawdown_pct": 1.47,
-      "final_nav": 98923.2,
+      "total_return_pct": -7.99,
+      "annualized_return_pct": -38.63,
+      "annualized_vol_pct": 20.27,
+      "sharpe": -2.356,
+      "max_drawdown_pct": 8.36,
+      "final_nav": 92007.4,
       "bench_total_return_pct": 20.319999999999993,
-      "excess_return_pct": -21.4
+      "excess_return_pct": -28.31
     },
     "weekly": [
       {
@@ -38901,8 +38812,8 @@
       {
         "period": "2026-W36",
         "start_nav": 100397.0,
-        "end_nav": 98923.2,
-        "ret_pct": -1.47
+        "end_nav": 92007.4,
+        "ret_pct": -8.36
       }
     ],
     "monthly": [
@@ -38921,8 +38832,8 @@
       {
         "period": "2026-09",
         "start_nav": 100397.0,
-        "end_nav": 98923.2,
-        "ret_pct": -1.47
+        "end_nav": 92007.4,
+        "ret_pct": -8.36
       }
     ],
     "caliber": "F章务实口径：净值曲线由真实持仓建仓日+日K线逐交易日重建(现金=本金-Σ建仓成本+已实现盈亏)，基准=沪深300归一100；夏普用日收益√252年化(无风险利率=0)；最大回撤=净值峰谷回落。无历史净值记录时的近似方案。"
