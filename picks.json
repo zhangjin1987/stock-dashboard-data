@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-03 01:00:01",
+  "generated_at": "2026-09-03 02:06:01",
   "source": "WORKBUDDY 统一投资数据库 (NeoData / 腾讯自选股 / 通达信 实拉)",
   "levels_rule": "动态买卖点每日 17:15 按最新收盘价重算，且按【个股实际波动率 ATR14 + MA10 支撑 + 计划位】自适应：止损宽度=低波动 7%/中波动 10%/高波动 13%（不低于原硬止损，站上 MA10 抬至其下 1.5%）；目标=纪律B +8% 上限（高波动放宽至 +10%/+12%，且不低于自动化计划目标）。",
   "account": {
@@ -19653,6 +19653,65 @@
       }
     ],
     "records": [
+      {
+        "name": "风语筑",
+        "code": "sh603466",
+        "quote_code": "sh603466",
+        "pick_date": "2026-09-02",
+        "signal": "HOLD",
+        "automation": "主板三层过滤",
+        "ref_close": 12.06,
+        "current_signal": "REJECT",
+        "conflict": true,
+        "conflict_dates": [],
+        "select_count": 1,
+        "history": [
+          {
+            "date": "2026-09-02",
+            "signal": "BUY",
+            "ref_close": 12.06,
+            "automation_name": "主板三层过滤",
+            "automation_id": "1783445808186",
+            "lesson": null,
+            "reviewed": false,
+            "outcome_pct": null
+          }
+        ],
+        "td_pct": 1.01,
+        "detail": null,
+        "days": 1,
+        "period_returns": {
+          "T1": null,
+          "T3": null,
+          "T5": null,
+          "T7": null,
+          "T10": null,
+          "T15": null,
+          "T22": null,
+          "max_gain": 0.0,
+          "min_ret": 0.0,
+          "max_drawdown": 0.0,
+          "t1_reached": false,
+          "stop_hit": false,
+          "win_days": 0,
+          "span_calendar": 0,
+          "exit_type": null,
+          "exit_day": null,
+          "exit_pct": null,
+          "peak_pct": 0.0,
+          "be_armed": false
+        },
+        "mid_target_hit": false,
+        "mid_partial": true,
+        "exit_type": null,
+        "exit_day": null,
+        "exit_pct": null,
+        "tgt_pct": 17.74,
+        "reviewed": false,
+        "status": "running",
+        "now_price": 12.06,
+        "outcome_pct": 0.0
+      },
       {
         "name": "福耀玻璃",
         "code": "sh600660",
@@ -40812,7 +40871,7 @@
     "buy": 18,
     "watch": 11,
     "other": 13,
-    "filtered_rejected": 6
+    "filtered_rejected": 7
   },
   "build": "v32-20260902-statusdesc"
 }
