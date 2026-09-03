@@ -1,6 +1,6 @@
 {
   "build": "v32-20260902-statusdesc",
-  "data_file": "picks.20260903_164456.json",
-  "generated_at": "2026-09-03 16:45:23",
+  "data_file": "picks.20260903_165026.json",
+  "generated_at": "2026-09-03 16:50:27",
   "note": "看板部署版本标记，index.html 比对 build 不一致则自动重载；data_file 为本次带时间戳的数据文件"
 }
