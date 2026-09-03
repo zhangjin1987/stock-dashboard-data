@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-03 17:17:35",
+  "generated_at": "2026-09-03 18:02:51",
   "source": "WORKBUDDY 统一投资数据库 (NeoData / 腾讯自选股 / 通达信 实拉)",
   "levels_rule": "动态买卖点每日 17:15 按最新收盘价重算，且按【个股实际波动率 ATR14 + MA10 支撑 + 计划位】自适应：止损宽度=低波动 7%/中波动 10%/高波动 13%（不低于原硬止损，站上 MA10 抬至其下 1.5%）；目标=纪律B +8% 上限（高波动放宽至 +10%/+12%，且不低于自动化计划目标）。",
   "account": {
@@ -868,19 +868,19 @@
       ],
       "resonance": "single",
       "automation_id": "automation-1783962452787",
-      "entry_lo": null,
-      "entry_hi": null,
-      "stop": null,
-      "target1": null,
-      "target2": null,
+      "entry_lo": 20.2,
+      "entry_hi": 20.55,
+      "stop": 19.7,
+      "target1": 23.4,
+      "target2": 24.6,
       "ref_close": 21.67,
       "pick_date": "2026-09-02",
       "next_day": null,
       "lesson": "",
       "d_entry_lo": 19.65,
       "d_entry_hi": 20.47,
-      "d_stop": 17.99,
-      "d_target": 23.16,
+      "d_stop": 19.7,
+      "d_target": 23.4,
       "entry_derived": true,
       "basis_price": 20.68,
       "basis_date": "2026-09-03",
@@ -890,7 +890,7 @@
         "chg": 0.0,
         "vol_ratio": 0.5779654557765443
       },
-      "daily_note": "【每日点评 · 华鲁恒升 · 推荐 · 2026-09-03】\n【行情】现价 ¥20.68  涨跌 +0.00% ｜ 缩量 0.6×均量\n【技术】均线：低于 MA5/MA10，偏弱 ｜ ATR波动 4.56% ｜ 偏空(现价<均价)\n【止损】🛡 动态止损 ¥17.99（距现价 13.0%，沿用原硬止损¥17.99）\n【目标】🎯 动态目标 ¥23.16（现价/买点 +12.0% 期望）\n【买区】➡️ 现价 ¥20.68：已高于买区 1.0%，等回踩 ¥19.65–20.47 再买\n【空间】距目标 +12.0% ｜ 距止损 +13.0%\n【操作】未到买区，等待回踩/放量突破；不追高",
+      "daily_note": "【每日点评 · 华鲁恒升 · 推荐 · 2026-09-03】\n【行情】现价 ¥20.68  涨跌 +0.00% ｜ 缩量 0.6×均量\n【技术】均线：低于 MA5/MA10，偏弱 ｜ ATR波动 4.56% ｜ 偏空(现价<均价)\n【止损】🛡 动态止损 ¥19.70（距现价 4.7%，沿用原硬止损¥19.70）\n【目标】🎯 动态目标 ¥23.40（现价/买点 +13.2% 期望）\n【买区】➡️ 现价 ¥20.68：已高于买区 1.0%，等回踩 ¥19.65–20.47 再买\n【参考】计划买区 ¥20.20–20.55\n【空间】距目标 +13.2% ｜ 距止损 +4.7%\n【操作】未到买区，等待回踩/放量突破；不追高",
       "research": {
         "verdict": "买入",
         "bullish": 43,
@@ -1232,16 +1232,16 @@
         "levels": {
           "entry_lo": 19.65,
           "entry_hi": 20.47,
-          "stop": 17.99,
+          "stop": 19.7,
           "stop_basis": "ATR14波动率 4.56% 定宽",
           "stop_dyn": null,
-          "target": 23.16,
-          "target2": 25.48,
-          "target_basis": "波动率目标（纪律B 底线 ≥6% → 上限 +8%），目标隐含 +12.0%"
+          "target": 23.4,
+          "target2": 25.74,
+          "target_basis": "波动率目标（纪律B 底线 ≥6% → 上限 +8%），目标隐含 +13.2%"
         },
         "space": {
-          "up_pct": 12.0,
-          "down_pct": -13.0
+          "up_pct": 13.2,
+          "down_pct": -4.7
         },
         "action": {
           "advice": "未到买区：等待回踩 ¥19.65–20.47 或放量突破，不追高",
@@ -19458,7 +19458,7 @@
         "outcome_pct": null,
         "correct": null,
         "reviewed": false,
-        "lesson": "现价20.68 较 ref21.67 -4.57%"
+        "lesson": "现价20.68 较 ref21.67 -4.57%；等回踩20.20-20.55缩量企稳；跌破19.70作废"
       },
       {
         "date": "2026-09-02",
@@ -20661,16 +20661,16 @@
           "levels": {
             "entry_lo": 19.65,
             "entry_hi": 20.47,
-            "stop": 17.99,
+            "stop": 19.7,
             "stop_basis": "ATR14波动率 4.56% 定宽",
             "stop_dyn": null,
-            "target": 23.16,
-            "target2": 25.48,
-            "target_basis": "波动率目标（纪律B 底线 ≥6% → 上限 +8%），目标隐含 +12.0%"
+            "target": 23.4,
+            "target2": 25.74,
+            "target_basis": "波动率目标（纪律B 底线 ≥6% → 上限 +8%），目标隐含 +13.2%"
           },
           "space": {
-            "up_pct": 12.0,
-            "down_pct": -13.0
+            "up_pct": 13.2,
+            "down_pct": -4.7
           },
           "action": {
             "advice": "未到买区：等待回踩 ¥19.65–20.47 或放量突破，不追高",
@@ -20743,7 +20743,7 @@
         "exit_type": null,
         "exit_day": null,
         "exit_pct": null,
-        "tgt_pct": null,
+        "tgt_pct": 7.98,
         "reviewed": false,
         "status": "running",
         "now_price": 20.68,
@@ -40976,5 +40976,5 @@
     "other": 13,
     "filtered_rejected": 7
   },
-  "build": "v32-20260902-statusdesc"
+  "build": "v33-20260903-cardlayout"
 }
