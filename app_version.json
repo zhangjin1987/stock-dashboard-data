@@ -1,6 +1,6 @@
 {
-  "build": "v33-20260903-cardlayout2",
-  "data_file": "picks.20260903_180848.json",
-  "generated_at": "2026-09-03 18:08:49",
+  "build": "v34-20260904-sixind",
+  "data_file": "picks.20260904_003857.json",
+  "generated_at": "2026-09-04 00:39:12",
   "note": "看板部署版本标记，index.html 比对 build 不一致则自动重载；data_file 为本次带时间戳的数据文件"
 }
