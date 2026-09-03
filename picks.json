@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04 00:38:57",
+  "generated_at": "2026-09-04 00:54:13",
   "source": "WORKBUDDY 统一投资数据库 (NeoData / 腾讯自选股 / 通达信 实拉)",
   "levels_rule": "动态买卖点每日 17:15 按最新收盘价重算，且按【个股实际波动率 ATR14 + MA10 支撑 + 计划位】自适应：止损宽度=低波动 7%/中波动 10%/高波动 13%（不低于原硬止损，站上 MA10 抬至其下 1.5%）；目标=纪律B +8% 上限（高波动放宽至 +10%/+12%，且不低于自动化计划目标）。",
   "account": {
@@ -362,7 +362,16 @@
           "vol10": 740687.0,
           "vol_compare": "5日均量低于10日均量（0.79×）",
           "support": 49.92,
-          "resistance": 55.88
+          "resistance": 55.88,
+          "hits6": 1,
+          "res6": {
+            "vol": false,
+            "vwap": false,
+            "fib": true,
+            "pa": false,
+            "macd": false,
+            "boll": false
+          }
         },
         "levels": {
           "entry_lo": null,
@@ -787,7 +796,16 @@
           "vol10": 3634853.0,
           "vol_compare": "5日均量高于10日均量（1.09×）",
           "support": 5.01,
-          "resistance": 5.34
+          "resistance": 5.34,
+          "hits6": 1,
+          "res6": {
+            "vol": false,
+            "vwap": false,
+            "fib": true,
+            "pa": false,
+            "macd": false,
+            "boll": false
+          }
         },
         "levels": {
           "entry_lo": null,
@@ -853,6 +871,850 @@
     }
   ],
   "picks": [
+    {
+      "code": "sz000651",
+      "quote_code": "sz000651",
+      "name": "格力电器",
+      "signal": "BUY",
+      "category": "buy",
+      "signal_expired": false,
+      "conflict": false,
+      "horizon": null,
+      "source": "投资大师圆桌(基本面)·合并风控",
+      "lanes": [
+        "投资大师圆桌(基本面)·合并风控"
+      ],
+      "resonance": "single",
+      "automation_id": "automation-1783962452787",
+      "entry_lo": null,
+      "entry_hi": null,
+      "stop": null,
+      "target1": null,
+      "target2": null,
+      "ref_close": 38.74,
+      "pick_date": "2026-09-04",
+      "next_day": null,
+      "lesson": "PM 主理人裁决：维持护栏 ok 满仓 BUY。三维全绿+PB 3.14%分位深价值+基金回补(+48家)+未延伸(周MA60比1.0265)；2026E 归母 -0.95%(短期承压)但 2027E +5.16% 修复、高股息兜底。",
+      "d_entry_lo": 36.8,
+      "d_entry_hi": 38.35,
+      "d_stop": 36.03,
+      "d_target": 42.61,
+      "entry_derived": true,
+      "basis_price": 38.74,
+      "basis_date": "2026-09-04",
+      "current": 38.74,
+      "note_live": {
+        "price": 38.74,
+        "chg": 0.675675675675689,
+        "vol_ratio": 0.6685173411330003
+      },
+      "daily_note": "【每日点评 · 格力电器 · 推荐 · 2026-09-04】\n【行情】现价 ¥38.74  涨跌 +0.68% ｜ 缩量 0.7×均量\n【技术】均线：低于 MA5/MA10，偏弱 ｜ ATR波动 2.08% ｜ 偏空(现价<均价)\n【止损】🛡 动态止损 ¥36.03（距现价 7.0%，沿用原硬止损¥36.03）\n【目标】🎯 动态目标 ¥42.61（现价/买点 +10.0% 期望）\n【买区】➡️ 现价 ¥38.74：已高于买区 1.0%，等回踩 ¥36.80–38.35 再买\n【空间】距目标 +10.0% ｜ 距止损 +7.0%\n【操作】未到买区，等待回踩/放量突破；不追高",
+      "research": {
+        "verdict": "买入",
+        "bullish": 30,
+        "bearish": 0,
+        "neutral": 0,
+        "recent_enough": true,
+        "latest_report_date": "2026-08-31",
+        "target_count": 38,
+        "report_count": 30,
+        "consensus_target": 50.64,
+        "eps_2026e": 5.13,
+        "net_profit_yoy_2026e": -0.95,
+        "forecast_houses_2026e": 38,
+        "pe_ttm": 7.79,
+        "pe_percentile": 49.88,
+        "pb": 1.46,
+        "pb_percentile": 3.14,
+        "fwd_pe_2026e": 8.12,
+        "fund_houses": 138,
+        "fund_houses_chg": 48,
+        "fund_shares_chg": 8832480
+      },
+      "detail": {
+        "name": "格力电器",
+        "quote": {
+          "open": 38.48,
+          "high": 39.09,
+          "low": 38.39,
+          "close": 38.74,
+          "prev": 38.48,
+          "chg": 0.68,
+          "vol_ratio": 0.6685173411330003
+        },
+        "tech": {
+          "ma5": 38.74,
+          "ma10": 39.89,
+          "ma20": 40.16,
+          "ma_txt": "低于 MA5/MA10，偏弱",
+          "ma60": 39.44,
+          "ma90": 39.37,
+          "ma120": 38.95,
+          "ma200": 39.27,
+          "long_ma_txt": "均线缠绕（价 38.74 位于 MA60 39.44 附近）",
+          "macd": [
+            -0.348,
+            -0.031,
+            -0.634
+          ],
+          "macd_txt": "DIF<DEA，绿柱运行，空头占优",
+          "macd_cross": "死叉·绿柱（空头）",
+          "macd_param": "(12,26,9)",
+          "macd_series": [
+            [
+              0.871,
+              0.737,
+              0.27
+            ],
+            [
+              0.775,
+              0.744,
+              0.061
+            ],
+            [
+              0.671,
+              0.73,
+              -0.118
+            ],
+            [
+              0.579,
+              0.7,
+              -0.24
+            ],
+            [
+              0.49,
+              0.658,
+              -0.336
+            ],
+            [
+              0.459,
+              0.618,
+              -0.318
+            ],
+            [
+              0.42,
+              0.578,
+              -0.317
+            ],
+            [
+              0.359,
+              0.534,
+              -0.351
+            ],
+            [
+              0.308,
+              0.489,
+              -0.362
+            ],
+            [
+              0.238,
+              0.439,
+              -0.402
+            ],
+            [
+              0.179,
+              0.387,
+              -0.415
+            ],
+            [
+              0.145,
+              0.339,
+              -0.387
+            ],
+            [
+              0.217,
+              0.314,
+              -0.195
+            ],
+            [
+              0.279,
+              0.307,
+              -0.057
+            ],
+            [
+              0.31,
+              0.308,
+              0.004
+            ],
+            [
+              0.347,
+              0.316,
+              0.063
+            ],
+            [
+              0.386,
+              0.33,
+              0.113
+            ],
+            [
+              0.409,
+              0.346,
+              0.127
+            ],
+            [
+              0.238,
+              0.324,
+              -0.172
+            ],
+            [
+              0.08,
+              0.275,
+              -0.391
+            ],
+            [
+              -0.049,
+              0.21,
+              -0.519
+            ],
+            [
+              -0.181,
+              0.132,
+              -0.627
+            ],
+            [
+              -0.289,
+              0.048,
+              -0.673
+            ],
+            [
+              -0.348,
+              -0.031,
+              -0.634
+            ]
+          ],
+          "kdj": [
+            17.6,
+            30.2,
+            -7.4
+          ],
+          "kdj_txt": "J值-7超卖区，或有技术反弹",
+          "boll": [
+            42.24,
+            40.16,
+            38.09
+          ],
+          "boll_txt": "运行于布林带内（38.09–42.24，中轨 40.16），中性",
+          "boll_series": [
+            [
+              42.61,
+              40.13,
+              37.65,
+              40.96
+            ],
+            [
+              42.59,
+              40.23,
+              37.88,
+              40.52
+            ],
+            [
+              42.54,
+              40.32,
+              38.1,
+              40.27
+            ],
+            [
+              42.43,
+              40.42,
+              38.42,
+              40.25
+            ],
+            [
+              42.26,
+              40.51,
+              38.76,
+              40.1
+            ],
+            [
+              42.15,
+              40.61,
+              39.07,
+              40.67
+            ],
+            [
+              42.08,
+              40.68,
+              39.28,
+              40.54
+            ],
+            [
+              42.06,
+              40.7,
+              39.34,
+              40.23
+            ],
+            [
+              42.04,
+              40.72,
+              39.4,
+              40.24
+            ],
+            [
+              42.04,
+              40.72,
+              39.39,
+              39.9
+            ],
+            [
+              42.05,
+              40.68,
+              39.31,
+              39.89
+            ],
+            [
+              42.05,
+              40.66,
+              39.26,
+              40.06
+            ],
+            [
+              42.11,
+              40.68,
+              39.25,
+              41.32
+            ],
+            [
+              42.18,
+              40.72,
+              39.26,
+              41.42
+            ],
+            [
+              42.23,
+              40.76,
+              39.29,
+              41.24
+            ],
+            [
+              42.3,
+              40.81,
+              39.32,
+              41.45
+            ],
+            [
+              42.39,
+              40.86,
+              39.32,
+              41.62
+            ],
+            [
+              42.38,
+              40.85,
+              39.33,
+              41.58
+            ],
+            [
+              42.17,
+              40.69,
+              39.21,
+              39.27
+            ],
+            [
+              41.99,
+              40.53,
+              39.06,
+              39.0
+            ],
+            [
+              42.03,
+              40.43,
+              38.82,
+              38.95
+            ],
+            [
+              42.12,
+              40.33,
+              38.53,
+              38.55
+            ],
+            [
+              42.21,
+              40.24,
+              38.27,
+              38.48
+            ],
+            [
+              42.24,
+              40.16,
+              38.09,
+              38.74
+            ]
+          ],
+          "atr_pct": 2.08,
+          "vol_txt": "缩量 0.7×均量",
+          "vol5": 389393.0,
+          "vol10": 474098.0,
+          "vol_compare": "5日均量低于10日均量（0.82×）",
+          "support": 40.16,
+          "resistance": 41.98,
+          "hits6": 1,
+          "res6": {
+            "vol": false,
+            "vwap": false,
+            "fib": true,
+            "pa": false,
+            "macd": false,
+            "boll": false
+          }
+        },
+        "levels": {
+          "entry_lo": 36.8,
+          "entry_hi": 38.35,
+          "stop": 36.03,
+          "stop_basis": "ATR14波动率 2.08% 定宽",
+          "stop_dyn": null,
+          "target": 42.61,
+          "target2": 46.87,
+          "target_basis": "波动率目标（纪律B 底线 ≥6% → 上限 +8%），目标隐含 +10.0%"
+        },
+        "space": {
+          "up_pct": 10.0,
+          "down_pct": -7.0
+        },
+        "action": {
+          "advice": "未到买区：等待回踩 ¥36.80–38.35 或放量突破，不追高",
+          "position": "建议单票仓位 ≤5%%（10万本金约 ¥5,000），分批介入",
+          "is_holding": false
+        },
+        "fundamental": {
+          "verdict": "暂无研报覆盖",
+          "target": 50.64,
+          "auth_count": 30,
+          "summary": "暂无研报覆盖，暂无详细摘要"
+        },
+        "news": {
+          "available": false,
+          "items": [],
+          "note": "暂无自动抓取源；可在选股自动任务中接入新闻/公告 API"
+        }
+      },
+      "industry": "白色家电",
+      "sector": "家电-白色家电-白色家电",
+      "intro": "珠海格力电器股份有限公司成立于1991年,1996年11月在深交所挂牌上市。公司成立初期,主要依靠组装生产家用空调,现已发展成为多元化、科技型的全球工业制造集团,产业覆盖家用消费品和工业装备两大领域。公司在国内外建有生产…",
+      "org_name": "珠海格力电器股份有限公司"
+    },
+    {
+      "code": "sh601318",
+      "quote_code": "sh601318",
+      "name": "中国平安",
+      "signal": "BUY",
+      "category": "buy",
+      "signal_expired": false,
+      "conflict": false,
+      "horizon": null,
+      "source": "投资大师圆桌(基本面)·合并风控",
+      "lanes": [
+        "投资大师圆桌(基本面)·合并风控"
+      ],
+      "resonance": "single",
+      "automation_id": "automation-1783962452787",
+      "entry_lo": null,
+      "entry_hi": null,
+      "stop": null,
+      "target1": null,
+      "target2": null,
+      "ref_close": 58.0,
+      "pick_date": "2026-09-04",
+      "next_day": null,
+      "lesson": "PM 主理人裁决：护栏判 ok 正常 BUY，但主动偏股基金持仓 319→骤减 217 家(-0.86%流通股) 机构阶段性派发，PE 虽处 1% 分位极值低估但资金面弱化 → 主动降级 BUY×0.5 控险。基本面：2026E 归母 +9.93%、NBV +20.8%、目标价 78.57(+35.5%) 强支撑。",
+      "d_entry_lo": 55.1,
+      "d_entry_hi": 57.42,
+      "d_stop": 55.04,
+      "d_target": 63.8,
+      "entry_derived": true,
+      "basis_price": 58.0,
+      "basis_date": "2026-09-04",
+      "current": 58.0,
+      "note_live": {
+        "price": 58.0,
+        "chg": 2.4192124315733663,
+        "vol_ratio": 1.6122674223564626
+      },
+      "daily_note": "【每日点评 · 中国平安 · 推荐 · 2026-09-04】\n【行情】现价 ¥58.00  涨跌 +2.42% ｜ 放量 1.6×均量\n【技术】均线：站上 MA5/MA10，多头姿态 ｜ ATR波动 1.89% ｜ 偏多(现价>均价)\n【止损】🛡 动态止损 ¥55.04（距现价 5.1%，沿用原硬止损¥55.04）\n【目标】🎯 动态目标 ¥63.80（现价/买点 +10.0% 期望）\n【买区】➡️ 现价 ¥58.00：已高于买区 1.0%，等回踩 ¥55.10–57.42 再买\n【空间】距目标 +10.0% ｜ 距止损 +5.1%\n【操作】未到买区，等待回踩/放量突破；不追高",
+      "research": {
+        "verdict": "买入",
+        "bullish": 40,
+        "bearish": 0,
+        "neutral": 0,
+        "recent_enough": true,
+        "latest_report_date": "2026-08-31",
+        "target_count": 30,
+        "report_count": 40,
+        "consensus_target": 78.57,
+        "eps_2026e": 8.18,
+        "net_profit_yoy_2026e": 9.93,
+        "forecast_houses_2026e": 30,
+        "pe_ttm": 6.59,
+        "pe_percentile": 1.08,
+        "pb": 1.02,
+        "pb_percentile": 51.12,
+        "fwd_pe_2026e": 5.54,
+        "fund_houses": 319,
+        "fund_houses_chg": -217,
+        "fund_shares_chg": -91726474
+      },
+      "detail": {
+        "name": "中国平安",
+        "quote": {
+          "open": 56.6,
+          "high": 58.58,
+          "low": 56.5,
+          "close": 58.0,
+          "prev": 56.63,
+          "chg": 2.42,
+          "vol_ratio": 1.6122674223564626
+        },
+        "tech": {
+          "ma5": 56.71,
+          "ma10": 55.88,
+          "ma20": 54.13,
+          "ma_txt": "站上 MA5/MA10，多头姿态",
+          "ma60": 52.46,
+          "ma90": 53.54,
+          "ma120": 54.79,
+          "ma200": 58.77,
+          "long_ma_txt": "均线缠绕（价 58.00 位于 MA60 52.46 附近）",
+          "macd": [
+            1.157,
+            0.755,
+            0.803
+          ],
+          "macd_txt": "DIF>DEA，红柱运行，多头动能",
+          "macd_cross": "金叉·红柱（多头）",
+          "macd_param": "(12,26,9)",
+          "macd_series": [
+            [
+              1.09,
+              0.634,
+              0.91
+            ],
+            [
+              1.013,
+              0.71,
+              0.605
+            ],
+            [
+              0.948,
+              0.758,
+              0.38
+            ],
+            [
+              0.845,
+              0.775,
+              0.14
+            ],
+            [
+              0.745,
+              0.769,
+              -0.048
+            ],
+            [
+              0.653,
+              0.746,
+              -0.185
+            ],
+            [
+              0.513,
+              0.699,
+              -0.373
+            ],
+            [
+              0.401,
+              0.64,
+              -0.478
+            ],
+            [
+              0.325,
+              0.577,
+              -0.504
+            ],
+            [
+              0.177,
+              0.497,
+              -0.639
+            ],
+            [
+              0.064,
+              0.41,
+              -0.693
+            ],
+            [
+              -0.064,
+              0.315,
+              -0.759
+            ],
+            [
+              -0.103,
+              0.232,
+              -0.669
+            ],
+            [
+              -0.127,
+              0.16,
+              -0.575
+            ],
+            [
+              -0.049,
+              0.118,
+              -0.334
+            ],
+            [
+              0.139,
+              0.122,
+              0.033
+            ],
+            [
+              0.291,
+              0.156,
+              0.271
+            ],
+            [
+              0.497,
+              0.224,
+              0.545
+            ],
+            [
+              0.632,
+              0.306,
+              0.652
+            ],
+            [
+              0.728,
+              0.39,
+              0.676
+            ],
+            [
+              0.793,
+              0.471,
+              0.645
+            ],
+            [
+              0.948,
+              0.566,
+              0.763
+            ],
+            [
+              1.01,
+              0.655,
+              0.71
+            ],
+            [
+              1.157,
+              0.755,
+              0.803
+            ]
+          ],
+          "kdj": [
+            87.8,
+            85.0,
+            93.4
+          ],
+          "kdj_txt": "K>D金叉状态，短线偏多",
+          "boll": [
+            58.14,
+            54.13,
+            50.11
+          ],
+          "boll_txt": "运行于布林带内（50.11–58.14，中轨 54.13），中性",
+          "boll_series": [
+            [
+              56.85,
+              52.29,
+              47.73,
+              55.55
+            ],
+            [
+              56.91,
+              52.52,
+              48.13,
+              53.93
+            ],
+            [
+              56.96,
+              52.75,
+              48.53,
+              54.02
+            ],
+            [
+              56.9,
+              52.95,
+              49.0,
+              53.5
+            ],
+            [
+              56.76,
+              53.14,
+              49.53,
+              53.38
+            ],
+            [
+              56.54,
+              53.33,
+              50.12,
+              53.32
+            ],
+            [
+              56.23,
+              53.48,
+              50.73,
+              52.55
+            ],
+            [
+              56.1,
+              53.56,
+              51.03,
+              52.6
+            ],
+            [
+              55.86,
+              53.67,
+              51.47,
+              52.8
+            ],
+            [
+              55.67,
+              53.72,
+              51.77,
+              51.75
+            ],
+            [
+              55.76,
+              53.65,
+              51.54,
+              51.8
+            ],
+            [
+              55.89,
+              53.57,
+              51.25,
+              51.32
+            ],
+            [
+              55.88,
+              53.48,
+              51.07,
+              52.08
+            ],
+            [
+              55.81,
+              53.37,
+              50.93,
+              52.14
+            ],
+            [
+              55.76,
+              53.34,
+              50.91,
+              53.35
+            ],
+            [
+              55.93,
+              53.41,
+              50.89,
+              54.92
+            ],
+            [
+              56.04,
+              53.45,
+              50.86,
+              55.01
+            ],
+            [
+              56.37,
+              53.54,
+              50.72,
+              56.13
+            ],
+            [
+              56.38,
+              53.55,
+              50.71,
+              55.87
+            ],
+            [
+              56.55,
+              53.59,
+              50.64,
+              55.85
+            ],
+            [
+              56.6,
+              53.61,
+              50.61,
+              55.82
+            ],
+            [
+              57.16,
+              53.77,
+              50.39,
+              57.23
+            ],
+            [
+              57.51,
+              53.9,
+              50.3,
+              56.63
+            ],
+            [
+              58.14,
+              54.13,
+              50.11,
+              58.0
+            ]
+          ],
+          "atr_pct": 1.89,
+          "vol_txt": "放量 1.6×均量",
+          "vol5": 762391.0,
+          "vol10": 867485.0,
+          "vol_compare": "5日均量低于10日均量（0.88×）",
+          "support": 54.13,
+          "resistance": 58.58,
+          "hits6": 5,
+          "res6": {
+            "vol": true,
+            "vwap": true,
+            "fib": true,
+            "pa": true,
+            "macd": true,
+            "boll": false
+          }
+        },
+        "levels": {
+          "entry_lo": 55.1,
+          "entry_hi": 57.42,
+          "stop": 55.04,
+          "stop_basis": "ATR14波动率 1.89% 定宽；站上 MA10(55.88)，止损抬至其下方贴合趋势",
+          "stop_dyn": 55.04,
+          "target": 63.8,
+          "target2": 70.18,
+          "target_basis": "波动率目标（纪律B 底线 ≥6% → 上限 +8%），目标隐含 +10.0%"
+        },
+        "space": {
+          "up_pct": 10.0,
+          "down_pct": -5.1
+        },
+        "action": {
+          "advice": "未到买区：等待回踩 ¥55.10–57.42 或放量突破，不追高",
+          "position": "建议单票仓位 ≤5%%（10万本金约 ¥5,000），分批介入",
+          "is_holding": false
+        },
+        "fundamental": {
+          "verdict": "暂无研报覆盖",
+          "target": 78.57,
+          "auth_count": 40,
+          "summary": "暂无研报覆盖，暂无详细摘要"
+        },
+        "news": {
+          "available": false,
+          "items": [],
+          "note": "暂无自动抓取源；可在选股自动任务中接入新闻/公告 API"
+        }
+      },
+      "industry": "保险Ⅱ",
+      "sector": "金融-非银行金融-保险",
+      "intro": "中国平安保险(集团)股份有限公司于1988年诞生于深圳蛇口,是中国第一家股份制保险企业,在各级政府及监管部门、广大客户和社会各界的支持下,中国平安成长为国内金融牌照最齐全、业务范围最广泛的综合金融集团之一,致力于成为国际…",
+      "org_name": "中国平安保险(集团)股份有限公司"
+    },
     {
       "code": "sh600426",
       "quote_code": "sh600426",
@@ -1227,7 +2089,16 @@
           "vol10": 468452.0,
           "vol_compare": "5日均量高于10日均量（1.19×）",
           "support": 20.94,
-          "resistance": 22.47
+          "resistance": 22.47,
+          "hits6": 2,
+          "res6": {
+            "vol": false,
+            "vwap": false,
+            "fib": true,
+            "pa": false,
+            "macd": true,
+            "boll": false
+          }
         },
         "levels": {
           "entry_lo": 19.65,
@@ -1654,7 +2525,16 @@
           "vol10": 390123.0,
           "vol_compare": "5日均量高于10日均量（1.49×）",
           "support": 14.16,
-          "resistance": 15.77
+          "resistance": 15.77,
+          "hits6": 4,
+          "res6": {
+            "vol": false,
+            "vwap": true,
+            "fib": true,
+            "pa": true,
+            "macd": true,
+            "boll": false
+          }
         },
         "levels": {
           "entry_lo": 14.68,
@@ -2081,7 +2961,16 @@
           "vol10": 368654.0,
           "vol_compare": "5日均量高于10日均量（1.13×）",
           "support": 75.02,
-          "resistance": 79.1
+          "resistance": 79.1,
+          "hits6": 4,
+          "res6": {
+            "vol": false,
+            "vwap": true,
+            "fib": true,
+            "pa": true,
+            "macd": true,
+            "boll": false
+          }
         },
         "levels": {
           "entry_lo": 73.51,
@@ -2507,7 +3396,16 @@
           "vol10": 1291598.0,
           "vol_compare": "5日均量约等于10日均量（0.97×）",
           "support": 33.7,
-          "resistance": 38.61
+          "resistance": 38.61,
+          "hits6": 4,
+          "res6": {
+            "vol": false,
+            "vwap": true,
+            "fib": true,
+            "pa": true,
+            "macd": true,
+            "boll": false
+          }
         },
         "levels": {
           "entry_lo": 35.62,
@@ -2946,7 +3844,16 @@
           "vol10": 2497860.0,
           "vol_compare": "5日均量低于10日均量（0.85×）",
           "support": 33.82,
-          "resistance": 35.77
+          "resistance": 35.77,
+          "hits6": 1,
+          "res6": {
+            "vol": false,
+            "vwap": false,
+            "fib": true,
+            "pa": false,
+            "macd": false,
+            "boll": false
+          }
         },
         "levels": {
           "entry_lo": 31.64,
@@ -3372,7 +4279,16 @@
           "vol10": 740687.0,
           "vol_compare": "5日均量低于10日均量（0.79×）",
           "support": 49.92,
-          "resistance": 55.88
+          "resistance": 55.88,
+          "hits6": 1,
+          "res6": {
+            "vol": false,
+            "vwap": false,
+            "fib": true,
+            "pa": false,
+            "macd": false,
+            "boll": false
+          }
         },
         "levels": {
           "entry_lo": 43.66,
@@ -3798,7 +4714,16 @@
           "vol10": 687533.0,
           "vol_compare": "5日均量约等于10日均量（0.99×）",
           "support": 25.98,
-          "resistance": 26.92
+          "resistance": 26.92,
+          "hits6": 3,
+          "res6": {
+            "vol": false,
+            "vwap": false,
+            "fib": true,
+            "pa": true,
+            "macd": true,
+            "boll": false
+          }
         },
         "levels": {
           "entry_lo": 25.23,
@@ -4237,7 +5162,16 @@
           "vol10": 334386.0,
           "vol_compare": "5日均量约等于10日均量（1.00×）",
           "support": 21.53,
-          "resistance": 22.39
+          "resistance": 22.39,
+          "hits6": 4,
+          "res6": {
+            "vol": true,
+            "vwap": true,
+            "fib": true,
+            "pa": true,
+            "macd": false,
+            "boll": false
+          }
         },
         "levels": {
           "entry_lo": 20.73,
@@ -4675,7 +5609,16 @@
           "vol10": 86615.0,
           "vol_compare": "5日均量约等于10日均量（1.04×）",
           "support": 56.6,
-          "resistance": 58.52
+          "resistance": 58.52,
+          "hits6": 2,
+          "res6": {
+            "vol": false,
+            "vwap": false,
+            "fib": true,
+            "pa": true,
+            "macd": false,
+            "boll": false
+          }
         },
         "levels": {
           "entry_lo": 54.16,
@@ -5102,7 +6045,16 @@
           "vol10": 191011.0,
           "vol_compare": "5日均量高于10日均量（1.26×）",
           "support": 45.06,
-          "resistance": 49.52
+          "resistance": 49.52,
+          "hits6": 4,
+          "res6": {
+            "vol": false,
+            "vwap": true,
+            "fib": true,
+            "pa": true,
+            "macd": true,
+            "boll": false
+          }
         },
         "levels": {
           "entry_lo": 45.62,
@@ -5529,7 +6481,16 @@
           "vol10": 66484.0,
           "vol_compare": "5日均量高于10日均量（1.23×）",
           "support": 28.02,
-          "resistance": 29.2
+          "resistance": 29.2,
+          "hits6": 3,
+          "res6": {
+            "vol": false,
+            "vwap": false,
+            "fib": true,
+            "pa": true,
+            "macd": true,
+            "boll": false
+          }
         },
         "levels": {
           "entry_lo": 26.92,
@@ -5956,7 +6917,16 @@
           "vol10": 347590.0,
           "vol_compare": "5日均量高于10日均量（1.28×）",
           "support": 21.43,
-          "resistance": 23.66
+          "resistance": 23.66,
+          "hits6": 5,
+          "res6": {
+            "vol": false,
+            "vwap": true,
+            "fib": true,
+            "pa": true,
+            "macd": true,
+            "boll": true
+          }
         },
         "levels": {
           "entry_lo": 21.89,
@@ -6383,7 +7353,16 @@
           "vol10": 72220.0,
           "vol_compare": "5日均量低于10日均量（0.88×）",
           "support": 363.65,
-          "resistance": 402.88
+          "resistance": 402.88,
+          "hits6": 1,
+          "res6": {
+            "vol": false,
+            "vwap": false,
+            "fib": true,
+            "pa": false,
+            "macd": false,
+            "boll": false
+          }
         },
         "levels": {
           "entry_lo": 324.46,
@@ -6801,7 +7780,16 @@
           "vol10": 1139957.0,
           "vol_compare": "5日均量约等于10日均量（1.04×）",
           "support": 11.03,
-          "resistance": 11.63
+          "resistance": 11.63,
+          "hits6": 2,
+          "res6": {
+            "vol": false,
+            "vwap": false,
+            "fib": true,
+            "pa": true,
+            "macd": false,
+            "boll": false
+          }
         },
         "levels": {
           "entry_lo": 10.65,
@@ -7248,7 +8236,16 @@
           "vol10": 3424536.0,
           "vol_compare": "5日均量约等于10日均量（0.96×）",
           "support": 6.72,
-          "resistance": 7.1
+          "resistance": 7.1,
+          "hits6": 3,
+          "res6": {
+            "vol": false,
+            "vwap": false,
+            "fib": true,
+            "pa": true,
+            "macd": true,
+            "boll": false
+          }
         },
         "levels": {
           "entry_lo": 6.55,
@@ -7687,7 +8684,16 @@
           "vol10": 805546.0,
           "vol_compare": "5日均量高于10日均量（1.23×）",
           "support": 6.09,
-          "resistance": 6.46
+          "resistance": 6.46,
+          "hits6": 3,
+          "res6": {
+            "vol": false,
+            "vwap": false,
+            "fib": true,
+            "pa": true,
+            "macd": true,
+            "boll": false
+          }
         },
         "levels": {
           "entry_lo": 5.85,
@@ -8126,7 +9132,16 @@
           "vol10": 411050.0,
           "vol_compare": "5日均量高于10日均量（1.13×）",
           "support": 16.57,
-          "resistance": 17.46
+          "resistance": 17.46,
+          "hits6": 4,
+          "res6": {
+            "vol": false,
+            "vwap": true,
+            "fib": true,
+            "pa": true,
+            "macd": true,
+            "boll": false
+          }
         },
         "levels": {
           "entry_lo": 16.27,
@@ -8565,7 +9580,16 @@
           "vol10": 673260.0,
           "vol_compare": "5日均量高于10日均量（1.09×）",
           "support": 12.79,
-          "resistance": 14.22
+          "resistance": 14.22,
+          "hits6": 1,
+          "res6": {
+            "vol": false,
+            "vwap": false,
+            "fib": true,
+            "pa": false,
+            "macd": false,
+            "boll": false
+          }
         },
         "levels": {
           "entry_lo": 12.03,
@@ -9004,7 +10028,16 @@
           "vol10": 1123199.0,
           "vol_compare": "5日均量低于10日均量（0.91×）",
           "support": 18.23,
-          "resistance": 20.1
+          "resistance": 20.1,
+          "hits6": 4,
+          "res6": {
+            "vol": true,
+            "vwap": true,
+            "fib": true,
+            "pa": true,
+            "macd": false,
+            "boll": false
+          }
         },
         "levels": {
           "entry_lo": 18.34,
@@ -9443,7 +10476,16 @@
           "vol10": 205896.0,
           "vol_compare": "5日均量低于10日均量（0.93×）",
           "support": 3.28,
-          "resistance": 3.54
+          "resistance": 3.54,
+          "hits6": 5,
+          "res6": {
+            "vol": true,
+            "vwap": true,
+            "fib": true,
+            "pa": true,
+            "macd": true,
+            "boll": false
+          }
         },
         "levels": {
           "entry_lo": 3.16,
@@ -9869,7 +10911,16 @@
           "vol10": 503353.0,
           "vol_compare": "5日均量约等于10日均量（1.03×）",
           "support": 31.24,
-          "resistance": 34.48
+          "resistance": 34.48,
+          "hits6": 6,
+          "res6": {
+            "vol": true,
+            "vwap": true,
+            "fib": true,
+            "pa": true,
+            "macd": true,
+            "boll": true
+          }
         },
         "levels": {
           "entry_lo": 32.34,
@@ -10308,7 +11359,16 @@
           "vol10": 224066.0,
           "vol_compare": "5日均量低于10日均量（0.63×）",
           "support": 26.66,
-          "resistance": 29.92
+          "resistance": 29.92,
+          "hits6": 1,
+          "res6": {
+            "vol": false,
+            "vwap": false,
+            "fib": true,
+            "pa": false,
+            "macd": false,
+            "boll": false
+          }
         },
         "levels": {
           "entry_lo": 27.82,
@@ -10747,7 +11807,16 @@
           "vol10": 391474.0,
           "vol_compare": "5日均量约等于10日均量（0.96×）",
           "support": 22.35,
-          "resistance": 24.66
+          "resistance": 24.66,
+          "hits6": 4,
+          "res6": {
+            "vol": false,
+            "vwap": true,
+            "fib": true,
+            "pa": true,
+            "macd": true,
+            "boll": false
+          }
         },
         "levels": {
           "entry_lo": 22.21,
@@ -11186,7 +12255,16 @@
           "vol10": 376896.0,
           "vol_compare": "5日均量低于10日均量（0.79×）",
           "support": 16.88,
-          "resistance": 19.12
+          "resistance": 19.12,
+          "hits6": 1,
+          "res6": {
+            "vol": false,
+            "vwap": false,
+            "fib": true,
+            "pa": false,
+            "macd": false,
+            "boll": false
+          }
         },
         "levels": {
           "entry_lo": 15.81,
@@ -11625,7 +12703,16 @@
           "vol10": 146701.0,
           "vol_compare": "5日均量约等于10日均量（0.96×）",
           "support": 64.7,
-          "resistance": 79.44
+          "resistance": 79.44,
+          "hits6": 5,
+          "res6": {
+            "vol": false,
+            "vwap": true,
+            "fib": true,
+            "pa": true,
+            "macd": true,
+            "boll": true
+          }
         },
         "levels": {
           "entry_lo": 75.47,
@@ -12064,7 +13151,16 @@
           "vol10": 489686.0,
           "vol_compare": "5日均量高于10日均量（1.07×）",
           "support": 3.94,
-          "resistance": 4.16
+          "resistance": 4.16,
+          "hits6": 1,
+          "res6": {
+            "vol": false,
+            "vwap": false,
+            "fib": true,
+            "pa": false,
+            "macd": false,
+            "boll": false
+          }
         },
         "levels": {
           "entry_lo": 3.72,
@@ -12503,7 +13599,16 @@
           "vol10": 140357.0,
           "vol_compare": "5日均量低于10日均量（0.88×）",
           "support": 15.95,
-          "resistance": 17.71
+          "resistance": 17.71,
+          "hits6": 1,
+          "res6": {
+            "vol": false,
+            "vwap": false,
+            "fib": true,
+            "pa": false,
+            "macd": false,
+            "boll": false
+          }
         },
         "levels": {
           "entry_lo": 16.1,
@@ -12942,7 +14047,16 @@
           "vol10": 483630.0,
           "vol_compare": "5日均量低于10日均量（0.94×）",
           "support": 41.17,
-          "resistance": 45.99
+          "resistance": 45.99,
+          "hits6": 1,
+          "res6": {
+            "vol": false,
+            "vwap": false,
+            "fib": true,
+            "pa": false,
+            "macd": false,
+            "boll": false
+          }
         },
         "levels": {
           "entry_lo": 40.93,
@@ -13381,7 +14495,16 @@
           "vol10": 352219.0,
           "vol_compare": "5日均量高于10日均量（1.15×）",
           "support": 17.32,
-          "resistance": 18.77
+          "resistance": 18.77,
+          "hits6": 1,
+          "res6": {
+            "vol": false,
+            "vwap": false,
+            "fib": true,
+            "pa": false,
+            "macd": false,
+            "boll": false
+          }
         },
         "levels": {
           "entry_lo": 16.27,
@@ -13444,6 +14567,407 @@
       "sector": "化石能源-煤炭-煤炭开采洗选",
       "intro": "淮北矿业控股股份有限公司(下称“淮北矿业”或“公司”)于2018年8月完成重大资产重组,主营业务为煤炭采掘、洗选加工、销售,煤化工产品的生产销售等业务。淮北矿业为华东地区煤种较为齐全和重要炼焦精煤生产企业,公司拥有焦煤、…",
       "org_name": "淮北矿业控股股份有限公司"
+    },
+    {
+      "code": "sh600601",
+      "quote_code": "sh600601",
+      "name": "方正科技",
+      "signal": "HOLD",
+      "category": "hold",
+      "signal_expired": false,
+      "conflict": false,
+      "horizon": "next-day",
+      "source": "主板三层过滤",
+      "lanes": [
+        "主板三层过滤"
+      ],
+      "resonance": "single",
+      "automation_id": "1783445808186",
+      "entry_lo": 12.43,
+      "entry_hi": 12.62,
+      "stop": 11.08,
+      "target1": 13.5,
+      "target2": 14.89,
+      "ref_close": 12.62,
+      "pick_date": "2026-09-03",
+      "next_day": "2026-09-03",
+      "lesson": "HOLD纪律否决: 目标①赔率1:0.67 < 1:1（最近可达目标赔率不足，实际不足非四舍五入）",
+      "d_entry_lo": 12.43,
+      "d_entry_hi": 12.62,
+      "d_stop": 11.99,
+      "d_target": 14.13,
+      "entry_derived": false,
+      "basis_price": 12.62,
+      "basis_date": "2026-09-04",
+      "current": 12.62,
+      "note_live": {
+        "price": 12.62,
+        "chg": 4.643449419568812,
+        "vol_ratio": 1.4191302820545617
+      },
+      "daily_note": "【每日点评 · 方正科技 · 推荐 · 2026-09-04】\n【行情】现价 ¥12.62  涨跌 +4.64% ｜ 量能平稳 1.4×均量\n【技术】均线：站上 MA5/MA10，多头姿态 ｜ ATR波动 5.82% ｜ 偏多(现价>均价)\n【止损】🛡 动态止损 ¥11.99（距现价 5.0%，≥原硬止损¥11.08）\n【目标】🎯 动态目标 ¥14.13（现价/买点 +12.0% 期望）\n【买区】➡️ 现价 ¥12.62：已在动态买区 ¥12.43–12.62 内，可分批介入\n【参考】计划买区 ¥12.43–12.62\n【空间】距目标 +12.0% ｜ 距止损 +5.0%\n【操作】进入买区，按计划分批建仓，止损 ¥11.99",
+      "research": null,
+      "detail": {
+        "name": "方正科技",
+        "quote": {
+          "open": 12.16,
+          "high": 12.92,
+          "low": 11.97,
+          "close": 12.62,
+          "prev": 12.06,
+          "chg": 4.64,
+          "vol_ratio": 1.4191302820545617
+        },
+        "tech": {
+          "ma5": 12.41,
+          "ma10": 12.17,
+          "ma20": 12.47,
+          "ma_txt": "站上 MA5/MA10，多头姿态",
+          "ma60": 12.3,
+          "ma90": 12.39,
+          "ma120": 11.89,
+          "ma200": 11.82,
+          "long_ma_txt": "多头排列（价>MA60>MA120），中长期趋势向上",
+          "macd": [
+            0.169,
+            0.154,
+            0.029
+          ],
+          "macd_txt": "DIF>DEA，红柱运行，多头动能",
+          "macd_cross": "金叉·红柱（多头）",
+          "macd_param": "(12,26,9)",
+          "macd_series": [
+            [
+              -1.057,
+              -0.856,
+              -0.403
+            ],
+            [
+              -0.995,
+              -0.884,
+              -0.223
+            ],
+            [
+              -0.873,
+              -0.881,
+              0.017
+            ],
+            [
+              -0.683,
+              -0.842,
+              0.318
+            ],
+            [
+              -0.432,
+              -0.76,
+              0.655
+            ],
+            [
+              -0.203,
+              -0.649,
+              0.89
+            ],
+            [
+              -0.06,
+              -0.531,
+              0.941
+            ],
+            [
+              0.07,
+              -0.411,
+              0.962
+            ],
+            [
+              0.142,
+              -0.3,
+              0.883
+            ],
+            [
+              0.202,
+              -0.2,
+              0.804
+            ],
+            [
+              0.274,
+              -0.105,
+              0.757
+            ],
+            [
+              0.338,
+              -0.016,
+              0.709
+            ],
+            [
+              0.318,
+              0.051,
+              0.535
+            ],
+            [
+              0.3,
+              0.101,
+              0.4
+            ],
+            [
+              0.294,
+              0.139,
+              0.31
+            ],
+            [
+              0.213,
+              0.154,
+              0.118
+            ],
+            [
+              0.147,
+              0.153,
+              -0.011
+            ],
+            [
+              0.098,
+              0.142,
+              -0.087
+            ],
+            [
+              0.125,
+              0.138,
+              -0.027
+            ],
+            [
+              0.136,
+              0.138,
+              -0.003
+            ],
+            [
+              0.18,
+              0.146,
+              0.068
+            ],
+            [
+              0.172,
+              0.151,
+              0.04
+            ],
+            [
+              0.146,
+              0.15,
+              -0.009
+            ],
+            [
+              0.169,
+              0.154,
+              0.029
+            ]
+          ],
+          "kdj": [
+            64.5,
+            56.0,
+            81.6
+          ],
+          "kdj_txt": "K>D金叉状态，短线偏多",
+          "boll": [
+            13.44,
+            12.47,
+            11.5
+          ],
+          "boll_txt": "运行于布林带内（11.50–13.44，中轨 12.47），中性",
+          "boll_series": [
+            [
+              14.46,
+              11.1,
+              7.75,
+              9.06
+            ],
+            [
+              13.81,
+              10.86,
+              7.91,
+              9.86
+            ],
+            [
+              13.46,
+              10.73,
+              8.0,
+              10.64
+            ],
+            [
+              12.99,
+              10.62,
+              8.25,
+              11.7
+            ],
+            [
+              12.91,
+              10.6,
+              8.3,
+              12.87
+            ],
+            [
+              13.14,
+              10.66,
+              8.17,
+              13.22
+            ],
+            [
+              13.17,
+              10.66,
+              8.16,
+              12.74
+            ],
+            [
+              13.39,
+              10.72,
+              8.06,
+              12.96
+            ],
+            [
+              13.53,
+              10.77,
+              8.01,
+              12.58
+            ],
+            [
+              13.75,
+              10.88,
+              8.0,
+              12.66
+            ],
+            [
+              14.0,
+              11.04,
+              8.08,
+              12.99
+            ],
+            [
+              14.26,
+              11.17,
+              8.08,
+              13.14
+            ],
+            [
+              14.37,
+              11.26,
+              8.15,
+              12.3
+            ],
+            [
+              14.47,
+              11.35,
+              8.22,
+              12.32
+            ],
+            [
+              14.57,
+              11.46,
+              8.35,
+              12.46
+            ],
+            [
+              14.59,
+              11.52,
+              8.44,
+              11.54
+            ],
+            [
+              14.58,
+              11.6,
+              8.63,
+              11.55
+            ],
+            [
+              14.53,
+              11.7,
+              8.87,
+              11.6
+            ],
+            [
+              14.37,
+              11.89,
+              9.41,
+              12.43
+            ],
+            [
+              14.2,
+              12.05,
+              9.9,
+              12.33
+            ],
+            [
+              13.91,
+              12.23,
+              10.56,
+              12.79
+            ],
+            [
+              13.63,
+              12.35,
+              11.08,
+              12.27
+            ],
+            [
+              13.45,
+              12.43,
+              11.4,
+              12.06
+            ],
+            [
+              13.44,
+              12.47,
+              11.5,
+              12.62
+            ]
+          ],
+          "atr_pct": 5.82,
+          "vol_txt": "量能平稳 1.4×均量",
+          "vol5": 1487487.0,
+          "vol10": 1516608.0,
+          "vol_compare": "5日均量约等于10日均量（0.98×）",
+          "support": 12.47,
+          "resistance": 13.5,
+          "hits6": 4,
+          "res6": {
+            "vol": false,
+            "vwap": true,
+            "fib": true,
+            "pa": true,
+            "macd": true,
+            "boll": false
+          }
+        },
+        "levels": {
+          "entry_lo": 12.43,
+          "entry_hi": 12.62,
+          "stop": 11.99,
+          "stop_basis": "ATR14波动率 5.82% 定宽；站上 MA10(12.17)，止损抬至其下方贴合趋势",
+          "stop_dyn": 11.99,
+          "target": 14.13,
+          "target2": 15.54,
+          "target_basis": "波动率目标（纪律B 底线 ≥6% → 上限 +8%），目标隐含 +12.0%"
+        },
+        "space": {
+          "up_pct": 12.0,
+          "down_pct": -5.0
+        },
+        "action": {
+          "advice": "进入买区：分批建仓，首笔½仓位，余½待回踩确认",
+          "position": "建议单票仓位 ≤5%%（10万本金约 ¥5,000），分批介入",
+          "is_holding": false
+        },
+        "fundamental": {
+          "verdict": null,
+          "target": null,
+          "auth_count": 0,
+          "summary": "—"
+        },
+        "news": {
+          "available": false,
+          "items": [],
+          "note": "暂无自动抓取源；可在选股自动任务中接入新闻/公告 API"
+        }
+      },
+      "industry": "元件",
+      "sector": "电子设备-电子元件-电子元件",
+      "intro": "方正科技集团股份有限公司是上海证券交易所上市公司(600601.SH),前身系上海延中实业有限公司,后经批准改制为上海延中实业股份有限公司,是新中国第一批股份制上市公司。公司专业从事PCB产品的设计研发、生产和制造全流程…",
+      "org_name": "方正科技集团股份有限公司"
     },
     {
       "code": "sh600031",
@@ -13819,7 +15343,16 @@
           "vol10": 625754.0,
           "vol_compare": "5日均量高于10日均量（1.29×）",
           "support": 19.18,
-          "resistance": 20.56
+          "resistance": 20.56,
+          "hits6": 4,
+          "res6": {
+            "vol": false,
+            "vwap": true,
+            "fib": true,
+            "pa": true,
+            "macd": true,
+            "boll": false
+          }
         },
         "levels": {
           "entry_lo": 18.94,
@@ -14211,7 +15744,16 @@
           "vol10": 91784.0,
           "vol_compare": "5日均量高于10日均量（1.27×）",
           "support": 7.82,
-          "resistance": 8.41
+          "resistance": 8.41,
+          "hits6": 1,
+          "res6": {
+            "vol": false,
+            "vwap": false,
+            "fib": true,
+            "pa": false,
+            "macd": false,
+            "boll": false
+          }
         },
         "levels": {
           "entry_lo": 7.93,
@@ -14629,7 +16171,16 @@
           "vol10": 191639.0,
           "vol_compare": "5日均量高于10日均量（1.07×）",
           "support": 91.95,
-          "resistance": 104.11
+          "resistance": 104.11,
+          "hits6": 1,
+          "res6": {
+            "vol": false,
+            "vwap": false,
+            "fib": true,
+            "pa": false,
+            "macd": false,
+            "boll": false
+          }
         },
         "levels": {
           "entry_lo": 91.9,
@@ -15047,7 +16598,16 @@
           "vol10": 117856.0,
           "vol_compare": "5日均量高于10日均量（1.12×）",
           "support": 33.68,
-          "resistance": 36.36
+          "resistance": 36.36,
+          "hits6": 2,
+          "res6": {
+            "vol": false,
+            "vwap": false,
+            "fib": true,
+            "pa": false,
+            "macd": true,
+            "boll": false
+          }
         },
         "levels": {
           "entry_lo": 33.83,
@@ -15465,7 +17025,16 @@
           "vol10": 1303852.0,
           "vol_compare": "5日均量约等于10日均量（1.01×）",
           "support": 8.95,
-          "resistance": 9.64
+          "resistance": 9.64,
+          "hits6": 5,
+          "res6": {
+            "vol": true,
+            "vwap": true,
+            "fib": true,
+            "pa": true,
+            "macd": true,
+            "boll": false
+          }
         },
         "levels": {
           "entry_lo": 9.18,
@@ -15883,7 +17452,16 @@
           "vol10": 37542.0,
           "vol_compare": "5日均量低于10日均量（0.81×）",
           "support": 11.59,
-          "resistance": 11.91
+          "resistance": 11.91,
+          "hits6": 3,
+          "res6": {
+            "vol": false,
+            "vwap": false,
+            "fib": true,
+            "pa": true,
+            "macd": true,
+            "boll": false
+          }
         },
         "levels": {
           "entry_lo": 11.1,
@@ -16301,7 +17879,16 @@
           "vol10": 1346902.0,
           "vol_compare": "5日均量约等于10日均量（1.01×）",
           "support": 4.03,
-          "resistance": 4.47
+          "resistance": 4.47,
+          "hits6": 4,
+          "res6": {
+            "vol": false,
+            "vwap": true,
+            "fib": true,
+            "pa": true,
+            "macd": true,
+            "boll": false
+          }
         },
         "levels": {
           "entry_lo": 4.18,
@@ -16719,7 +18306,16 @@
           "vol10": 1296009.0,
           "vol_compare": "5日均量约等于10日均量（1.02×）",
           "support": 15.75,
-          "resistance": 17.74
+          "resistance": 17.74,
+          "hits6": 4,
+          "res6": {
+            "vol": false,
+            "vwap": true,
+            "fib": true,
+            "pa": true,
+            "macd": true,
+            "boll": false
+          }
         },
         "levels": {
           "entry_lo": 16.22,
@@ -17137,7 +18733,16 @@
           "vol10": 259869.0,
           "vol_compare": "5日均量约等于10日均量（1.02×）",
           "support": 33.21,
-          "resistance": 35.0
+          "resistance": 35.0,
+          "hits6": 4,
+          "res6": {
+            "vol": false,
+            "vwap": true,
+            "fib": true,
+            "pa": true,
+            "macd": true,
+            "boll": false
+          }
         },
         "levels": {
           "entry_lo": 32.68,
@@ -17555,7 +19160,16 @@
           "vol10": 763750.0,
           "vol_compare": "5日均量高于10日均量（1.10×）",
           "support": 39.34,
-          "resistance": 41.36
+          "resistance": 41.36,
+          "hits6": 5,
+          "res6": {
+            "vol": false,
+            "vwap": true,
+            "fib": true,
+            "pa": true,
+            "macd": true,
+            "boll": true
+          }
         },
         "levels": {
           "entry_lo": 39.02,
@@ -17973,7 +19587,16 @@
           "vol10": 7169484.0,
           "vol_compare": "5日均量低于10日均量（0.94×）",
           "support": 9.18,
-          "resistance": 9.62
+          "resistance": 9.62,
+          "hits6": 1,
+          "res6": {
+            "vol": false,
+            "vwap": false,
+            "fib": true,
+            "pa": false,
+            "macd": false,
+            "boll": false
+          }
         },
         "levels": {
           "entry_lo": 8.65,
@@ -18365,7 +19988,16 @@
           "vol10": 8584300.0,
           "vol_compare": "5日均量高于10日均量（1.10×）",
           "support": 0.43,
-          "resistance": 0.46
+          "resistance": 0.46,
+          "hits6": 1,
+          "res6": {
+            "vol": false,
+            "vwap": false,
+            "fib": true,
+            "pa": false,
+            "macd": false,
+            "boll": false
+          }
         },
         "levels": {
           "entry_lo": 0.4,
@@ -18757,7 +20389,16 @@
           "vol10": 576315.0,
           "vol_compare": "5日均量高于10日均量（1.12×）",
           "support": 8.55,
-          "resistance": 9.28
+          "resistance": 9.28,
+          "hits6": 1,
+          "res6": {
+            "vol": false,
+            "vwap": false,
+            "fib": true,
+            "pa": false,
+            "macd": false,
+            "boll": false
+          }
         },
         "levels": {
           "entry_lo": 7.86,
@@ -19146,6 +20787,348 @@
   "alerts": {
     "items": [
       {
+        "type": "六指标共振",
+        "lvl": "green",
+        "kind": "buy",
+        "name": "中国平安",
+        "code": "sh601318",
+        "price": 58.0,
+        "trig": 5,
+        "msg": "六指标共振 5/6（高置信，≥4）：命中 量能/成本锚/空间/价行为/MACD。共振≠买点，仍须满足纪律B空间/赔率与大盘环境",
+        "entry_lo": 55.1,
+        "entry_hi": 57.42,
+        "stop_hard": 55.04,
+        "stop_dyn": 55.04,
+        "target1": 63.8,
+        "target2": 70.18,
+        "pos_max": "建议上限 400 股 / ¥22,968（单笔风险 1%）",
+        "pos_note": "按本金 ¥100,000 / 单笔风险 1% 测算",
+        "pos_ratio": "等待买区，暂不建仓",
+        "basis": [
+          "MACD金叉·红柱（多头）",
+          "站上MA60",
+          "KDJ金叉",
+          "放量"
+        ],
+        "is_new": true,
+        "days": 1
+      },
+      {
+        "type": "六指标共振",
+        "lvl": "green",
+        "kind": "buy",
+        "name": "赛轮轮胎",
+        "code": "sh601058",
+        "price": 15.45,
+        "trig": 4,
+        "msg": "六指标共振 4/6（高置信，≥4）：命中 成本锚/空间/价行为/MACD。共振≠买点，仍须满足纪律B空间/赔率与大盘环境",
+        "entry_lo": 14.68,
+        "entry_hi": 15.3,
+        "stop_hard": 14.33,
+        "stop_dyn": 14.33,
+        "target1": 17.0,
+        "target2": 18.7,
+        "pos_max": "建议上限 1000 股 / ¥15,300（单笔风险 1%）",
+        "pos_note": "按本金 ¥100,000 / 单笔风险 1% 测算",
+        "pos_ratio": "等待买区，暂不建仓",
+        "basis": [
+          "MACD金叉·红柱（多头）",
+          "站上MA60",
+          "KDJ金叉",
+          "缩量"
+        ],
+        "is_new": true,
+        "days": 1
+      },
+      {
+        "type": "六指标共振",
+        "lvl": "green",
+        "kind": "buy",
+        "name": "万华化学",
+        "code": "sh600309",
+        "price": 77.38,
+        "trig": 4,
+        "msg": "六指标共振 4/6（高置信，≥4）：命中 成本锚/空间/价行为/MACD。共振≠买点，仍须满足纪律B空间/赔率与大盘环境",
+        "entry_lo": 73.51,
+        "entry_hi": 76.61,
+        "stop_hard": 74.31,
+        "stop_dyn": 74.31,
+        "target1": 85.12,
+        "target2": 93.63,
+        "pos_max": "建议上限 400 股 / ¥30,644（单笔风险 1%）",
+        "pos_note": "按本金 ¥100,000 / 单笔风险 1% 测算",
+        "pos_ratio": "等待买区，暂不建仓",
+        "basis": [
+          "MACD金叉·红柱（多头）",
+          "站上MA60",
+          "KDJ金叉"
+        ],
+        "is_new": true,
+        "days": 1
+      },
+      {
+        "type": "六指标共振",
+        "lvl": "green",
+        "kind": "buy",
+        "name": "山东黄金",
+        "code": "sh600547",
+        "price": 37.5,
+        "trig": 4,
+        "msg": "六指标共振 4/6（高置信，≥4）：命中 成本锚/空间/价行为/MACD。共振≠买点，仍须满足纪律B空间/赔率与大盘环境",
+        "entry_lo": 35.62,
+        "entry_hi": 37.12,
+        "stop_hard": 29.3,
+        "stop_dyn": 35.8,
+        "target1": 42.0,
+        "target2": 46.2,
+        "pos_max": "建议上限 100 股 / ¥3,711（单笔风险 1%）",
+        "pos_note": "按本金 ¥100,000 / 单笔风险 1% 测算",
+        "pos_ratio": "等待买区，暂不建仓",
+        "basis": [
+          "MACD金叉·红柱（多头）",
+          "站上MA60",
+          "KDJ金叉"
+        ],
+        "is_new": true,
+        "days": 1
+      },
+      {
+        "type": "六指标共振",
+        "lvl": "green",
+        "kind": "buy",
+        "name": "海尔智家",
+        "code": "sh600690",
+        "price": 21.82,
+        "trig": 4,
+        "msg": "六指标共振 4/6（高置信，≥4）：命中 量能/成本锚/空间/价行为。共振≠买点，仍须满足纪律B空间/赔率与大盘环境",
+        "entry_lo": 20.73,
+        "entry_hi": 21.6,
+        "stop_hard": 20.9,
+        "stop_dyn": 20.9,
+        "target1": 24.0,
+        "target2": 26.4,
+        "pos_max": "建议上限 1400 股 / ¥30,240（单笔风险 1%）",
+        "pos_note": "按本金 ¥100,000 / 单笔风险 1% 测算",
+        "pos_ratio": "等待买区，暂不建仓",
+        "basis": [
+          "MACD死叉·绿柱（空头）",
+          "站上MA60",
+          "KDJ金叉",
+          "放量"
+        ],
+        "is_new": true,
+        "days": 1
+      },
+      {
+        "type": "六指标共振",
+        "lvl": "green",
+        "kind": "buy",
+        "name": "中航沈飞",
+        "code": "sh600760",
+        "price": 48.02,
+        "trig": 4,
+        "msg": "六指标共振 4/6（高置信，≥4）：命中 成本锚/空间/价行为/MACD。共振≠买点，仍须满足纪律B空间/赔率与大盘环境",
+        "entry_lo": 45.62,
+        "entry_hi": 47.54,
+        "stop_hard": 45.37,
+        "stop_dyn": 45.37,
+        "target1": 52.82,
+        "target2": 58.1,
+        "pos_max": "建议上限 400 股 / ¥19,016（单笔风险 1%）",
+        "pos_note": "按本金 ¥100,000 / 单笔风险 1% 测算",
+        "pos_ratio": "等待买区，暂不建仓",
+        "basis": [
+          "MACD金叉·红柱（多头）",
+          "站上MA60",
+          "KDJ金叉"
+        ],
+        "is_new": true,
+        "days": 1
+      },
+      {
+        "type": "六指标共振",
+        "lvl": "green",
+        "kind": "buy",
+        "name": "中航西飞",
+        "code": "sz000768",
+        "price": 23.04,
+        "trig": 5,
+        "msg": "六指标共振 5/6（高置信，≥4）：命中 成本锚/空间/价行为/MACD/BOLL。共振≠买点，仍须满足纪律B空间/赔率与大盘环境",
+        "entry_lo": 21.89,
+        "entry_hi": 22.81,
+        "stop_hard": 21.38,
+        "stop_dyn": 21.38,
+        "target1": 25.34,
+        "target2": 27.87,
+        "pos_max": "建议上限 600 股 / ¥13,686（单笔风险 1%）",
+        "pos_note": "按本金 ¥100,000 / 单笔风险 1% 测算",
+        "pos_ratio": "等待买区，暂不建仓",
+        "basis": [
+          "MACD金叉·红柱（多头）",
+          "站上MA60",
+          "KDJ金叉"
+        ],
+        "is_new": true,
+        "days": 1
+      },
+      {
+        "type": "六指标共振",
+        "lvl": "green",
+        "kind": "buy",
+        "name": "杭州银行",
+        "code": "sh600926",
+        "price": 17.13,
+        "trig": 4,
+        "msg": "六指标共振 4/6（高置信，≥4）：命中 成本锚/空间/价行为/MACD。共振≠买点，仍须满足纪律B空间/赔率与大盘环境",
+        "entry_lo": 16.27,
+        "entry_hi": 16.96,
+        "stop_hard": 15.4,
+        "stop_dyn": 16.53,
+        "target1": 18.84,
+        "target2": 20.72,
+        "pos_max": "建议上限 600 股 / ¥10,176（单笔风险 1%）",
+        "pos_note": "按本金 ¥100,000 / 单笔风险 1% 测算",
+        "pos_ratio": "等待买区，暂不建仓",
+        "basis": [
+          "MACD金叉·红柱（多头）",
+          "站上MA60"
+        ],
+        "is_new": true,
+        "days": 1
+      },
+      {
+        "type": "六指标共振",
+        "lvl": "green",
+        "kind": "buy",
+        "name": "招商轮船",
+        "code": "sh601872",
+        "price": 19.3,
+        "trig": 4,
+        "msg": "六指标共振 4/6（高置信，≥4）：命中 量能/成本锚/空间/价行为。共振≠买点，仍须满足纪律B空间/赔率与大盘环境",
+        "entry_lo": 18.34,
+        "entry_hi": 19.11,
+        "stop_hard": 18.5,
+        "stop_dyn": 18.5,
+        "target1": 21.62,
+        "target2": 23.78,
+        "pos_max": "建议上限 1600 股 / ¥30,576（单笔风险 1%）",
+        "pos_note": "按本金 ¥100,000 / 单笔风险 1% 测算",
+        "pos_ratio": "等待买区，暂不建仓",
+        "basis": [
+          "MACD死叉·绿柱（空头）",
+          "站上MA60",
+          "放量"
+        ],
+        "is_new": true,
+        "days": 1
+      },
+      {
+        "type": "六指标共振",
+        "lvl": "green",
+        "kind": "buy",
+        "name": "宁波海运",
+        "code": "sh600798",
+        "price": 3.33,
+        "trig": 5,
+        "msg": "六指标共振 5/6（高置信，≥4）：命中 量能/成本锚/空间/价行为/MACD。共振≠买点，仍须满足纪律B空间/赔率与大盘环境",
+        "entry_lo": 3.16,
+        "entry_hi": 3.3,
+        "stop_hard": 3.0,
+        "stop_dyn": 3.0,
+        "target1": 3.66,
+        "target2": 4.03,
+        "pos_max": "建议上限 3300 股 / ¥10,890（单笔风险 1%）",
+        "pos_note": "按本金 ¥100,000 / 单笔风险 1% 测算",
+        "pos_ratio": "等待买区，暂不建仓",
+        "basis": [
+          "MACD金叉·红柱（多头）",
+          "站上MA60",
+          "KDJ金叉",
+          "放量"
+        ],
+        "is_new": true,
+        "days": 1
+      },
+      {
+        "type": "六指标共振",
+        "lvl": "green",
+        "kind": "buy",
+        "name": "中国太保",
+        "code": "sh601601",
+        "price": 34.04,
+        "trig": 6,
+        "msg": "六指标共振 6/6（高置信，≥4）：命中 量能/成本锚/空间/价行为/MACD/BOLL。共振≠买点，仍须满足纪律B空间/赔率与大盘环境",
+        "entry_lo": 32.34,
+        "entry_hi": 33.7,
+        "stop_hard": 27.0,
+        "stop_dyn": 31.66,
+        "target1": 44.0,
+        "target2": 48.4,
+        "pos_max": "建议上限 100 股 / ¥3,370（单笔风险 1%）",
+        "pos_note": "按本金 ¥100,000 / 单笔风险 1% 测算",
+        "pos_ratio": "等待买区，暂不建仓",
+        "basis": [
+          "MACD金叉·红柱（多头）",
+          "站上MA60",
+          "KDJ金叉",
+          "放量"
+        ],
+        "is_new": true,
+        "days": 1
+      },
+      {
+        "type": "六指标共振",
+        "lvl": "green",
+        "kind": "buy",
+        "name": "华钰矿业",
+        "code": "sh601020",
+        "price": 23.38,
+        "trig": 4,
+        "msg": "六指标共振 4/6（高置信，≥4）：命中 成本锚/空间/价行为/MACD。共振≠买点，仍须满足纪律B空间/赔率与大盘环境",
+        "entry_lo": 22.21,
+        "entry_hi": 23.15,
+        "stop_hard": 22.4,
+        "stop_dyn": 22.4,
+        "target1": 26.19,
+        "target2": 28.81,
+        "pos_max": "建议上限 1300 股 / ¥30,094（单笔风险 1%）",
+        "pos_note": "按本金 ¥100,000 / 单笔风险 1% 测算",
+        "pos_ratio": "等待买区，暂不建仓",
+        "basis": [
+          "MACD金叉·红柱（多头）",
+          "站上MA60"
+        ],
+        "is_new": true,
+        "days": 1
+      },
+      {
+        "type": "六指标共振",
+        "lvl": "green",
+        "kind": "buy",
+        "name": "大元泵业",
+        "code": "sh603757",
+        "price": 79.44,
+        "trig": 5,
+        "msg": "六指标共振 5/6（高置信，≥4）：命中 成本锚/空间/价行为/MACD/BOLL。共振≠买点，仍须满足纪律B空间/赔率与大盘环境",
+        "entry_lo": 75.47,
+        "entry_hi": 78.65,
+        "stop_hard": 49.65,
+        "stop_dyn": 69.11,
+        "target1": 88.97,
+        "target2": 97.87,
+        "pos_max": "风险空间过小，不建议建仓",
+        "pos_note": "按本金 ¥100,000 / 单笔风险 1% 测算",
+        "pos_ratio": "等待买区，暂不建仓",
+        "basis": [
+          "MACD金叉·红柱（多头）",
+          "长均线多头",
+          "站上MA60",
+          "KDJ-J超买104"
+        ],
+        "is_new": true,
+        "days": 1
+      },
+      {
         "type": "累计浮亏",
         "lvl": "red",
         "kind": "hold",
@@ -19173,8 +21156,8 @@
       }
     ],
     "level": "red",
-    "count": 1,
-    "new_count": 0,
+    "count": 14,
+    "new_count": 13,
     "push": {
       "channel": "wecom",
       "ready": true,
@@ -19297,7 +21280,7 @@
     ]
   },
   "stats": {
-    "total": 18,
+    "total": 20,
     "mid_verified": 13,
     "mid_hit": 4,
     "mid_hit_rate": 30.8,
@@ -19310,7 +21293,7 @@
     "by_automation": [
       {
         "name": "主板三层过滤",
-        "total": 19,
+        "total": 20,
         "buy": 10,
         "t3": 0.84,
         "t5": 1.34,
@@ -19334,8 +21317,8 @@
       },
       {
         "name": "投资大师圆桌(基本面)·合并风控",
-        "total": 11,
-        "buy": 5,
+        "total": 13,
+        "buy": 7,
         "t3": 1.98,
         "t5": 7.01,
         "t7": 4.82,
@@ -19819,6 +21802,1251 @@
     ],
     "records": [
       {
+        "name": "格力电器",
+        "code": "sz000651",
+        "quote_code": "sz000651",
+        "pick_date": "2026-09-04",
+        "signal": "BUY",
+        "automation": "投资大师圆桌(基本面)·合并风控",
+        "ref_close": 38.74,
+        "current_signal": "BUY",
+        "conflict": false,
+        "conflict_dates": [],
+        "select_count": 1,
+        "history": [
+          {
+            "date": "2026-09-04",
+            "signal": "BUY",
+            "ref_close": 38.74,
+            "automation_name": "投资大师圆桌(基本面)·合并风控",
+            "automation_id": "automation-1783962452787",
+            "lesson": null,
+            "reviewed": false,
+            "outcome_pct": null
+          }
+        ],
+        "td_pct": 0.68,
+        "detail": {
+          "name": "格力电器",
+          "quote": {
+            "open": 38.48,
+            "high": 39.09,
+            "low": 38.39,
+            "close": 38.74,
+            "prev": 38.48,
+            "chg": 0.68,
+            "vol_ratio": 0.6685173411330003
+          },
+          "tech": {
+            "ma5": 38.74,
+            "ma10": 39.89,
+            "ma20": 40.16,
+            "ma_txt": "低于 MA5/MA10，偏弱",
+            "ma60": 39.44,
+            "ma90": 39.37,
+            "ma120": 38.95,
+            "ma200": 39.27,
+            "long_ma_txt": "均线缠绕（价 38.74 位于 MA60 39.44 附近）",
+            "macd": [
+              -0.348,
+              -0.031,
+              -0.634
+            ],
+            "macd_txt": "DIF<DEA，绿柱运行，空头占优",
+            "macd_cross": "死叉·绿柱（空头）",
+            "macd_param": "(12,26,9)",
+            "macd_series": [
+              [
+                0.871,
+                0.737,
+                0.27
+              ],
+              [
+                0.775,
+                0.744,
+                0.061
+              ],
+              [
+                0.671,
+                0.73,
+                -0.118
+              ],
+              [
+                0.579,
+                0.7,
+                -0.24
+              ],
+              [
+                0.49,
+                0.658,
+                -0.336
+              ],
+              [
+                0.459,
+                0.618,
+                -0.318
+              ],
+              [
+                0.42,
+                0.578,
+                -0.317
+              ],
+              [
+                0.359,
+                0.534,
+                -0.351
+              ],
+              [
+                0.308,
+                0.489,
+                -0.362
+              ],
+              [
+                0.238,
+                0.439,
+                -0.402
+              ],
+              [
+                0.179,
+                0.387,
+                -0.415
+              ],
+              [
+                0.145,
+                0.339,
+                -0.387
+              ],
+              [
+                0.217,
+                0.314,
+                -0.195
+              ],
+              [
+                0.279,
+                0.307,
+                -0.057
+              ],
+              [
+                0.31,
+                0.308,
+                0.004
+              ],
+              [
+                0.347,
+                0.316,
+                0.063
+              ],
+              [
+                0.386,
+                0.33,
+                0.113
+              ],
+              [
+                0.409,
+                0.346,
+                0.127
+              ],
+              [
+                0.238,
+                0.324,
+                -0.172
+              ],
+              [
+                0.08,
+                0.275,
+                -0.391
+              ],
+              [
+                -0.049,
+                0.21,
+                -0.519
+              ],
+              [
+                -0.181,
+                0.132,
+                -0.627
+              ],
+              [
+                -0.289,
+                0.048,
+                -0.673
+              ],
+              [
+                -0.348,
+                -0.031,
+                -0.634
+              ]
+            ],
+            "kdj": [
+              17.6,
+              30.2,
+              -7.4
+            ],
+            "kdj_txt": "J值-7超卖区，或有技术反弹",
+            "boll": [
+              42.24,
+              40.16,
+              38.09
+            ],
+            "boll_txt": "运行于布林带内（38.09–42.24，中轨 40.16），中性",
+            "boll_series": [
+              [
+                42.61,
+                40.13,
+                37.65,
+                40.96
+              ],
+              [
+                42.59,
+                40.23,
+                37.88,
+                40.52
+              ],
+              [
+                42.54,
+                40.32,
+                38.1,
+                40.27
+              ],
+              [
+                42.43,
+                40.42,
+                38.42,
+                40.25
+              ],
+              [
+                42.26,
+                40.51,
+                38.76,
+                40.1
+              ],
+              [
+                42.15,
+                40.61,
+                39.07,
+                40.67
+              ],
+              [
+                42.08,
+                40.68,
+                39.28,
+                40.54
+              ],
+              [
+                42.06,
+                40.7,
+                39.34,
+                40.23
+              ],
+              [
+                42.04,
+                40.72,
+                39.4,
+                40.24
+              ],
+              [
+                42.04,
+                40.72,
+                39.39,
+                39.9
+              ],
+              [
+                42.05,
+                40.68,
+                39.31,
+                39.89
+              ],
+              [
+                42.05,
+                40.66,
+                39.26,
+                40.06
+              ],
+              [
+                42.11,
+                40.68,
+                39.25,
+                41.32
+              ],
+              [
+                42.18,
+                40.72,
+                39.26,
+                41.42
+              ],
+              [
+                42.23,
+                40.76,
+                39.29,
+                41.24
+              ],
+              [
+                42.3,
+                40.81,
+                39.32,
+                41.45
+              ],
+              [
+                42.39,
+                40.86,
+                39.32,
+                41.62
+              ],
+              [
+                42.38,
+                40.85,
+                39.33,
+                41.58
+              ],
+              [
+                42.17,
+                40.69,
+                39.21,
+                39.27
+              ],
+              [
+                41.99,
+                40.53,
+                39.06,
+                39.0
+              ],
+              [
+                42.03,
+                40.43,
+                38.82,
+                38.95
+              ],
+              [
+                42.12,
+                40.33,
+                38.53,
+                38.55
+              ],
+              [
+                42.21,
+                40.24,
+                38.27,
+                38.48
+              ],
+              [
+                42.24,
+                40.16,
+                38.09,
+                38.74
+              ]
+            ],
+            "atr_pct": 2.08,
+            "vol_txt": "缩量 0.7×均量",
+            "vol5": 389393.0,
+            "vol10": 474098.0,
+            "vol_compare": "5日均量低于10日均量（0.82×）",
+            "support": 40.16,
+            "resistance": 41.98,
+            "hits6": 1,
+            "res6": {
+              "vol": false,
+              "vwap": false,
+              "fib": true,
+              "pa": false,
+              "macd": false,
+              "boll": false
+            }
+          },
+          "levels": {
+            "entry_lo": 36.8,
+            "entry_hi": 38.35,
+            "stop": 36.03,
+            "stop_basis": "ATR14波动率 2.08% 定宽",
+            "stop_dyn": null,
+            "target": 42.61,
+            "target2": 46.87,
+            "target_basis": "波动率目标（纪律B 底线 ≥6% → 上限 +8%），目标隐含 +10.0%"
+          },
+          "space": {
+            "up_pct": 10.0,
+            "down_pct": -7.0
+          },
+          "action": {
+            "advice": "未到买区：等待回踩 ¥36.80–38.35 或放量突破，不追高",
+            "position": "建议单票仓位 ≤5%%（10万本金约 ¥5,000），分批介入",
+            "is_holding": false
+          },
+          "fundamental": {
+            "verdict": "暂无研报覆盖",
+            "target": 50.64,
+            "auth_count": 30,
+            "summary": "暂无研报覆盖，暂无详细摘要"
+          },
+          "news": {
+            "available": false,
+            "items": [],
+            "note": "暂无自动抓取源；可在选股自动任务中接入新闻/公告 API"
+          }
+        },
+        "days": 0,
+        "period_returns": {
+          "T1": null,
+          "T3": null,
+          "T5": null,
+          "T7": null,
+          "T10": null,
+          "T15": null,
+          "T22": null,
+          "max_gain": 0.0,
+          "min_ret": 0.0,
+          "max_drawdown": 0.0,
+          "t1_reached": false,
+          "stop_hit": false,
+          "win_days": 0,
+          "span_calendar": 0,
+          "exit_type": null,
+          "exit_day": null,
+          "exit_pct": null,
+          "peak_pct": 0.0,
+          "be_armed": false
+        },
+        "mid_target_hit": false,
+        "mid_partial": true,
+        "exit_type": null,
+        "exit_day": null,
+        "exit_pct": null,
+        "tgt_pct": null,
+        "reviewed": false,
+        "status": "running",
+        "now_price": 38.74,
+        "outcome_pct": 0.0
+      },
+      {
+        "name": "中国平安",
+        "code": "sh601318",
+        "quote_code": "sh601318",
+        "pick_date": "2026-09-04",
+        "signal": "BUY",
+        "automation": "投资大师圆桌(基本面)·合并风控",
+        "ref_close": 58.0,
+        "current_signal": "BUY",
+        "conflict": false,
+        "conflict_dates": [],
+        "select_count": 1,
+        "history": [
+          {
+            "date": "2026-09-04",
+            "signal": "BUY",
+            "ref_close": 58.0,
+            "automation_name": "投资大师圆桌(基本面)·合并风控",
+            "automation_id": "automation-1783962452787",
+            "lesson": null,
+            "reviewed": false,
+            "outcome_pct": null
+          }
+        ],
+        "td_pct": 2.42,
+        "detail": {
+          "name": "中国平安",
+          "quote": {
+            "open": 56.6,
+            "high": 58.58,
+            "low": 56.5,
+            "close": 58.0,
+            "prev": 56.63,
+            "chg": 2.42,
+            "vol_ratio": 1.6122674223564626
+          },
+          "tech": {
+            "ma5": 56.71,
+            "ma10": 55.88,
+            "ma20": 54.13,
+            "ma_txt": "站上 MA5/MA10，多头姿态",
+            "ma60": 52.46,
+            "ma90": 53.54,
+            "ma120": 54.79,
+            "ma200": 58.77,
+            "long_ma_txt": "均线缠绕（价 58.00 位于 MA60 52.46 附近）",
+            "macd": [
+              1.157,
+              0.755,
+              0.803
+            ],
+            "macd_txt": "DIF>DEA，红柱运行，多头动能",
+            "macd_cross": "金叉·红柱（多头）",
+            "macd_param": "(12,26,9)",
+            "macd_series": [
+              [
+                1.09,
+                0.634,
+                0.91
+              ],
+              [
+                1.013,
+                0.71,
+                0.605
+              ],
+              [
+                0.948,
+                0.758,
+                0.38
+              ],
+              [
+                0.845,
+                0.775,
+                0.14
+              ],
+              [
+                0.745,
+                0.769,
+                -0.048
+              ],
+              [
+                0.653,
+                0.746,
+                -0.185
+              ],
+              [
+                0.513,
+                0.699,
+                -0.373
+              ],
+              [
+                0.401,
+                0.64,
+                -0.478
+              ],
+              [
+                0.325,
+                0.577,
+                -0.504
+              ],
+              [
+                0.177,
+                0.497,
+                -0.639
+              ],
+              [
+                0.064,
+                0.41,
+                -0.693
+              ],
+              [
+                -0.064,
+                0.315,
+                -0.759
+              ],
+              [
+                -0.103,
+                0.232,
+                -0.669
+              ],
+              [
+                -0.127,
+                0.16,
+                -0.575
+              ],
+              [
+                -0.049,
+                0.118,
+                -0.334
+              ],
+              [
+                0.139,
+                0.122,
+                0.033
+              ],
+              [
+                0.291,
+                0.156,
+                0.271
+              ],
+              [
+                0.497,
+                0.224,
+                0.545
+              ],
+              [
+                0.632,
+                0.306,
+                0.652
+              ],
+              [
+                0.728,
+                0.39,
+                0.676
+              ],
+              [
+                0.793,
+                0.471,
+                0.645
+              ],
+              [
+                0.948,
+                0.566,
+                0.763
+              ],
+              [
+                1.01,
+                0.655,
+                0.71
+              ],
+              [
+                1.157,
+                0.755,
+                0.803
+              ]
+            ],
+            "kdj": [
+              87.8,
+              85.0,
+              93.4
+            ],
+            "kdj_txt": "K>D金叉状态，短线偏多",
+            "boll": [
+              58.14,
+              54.13,
+              50.11
+            ],
+            "boll_txt": "运行于布林带内（50.11–58.14，中轨 54.13），中性",
+            "boll_series": [
+              [
+                56.85,
+                52.29,
+                47.73,
+                55.55
+              ],
+              [
+                56.91,
+                52.52,
+                48.13,
+                53.93
+              ],
+              [
+                56.96,
+                52.75,
+                48.53,
+                54.02
+              ],
+              [
+                56.9,
+                52.95,
+                49.0,
+                53.5
+              ],
+              [
+                56.76,
+                53.14,
+                49.53,
+                53.38
+              ],
+              [
+                56.54,
+                53.33,
+                50.12,
+                53.32
+              ],
+              [
+                56.23,
+                53.48,
+                50.73,
+                52.55
+              ],
+              [
+                56.1,
+                53.56,
+                51.03,
+                52.6
+              ],
+              [
+                55.86,
+                53.67,
+                51.47,
+                52.8
+              ],
+              [
+                55.67,
+                53.72,
+                51.77,
+                51.75
+              ],
+              [
+                55.76,
+                53.65,
+                51.54,
+                51.8
+              ],
+              [
+                55.89,
+                53.57,
+                51.25,
+                51.32
+              ],
+              [
+                55.88,
+                53.48,
+                51.07,
+                52.08
+              ],
+              [
+                55.81,
+                53.37,
+                50.93,
+                52.14
+              ],
+              [
+                55.76,
+                53.34,
+                50.91,
+                53.35
+              ],
+              [
+                55.93,
+                53.41,
+                50.89,
+                54.92
+              ],
+              [
+                56.04,
+                53.45,
+                50.86,
+                55.01
+              ],
+              [
+                56.37,
+                53.54,
+                50.72,
+                56.13
+              ],
+              [
+                56.38,
+                53.55,
+                50.71,
+                55.87
+              ],
+              [
+                56.55,
+                53.59,
+                50.64,
+                55.85
+              ],
+              [
+                56.6,
+                53.61,
+                50.61,
+                55.82
+              ],
+              [
+                57.16,
+                53.77,
+                50.39,
+                57.23
+              ],
+              [
+                57.51,
+                53.9,
+                50.3,
+                56.63
+              ],
+              [
+                58.14,
+                54.13,
+                50.11,
+                58.0
+              ]
+            ],
+            "atr_pct": 1.89,
+            "vol_txt": "放量 1.6×均量",
+            "vol5": 762391.0,
+            "vol10": 867485.0,
+            "vol_compare": "5日均量低于10日均量（0.88×）",
+            "support": 54.13,
+            "resistance": 58.58,
+            "hits6": 5,
+            "res6": {
+              "vol": true,
+              "vwap": true,
+              "fib": true,
+              "pa": true,
+              "macd": true,
+              "boll": false
+            }
+          },
+          "levels": {
+            "entry_lo": 55.1,
+            "entry_hi": 57.42,
+            "stop": 55.04,
+            "stop_basis": "ATR14波动率 1.89% 定宽；站上 MA10(55.88)，止损抬至其下方贴合趋势",
+            "stop_dyn": 55.04,
+            "target": 63.8,
+            "target2": 70.18,
+            "target_basis": "波动率目标（纪律B 底线 ≥6% → 上限 +8%），目标隐含 +10.0%"
+          },
+          "space": {
+            "up_pct": 10.0,
+            "down_pct": -5.1
+          },
+          "action": {
+            "advice": "未到买区：等待回踩 ¥55.10–57.42 或放量突破，不追高",
+            "position": "建议单票仓位 ≤5%%（10万本金约 ¥5,000），分批介入",
+            "is_holding": false
+          },
+          "fundamental": {
+            "verdict": "暂无研报覆盖",
+            "target": 78.57,
+            "auth_count": 40,
+            "summary": "暂无研报覆盖，暂无详细摘要"
+          },
+          "news": {
+            "available": false,
+            "items": [],
+            "note": "暂无自动抓取源；可在选股自动任务中接入新闻/公告 API"
+          }
+        },
+        "days": 0,
+        "period_returns": {
+          "T1": null,
+          "T3": null,
+          "T5": null,
+          "T7": null,
+          "T10": null,
+          "T15": null,
+          "T22": null,
+          "max_gain": 0.0,
+          "min_ret": 0.0,
+          "max_drawdown": 0.0,
+          "t1_reached": false,
+          "stop_hit": false,
+          "win_days": 0,
+          "span_calendar": 0,
+          "exit_type": null,
+          "exit_day": null,
+          "exit_pct": null,
+          "peak_pct": 0.0,
+          "be_armed": false
+        },
+        "mid_target_hit": false,
+        "mid_partial": true,
+        "exit_type": null,
+        "exit_day": null,
+        "exit_pct": null,
+        "tgt_pct": null,
+        "reviewed": false,
+        "status": "running",
+        "now_price": 58.0,
+        "outcome_pct": 0.0
+      },
+      {
+        "name": "方正科技",
+        "code": "sh600601",
+        "quote_code": "sh600601",
+        "pick_date": "2026-09-03",
+        "signal": "HOLD",
+        "automation": "主板三层过滤",
+        "ref_close": 12.62,
+        "current_signal": "HOLD",
+        "conflict": false,
+        "conflict_dates": [],
+        "select_count": 1,
+        "history": [
+          {
+            "date": "2026-09-03",
+            "signal": "HOLD",
+            "ref_close": 12.62,
+            "automation_name": "主板三层过滤",
+            "automation_id": "1783445808186",
+            "lesson": "HOLD纪律否决: 目标①赔率1:0.67 < 1:1（最近可达目标赔率不足，实际不足非四舍五入）",
+            "reviewed": false,
+            "outcome_pct": null
+          }
+        ],
+        "td_pct": 4.64,
+        "detail": {
+          "name": "方正科技",
+          "quote": {
+            "open": 12.16,
+            "high": 12.92,
+            "low": 11.97,
+            "close": 12.62,
+            "prev": 12.06,
+            "chg": 4.64,
+            "vol_ratio": 1.4191302820545617
+          },
+          "tech": {
+            "ma5": 12.41,
+            "ma10": 12.17,
+            "ma20": 12.47,
+            "ma_txt": "站上 MA5/MA10，多头姿态",
+            "ma60": 12.3,
+            "ma90": 12.39,
+            "ma120": 11.89,
+            "ma200": 11.82,
+            "long_ma_txt": "多头排列（价>MA60>MA120），中长期趋势向上",
+            "macd": [
+              0.169,
+              0.154,
+              0.029
+            ],
+            "macd_txt": "DIF>DEA，红柱运行，多头动能",
+            "macd_cross": "金叉·红柱（多头）",
+            "macd_param": "(12,26,9)",
+            "macd_series": [
+              [
+                -1.057,
+                -0.856,
+                -0.403
+              ],
+              [
+                -0.995,
+                -0.884,
+                -0.223
+              ],
+              [
+                -0.873,
+                -0.881,
+                0.017
+              ],
+              [
+                -0.683,
+                -0.842,
+                0.318
+              ],
+              [
+                -0.432,
+                -0.76,
+                0.655
+              ],
+              [
+                -0.203,
+                -0.649,
+                0.89
+              ],
+              [
+                -0.06,
+                -0.531,
+                0.941
+              ],
+              [
+                0.07,
+                -0.411,
+                0.962
+              ],
+              [
+                0.142,
+                -0.3,
+                0.883
+              ],
+              [
+                0.202,
+                -0.2,
+                0.804
+              ],
+              [
+                0.274,
+                -0.105,
+                0.757
+              ],
+              [
+                0.338,
+                -0.016,
+                0.709
+              ],
+              [
+                0.318,
+                0.051,
+                0.535
+              ],
+              [
+                0.3,
+                0.101,
+                0.4
+              ],
+              [
+                0.294,
+                0.139,
+                0.31
+              ],
+              [
+                0.213,
+                0.154,
+                0.118
+              ],
+              [
+                0.147,
+                0.153,
+                -0.011
+              ],
+              [
+                0.098,
+                0.142,
+                -0.087
+              ],
+              [
+                0.125,
+                0.138,
+                -0.027
+              ],
+              [
+                0.136,
+                0.138,
+                -0.003
+              ],
+              [
+                0.18,
+                0.146,
+                0.068
+              ],
+              [
+                0.172,
+                0.151,
+                0.04
+              ],
+              [
+                0.146,
+                0.15,
+                -0.009
+              ],
+              [
+                0.169,
+                0.154,
+                0.029
+              ]
+            ],
+            "kdj": [
+              64.5,
+              56.0,
+              81.6
+            ],
+            "kdj_txt": "K>D金叉状态，短线偏多",
+            "boll": [
+              13.44,
+              12.47,
+              11.5
+            ],
+            "boll_txt": "运行于布林带内（11.50–13.44，中轨 12.47），中性",
+            "boll_series": [
+              [
+                14.46,
+                11.1,
+                7.75,
+                9.06
+              ],
+              [
+                13.81,
+                10.86,
+                7.91,
+                9.86
+              ],
+              [
+                13.46,
+                10.73,
+                8.0,
+                10.64
+              ],
+              [
+                12.99,
+                10.62,
+                8.25,
+                11.7
+              ],
+              [
+                12.91,
+                10.6,
+                8.3,
+                12.87
+              ],
+              [
+                13.14,
+                10.66,
+                8.17,
+                13.22
+              ],
+              [
+                13.17,
+                10.66,
+                8.16,
+                12.74
+              ],
+              [
+                13.39,
+                10.72,
+                8.06,
+                12.96
+              ],
+              [
+                13.53,
+                10.77,
+                8.01,
+                12.58
+              ],
+              [
+                13.75,
+                10.88,
+                8.0,
+                12.66
+              ],
+              [
+                14.0,
+                11.04,
+                8.08,
+                12.99
+              ],
+              [
+                14.26,
+                11.17,
+                8.08,
+                13.14
+              ],
+              [
+                14.37,
+                11.26,
+                8.15,
+                12.3
+              ],
+              [
+                14.47,
+                11.35,
+                8.22,
+                12.32
+              ],
+              [
+                14.57,
+                11.46,
+                8.35,
+                12.46
+              ],
+              [
+                14.59,
+                11.52,
+                8.44,
+                11.54
+              ],
+              [
+                14.58,
+                11.6,
+                8.63,
+                11.55
+              ],
+              [
+                14.53,
+                11.7,
+                8.87,
+                11.6
+              ],
+              [
+                14.37,
+                11.89,
+                9.41,
+                12.43
+              ],
+              [
+                14.2,
+                12.05,
+                9.9,
+                12.33
+              ],
+              [
+                13.91,
+                12.23,
+                10.56,
+                12.79
+              ],
+              [
+                13.63,
+                12.35,
+                11.08,
+                12.27
+              ],
+              [
+                13.45,
+                12.43,
+                11.4,
+                12.06
+              ],
+              [
+                13.44,
+                12.47,
+                11.5,
+                12.62
+              ]
+            ],
+            "atr_pct": 5.82,
+            "vol_txt": "量能平稳 1.4×均量",
+            "vol5": 1487487.0,
+            "vol10": 1516608.0,
+            "vol_compare": "5日均量约等于10日均量（0.98×）",
+            "support": 12.47,
+            "resistance": 13.5,
+            "hits6": 4,
+            "res6": {
+              "vol": false,
+              "vwap": true,
+              "fib": true,
+              "pa": true,
+              "macd": true,
+              "boll": false
+            }
+          },
+          "levels": {
+            "entry_lo": 12.43,
+            "entry_hi": 12.62,
+            "stop": 11.99,
+            "stop_basis": "ATR14波动率 5.82% 定宽；站上 MA10(12.17)，止损抬至其下方贴合趋势",
+            "stop_dyn": 11.99,
+            "target": 14.13,
+            "target2": 15.54,
+            "target_basis": "波动率目标（纪律B 底线 ≥6% → 上限 +8%），目标隐含 +12.0%"
+          },
+          "space": {
+            "up_pct": 12.0,
+            "down_pct": -5.0
+          },
+          "action": {
+            "advice": "进入买区：分批建仓，首笔½仓位，余½待回踩确认",
+            "position": "建议单票仓位 ≤5%%（10万本金约 ¥5,000），分批介入",
+            "is_holding": false
+          },
+          "fundamental": {
+            "verdict": null,
+            "target": null,
+            "auth_count": 0,
+            "summary": "—"
+          },
+          "news": {
+            "available": false,
+            "items": [],
+            "note": "暂无自动抓取源；可在选股自动任务中接入新闻/公告 API"
+          }
+        },
+        "days": 1,
+        "period_returns": {
+          "T1": null,
+          "T3": null,
+          "T5": null,
+          "T7": null,
+          "T10": null,
+          "T15": null,
+          "T22": null,
+          "max_gain": 0.0,
+          "min_ret": 0.0,
+          "max_drawdown": 0.0,
+          "t1_reached": false,
+          "stop_hit": false,
+          "win_days": 0,
+          "span_calendar": 0,
+          "exit_type": null,
+          "exit_day": null,
+          "exit_pct": null,
+          "peak_pct": 0.0,
+          "be_armed": false
+        },
+        "mid_target_hit": false,
+        "mid_partial": true,
+        "exit_type": null,
+        "exit_day": null,
+        "exit_pct": null,
+        "tgt_pct": 6.97,
+        "reviewed": false,
+        "status": "running",
+        "now_price": 12.62,
+        "outcome_pct": 0.0
+      },
+      {
         "name": "风语筑",
         "code": "sh603466",
         "quote_code": "sh603466",
@@ -20219,7 +23447,16 @@
             "vol10": 86615.0,
             "vol_compare": "5日均量约等于10日均量（1.04×）",
             "support": 56.6,
-            "resistance": 58.52
+            "resistance": 58.52,
+            "hits6": 2,
+            "res6": {
+              "vol": false,
+              "vwap": false,
+              "fib": true,
+              "pa": true,
+              "macd": false,
+              "boll": false
+            }
           },
           "levels": {
             "entry_lo": 54.16,
@@ -20652,7 +23889,16 @@
             "vol10": 468452.0,
             "vol_compare": "5日均量高于10日均量（1.19×）",
             "support": 20.94,
-            "resistance": 22.47
+            "resistance": 22.47,
+            "hits6": 2,
+            "res6": {
+              "vol": false,
+              "vwap": false,
+              "fib": true,
+              "pa": false,
+              "macd": true,
+              "boll": false
+            }
           },
           "levels": {
             "entry_lo": 19.65,
@@ -21085,7 +24331,16 @@
             "vol10": 91784.0,
             "vol_compare": "5日均量高于10日均量（1.27×）",
             "support": 7.82,
-            "resistance": 8.41
+            "resistance": 8.41,
+            "hits6": 1,
+            "res6": {
+              "vol": false,
+              "vwap": false,
+              "fib": true,
+              "pa": false,
+              "macd": false,
+              "boll": false
+            }
           },
           "levels": {
             "entry_lo": 7.93,
@@ -21590,7 +24845,16 @@
             "vol10": 625754.0,
             "vol_compare": "5日均量高于10日均量（1.29×）",
             "support": 19.18,
-            "resistance": 20.56
+            "resistance": 20.56,
+            "hits6": 4,
+            "res6": {
+              "vol": false,
+              "vwap": true,
+              "fib": true,
+              "pa": true,
+              "macd": true,
+              "boll": false
+            }
           },
           "levels": {
             "entry_lo": 18.94,
@@ -21997,7 +25261,16 @@
             "vol10": 191639.0,
             "vol_compare": "5日均量高于10日均量（1.07×）",
             "support": 91.95,
-            "resistance": 104.11
+            "resistance": 104.11,
+            "hits6": 1,
+            "res6": {
+              "vol": false,
+              "vwap": false,
+              "fib": true,
+              "pa": false,
+              "macd": false,
+              "boll": false
+            }
           },
           "levels": {
             "entry_lo": 91.9,
@@ -22431,7 +25704,16 @@
             "vol10": 390123.0,
             "vol_compare": "5日均量高于10日均量（1.49×）",
             "support": 14.16,
-            "resistance": 15.77
+            "resistance": 15.77,
+            "hits6": 4,
+            "res6": {
+              "vol": false,
+              "vwap": true,
+              "fib": true,
+              "pa": true,
+              "macd": true,
+              "boll": false
+            }
           },
           "levels": {
             "entry_lo": 14.68,
@@ -22864,7 +26146,16 @@
             "vol10": 191011.0,
             "vol_compare": "5日均量高于10日均量（1.26×）",
             "support": 45.06,
-            "resistance": 49.52
+            "resistance": 49.52,
+            "hits6": 4,
+            "res6": {
+              "vol": false,
+              "vwap": true,
+              "fib": true,
+              "pa": true,
+              "macd": true,
+              "boll": false
+            }
           },
           "levels": {
             "entry_lo": 45.62,
@@ -23297,7 +26588,16 @@
             "vol10": 72220.0,
             "vol_compare": "5日均量低于10日均量（0.88×）",
             "support": 363.65,
-            "resistance": 402.88
+            "resistance": 402.88,
+            "hits6": 1,
+            "res6": {
+              "vol": false,
+              "vwap": false,
+              "fib": true,
+              "pa": false,
+              "macd": false,
+              "boll": false
+            }
           },
           "levels": {
             "entry_lo": 324.46,
@@ -23730,7 +27030,16 @@
             "vol10": 66484.0,
             "vol_compare": "5日均量高于10日均量（1.23×）",
             "support": 28.02,
-            "resistance": 29.2
+            "resistance": 29.2,
+            "hits6": 3,
+            "res6": {
+              "vol": false,
+              "vwap": false,
+              "fib": true,
+              "pa": true,
+              "macd": true,
+              "boll": false
+            }
           },
           "levels": {
             "entry_lo": 26.92,
@@ -24163,7 +27472,16 @@
             "vol10": 347590.0,
             "vol_compare": "5日均量高于10日均量（1.28×）",
             "support": 21.43,
-            "resistance": 23.66
+            "resistance": 23.66,
+            "hits6": 5,
+            "res6": {
+              "vol": false,
+              "vwap": true,
+              "fib": true,
+              "pa": true,
+              "macd": true,
+              "boll": true
+            }
           },
           "levels": {
             "entry_lo": 21.89,
@@ -24596,7 +27914,16 @@
             "vol10": 368654.0,
             "vol_compare": "5日均量高于10日均量（1.13×）",
             "support": 75.02,
-            "resistance": 79.1
+            "resistance": 79.1,
+            "hits6": 4,
+            "res6": {
+              "vol": false,
+              "vwap": true,
+              "fib": true,
+              "pa": true,
+              "macd": true,
+              "boll": false
+            }
           },
           "levels": {
             "entry_lo": 73.51,
@@ -25029,7 +28356,16 @@
             "vol10": 117856.0,
             "vol_compare": "5日均量高于10日均量（1.12×）",
             "support": 33.68,
-            "resistance": 36.36
+            "resistance": 36.36,
+            "hits6": 2,
+            "res6": {
+              "vol": false,
+              "vwap": false,
+              "fib": true,
+              "pa": false,
+              "macd": true,
+              "boll": false
+            }
           },
           "levels": {
             "entry_lo": 33.83,
@@ -25463,7 +28799,16 @@
             "vol10": 1303852.0,
             "vol_compare": "5日均量约等于10日均量（1.01×）",
             "support": 8.95,
-            "resistance": 9.64
+            "resistance": 9.64,
+            "hits6": 5,
+            "res6": {
+              "vol": true,
+              "vwap": true,
+              "fib": true,
+              "pa": true,
+              "macd": true,
+              "boll": false
+            }
           },
           "levels": {
             "entry_lo": 9.18,
@@ -25895,7 +29240,16 @@
             "vol10": 1346902.0,
             "vol_compare": "5日均量约等于10日均量（1.01×）",
             "support": 4.03,
-            "resistance": 4.47
+            "resistance": 4.47,
+            "hits6": 4,
+            "res6": {
+              "vol": false,
+              "vwap": true,
+              "fib": true,
+              "pa": true,
+              "macd": true,
+              "boll": false
+            }
           },
           "levels": {
             "entry_lo": 4.18,
@@ -26327,7 +29681,16 @@
             "vol10": 37542.0,
             "vol_compare": "5日均量低于10日均量（0.81×）",
             "support": 11.59,
-            "resistance": 11.91
+            "resistance": 11.91,
+            "hits6": 3,
+            "res6": {
+              "vol": false,
+              "vwap": false,
+              "fib": true,
+              "pa": true,
+              "macd": true,
+              "boll": false
+            }
           },
           "levels": {
             "entry_lo": 11.1,
@@ -26761,7 +30124,16 @@
             "vol10": 1296009.0,
             "vol_compare": "5日均量约等于10日均量（1.02×）",
             "support": 15.75,
-            "resistance": 17.74
+            "resistance": 17.74,
+            "hits6": 4,
+            "res6": {
+              "vol": false,
+              "vwap": true,
+              "fib": true,
+              "pa": true,
+              "macd": true,
+              "boll": false
+            }
           },
           "levels": {
             "entry_lo": 16.22,
@@ -27195,7 +30567,16 @@
             "vol10": 1139957.0,
             "vol_compare": "5日均量约等于10日均量（1.04×）",
             "support": 11.03,
-            "resistance": 11.63
+            "resistance": 11.63,
+            "hits6": 2,
+            "res6": {
+              "vol": false,
+              "vwap": false,
+              "fib": true,
+              "pa": true,
+              "macd": false,
+              "boll": false
+            }
           },
           "levels": {
             "entry_lo": 10.65,
@@ -27659,7 +31040,16 @@
             "vol10": 2497860.0,
             "vol_compare": "5日均量低于10日均量（0.85×）",
             "support": 33.82,
-            "resistance": 35.77
+            "resistance": 35.77,
+            "hits6": 1,
+            "res6": {
+              "vol": false,
+              "vwap": false,
+              "fib": true,
+              "pa": false,
+              "macd": false,
+              "boll": false
+            }
           },
           "levels": {
             "entry_lo": 31.64,
@@ -28174,7 +31564,16 @@
             "vol10": 1291598.0,
             "vol_compare": "5日均量约等于10日均量（0.97×）",
             "support": 33.7,
-            "resistance": 38.61
+            "resistance": 38.61,
+            "hits6": 4,
+            "res6": {
+              "vol": false,
+              "vwap": true,
+              "fib": true,
+              "pa": true,
+              "macd": true,
+              "boll": false
+            }
           },
           "levels": {
             "entry_lo": 35.62,
@@ -28608,7 +32007,16 @@
             "vol10": 259869.0,
             "vol_compare": "5日均量约等于10日均量（1.02×）",
             "support": 33.21,
-            "resistance": 35.0
+            "resistance": 35.0,
+            "hits6": 4,
+            "res6": {
+              "vol": false,
+              "vwap": true,
+              "fib": true,
+              "pa": true,
+              "macd": true,
+              "boll": false
+            }
           },
           "levels": {
             "entry_lo": 32.68,
@@ -29042,7 +32450,16 @@
             "vol10": 805546.0,
             "vol_compare": "5日均量高于10日均量（1.23×）",
             "support": 6.09,
-            "resistance": 6.46
+            "resistance": 6.46,
+            "hits6": 3,
+            "res6": {
+              "vol": false,
+              "vwap": false,
+              "fib": true,
+              "pa": true,
+              "macd": true,
+              "boll": false
+            }
           },
           "levels": {
             "entry_lo": 5.85,
@@ -29476,7 +32893,16 @@
             "vol10": 3424536.0,
             "vol_compare": "5日均量约等于10日均量（0.96×）",
             "support": 6.72,
-            "resistance": 7.1
+            "resistance": 7.1,
+            "hits6": 3,
+            "res6": {
+              "vol": false,
+              "vwap": false,
+              "fib": true,
+              "pa": true,
+              "macd": true,
+              "boll": false
+            }
           },
           "levels": {
             "entry_lo": 6.55,
@@ -29909,7 +33335,16 @@
             "vol10": 411050.0,
             "vol_compare": "5日均量高于10日均量（1.13×）",
             "support": 16.57,
-            "resistance": 17.46
+            "resistance": 17.46,
+            "hits6": 4,
+            "res6": {
+              "vol": false,
+              "vwap": true,
+              "fib": true,
+              "pa": true,
+              "macd": true,
+              "boll": false
+            }
           },
           "levels": {
             "entry_lo": 16.27,
@@ -30343,7 +33778,16 @@
             "vol10": 1123199.0,
             "vol_compare": "5日均量低于10日均量（0.91×）",
             "support": 18.23,
-            "resistance": 20.1
+            "resistance": 20.1,
+            "hits6": 4,
+            "res6": {
+              "vol": true,
+              "vwap": true,
+              "fib": true,
+              "pa": true,
+              "macd": false,
+              "boll": false
+            }
           },
           "levels": {
             "entry_lo": 18.34,
@@ -30796,7 +34240,16 @@
             "vol10": 740687.0,
             "vol_compare": "5日均量低于10日均量（0.79×）",
             "support": 49.92,
-            "resistance": 55.88
+            "resistance": 55.88,
+            "hits6": 1,
+            "res6": {
+              "vol": false,
+              "vwap": false,
+              "fib": true,
+              "pa": false,
+              "macd": false,
+              "boll": false
+            }
           },
           "levels": {
             "entry_lo": 43.66,
@@ -31230,7 +34683,16 @@
             "vol10": 205896.0,
             "vol_compare": "5日均量低于10日均量（0.93×）",
             "support": 3.28,
-            "resistance": 3.54
+            "resistance": 3.54,
+            "hits6": 5,
+            "res6": {
+              "vol": true,
+              "vwap": true,
+              "fib": true,
+              "pa": true,
+              "macd": true,
+              "boll": false
+            }
           },
           "levels": {
             "entry_lo": 3.16,
@@ -31664,7 +35126,16 @@
             "vol10": 673260.0,
             "vol_compare": "5日均量高于10日均量（1.09×）",
             "support": 12.79,
-            "resistance": 14.22
+            "resistance": 14.22,
+            "hits6": 1,
+            "res6": {
+              "vol": false,
+              "vwap": false,
+              "fib": true,
+              "pa": false,
+              "macd": false,
+              "boll": false
+            }
           },
           "levels": {
             "entry_lo": 12.03,
@@ -32098,7 +35569,16 @@
             "vol10": 224066.0,
             "vol_compare": "5日均量低于10日均量（0.63×）",
             "support": 26.66,
-            "resistance": 29.92
+            "resistance": 29.92,
+            "hits6": 1,
+            "res6": {
+              "vol": false,
+              "vwap": false,
+              "fib": true,
+              "pa": false,
+              "macd": false,
+              "boll": false
+            }
           },
           "levels": {
             "entry_lo": 27.82,
@@ -32572,7 +36052,16 @@
             "vol10": 687533.0,
             "vol_compare": "5日均量约等于10日均量（0.99×）",
             "support": 25.98,
-            "resistance": 26.92
+            "resistance": 26.92,
+            "hits6": 3,
+            "res6": {
+              "vol": false,
+              "vwap": false,
+              "fib": true,
+              "pa": true,
+              "macd": true,
+              "boll": false
+            }
           },
           "levels": {
             "entry_lo": 25.23,
@@ -33036,7 +36525,16 @@
             "vol10": 503353.0,
             "vol_compare": "5日均量约等于10日均量（1.03×）",
             "support": 31.24,
-            "resistance": 34.48
+            "resistance": 34.48,
+            "hits6": 6,
+            "res6": {
+              "vol": true,
+              "vwap": true,
+              "fib": true,
+              "pa": true,
+              "macd": true,
+              "boll": true
+            }
           },
           "levels": {
             "entry_lo": 32.34,
@@ -33531,7 +37029,16 @@
             "vol10": 391474.0,
             "vol_compare": "5日均量约等于10日均量（0.96×）",
             "support": 22.35,
-            "resistance": 24.66
+            "resistance": 24.66,
+            "hits6": 4,
+            "res6": {
+              "vol": false,
+              "vwap": true,
+              "fib": true,
+              "pa": true,
+              "macd": true,
+              "boll": false
+            }
           },
           "levels": {
             "entry_lo": 22.21,
@@ -34038,7 +37545,16 @@
             "vol10": 376896.0,
             "vol_compare": "5日均量低于10日均量（0.79×）",
             "support": 16.88,
-            "resistance": 19.12
+            "resistance": 19.12,
+            "hits6": 1,
+            "res6": {
+              "vol": false,
+              "vwap": false,
+              "fib": true,
+              "pa": false,
+              "macd": false,
+              "boll": false
+            }
           },
           "levels": {
             "entry_lo": 15.81,
@@ -34472,7 +37988,16 @@
             "vol10": 140357.0,
             "vol_compare": "5日均量低于10日均量（0.88×）",
             "support": 15.95,
-            "resistance": 17.71
+            "resistance": 17.71,
+            "hits6": 1,
+            "res6": {
+              "vol": false,
+              "vwap": false,
+              "fib": true,
+              "pa": false,
+              "macd": false,
+              "boll": false
+            }
           },
           "levels": {
             "entry_lo": 16.1,
@@ -34906,7 +38431,16 @@
             "vol10": 489686.0,
             "vol_compare": "5日均量高于10日均量（1.07×）",
             "support": 3.94,
-            "resistance": 4.16
+            "resistance": 4.16,
+            "hits6": 1,
+            "res6": {
+              "vol": false,
+              "vwap": false,
+              "fib": true,
+              "pa": false,
+              "macd": false,
+              "boll": false
+            }
           },
           "levels": {
             "entry_lo": 3.72,
@@ -35360,7 +38894,16 @@
             "vol10": 146701.0,
             "vol_compare": "5日均量约等于10日均量（0.96×）",
             "support": 64.7,
-            "resistance": 79.44
+            "resistance": 79.44,
+            "hits6": 5,
+            "res6": {
+              "vol": false,
+              "vwap": true,
+              "fib": true,
+              "pa": true,
+              "macd": true,
+              "boll": true
+            }
           },
           "levels": {
             "entry_lo": 75.47,
@@ -35804,7 +39347,16 @@
             "vol10": 483630.0,
             "vol_compare": "5日均量低于10日均量（0.94×）",
             "support": 41.17,
-            "resistance": 45.99
+            "resistance": 45.99,
+            "hits6": 1,
+            "res6": {
+              "vol": false,
+              "vwap": false,
+              "fib": true,
+              "pa": false,
+              "macd": false,
+              "boll": false
+            }
           },
           "levels": {
             "entry_lo": 40.93,
@@ -36258,7 +39810,16 @@
             "vol10": 7169484.0,
             "vol_compare": "5日均量低于10日均量（0.94×）",
             "support": 9.18,
-            "resistance": 9.62
+            "resistance": 9.62,
+            "hits6": 1,
+            "res6": {
+              "vol": false,
+              "vwap": false,
+              "fib": true,
+              "pa": false,
+              "macd": false,
+              "boll": false
+            }
           },
           "levels": {
             "entry_lo": 8.65,
@@ -36676,7 +40237,16 @@
             "vol10": 8584300.0,
             "vol_compare": "5日均量高于10日均量（1.10×）",
             "support": 0.43,
-            "resistance": 0.46
+            "resistance": 0.46,
+            "hits6": 1,
+            "res6": {
+              "vol": false,
+              "vwap": false,
+              "fib": true,
+              "pa": false,
+              "macd": false,
+              "boll": false
+            }
           },
           "levels": {
             "entry_lo": 0.4,
@@ -37094,7 +40664,16 @@
             "vol10": 576315.0,
             "vol_compare": "5日均量高于10日均量（1.12×）",
             "support": 8.55,
-            "resistance": 9.28
+            "resistance": 9.28,
+            "hits6": 1,
+            "res6": {
+              "vol": false,
+              "vwap": false,
+              "fib": true,
+              "pa": false,
+              "macd": false,
+              "boll": false
+            }
           },
           "levels": {
             "entry_lo": 7.86,
@@ -37548,7 +41127,16 @@
             "vol10": 334386.0,
             "vol_compare": "5日均量约等于10日均量（1.00×）",
             "support": 21.53,
-            "resistance": 22.39
+            "resistance": 22.39,
+            "hits6": 4,
+            "res6": {
+              "vol": true,
+              "vwap": true,
+              "fib": true,
+              "pa": true,
+              "macd": false,
+              "boll": false
+            }
           },
           "levels": {
             "entry_lo": 20.73,
@@ -37992,7 +41580,16 @@
             "vol10": 763750.0,
             "vol_compare": "5日均量高于10日均量（1.10×）",
             "support": 39.34,
-            "resistance": 41.36
+            "resistance": 41.36,
+            "hits6": 5,
+            "res6": {
+              "vol": false,
+              "vwap": true,
+              "fib": true,
+              "pa": true,
+              "macd": true,
+              "boll": true
+            }
           },
           "levels": {
             "entry_lo": 39.02,
@@ -38426,7 +42023,16 @@
             "vol10": 352219.0,
             "vol_compare": "5日均量高于10日均量（1.15×）",
             "support": 17.32,
-            "resistance": 18.77
+            "resistance": 18.77,
+            "hits6": 1,
+            "res6": {
+              "vol": false,
+              "vwap": false,
+              "fib": true,
+              "pa": false,
+              "macd": false,
+              "boll": false
+            }
           },
           "levels": {
             "entry_lo": 16.27,
@@ -39503,7 +43109,7 @@
     ]
   },
   "position": {
-    "generated_at": "2026-09-03 16:31:50",
+    "generated_at": "2026-09-04 00:44:56",
     "portfolio": {
       "ok": true,
       "capital": 100000.0,
@@ -39515,11 +43121,11 @@
           "code": "600276",
           "name": "恒瑞医药",
           "shares": 200.0,
-          "price": 45.57,
+          "price": 45.96,
           "stop": 43.5,
-          "risk_amt": 414.0,
-          "risk_pct": 0.41,
-          "mv_pct": 9.11,
+          "risk_amt": 492.0,
+          "risk_pct": 0.49,
+          "mv_pct": 9.19,
           "status": "holding",
           "risk_known": true
         },
@@ -39527,20 +43133,20 @@
           "code": "000100",
           "name": "TCL科技",
           "shares": 1500.0,
-          "price": 4.89,
+          "price": 4.88,
           "stop": 4.65,
-          "risk_amt": 360.0,
-          "risk_pct": 0.36,
-          "mv_pct": 7.33,
+          "risk_amt": 345.0,
+          "risk_pct": 0.34,
+          "mv_pct": 7.32,
           "status": "holding",
           "risk_known": true
         }
       ],
-      "total_market_value": 16449.0,
-      "exposure_pct": 16.45,
-      "total_risk_amt": 774.0,
-      "total_risk_pct": 0.77,
-      "worst_case_equity": 99226.0,
+      "total_market_value": 16512.0,
+      "exposure_pct": 16.51,
+      "total_risk_amt": 837.0,
+      "total_risk_pct": 0.84,
+      "worst_case_equity": 99163.0,
       "unknown_risk_count": 0,
       "warnings": [],
       "limits": {
@@ -40967,9 +44573,9 @@
   },
   "counts": {
     "holdings": 2,
-    "buy": 8,
+    "buy": 10,
     "watch": 21,
-    "other": 13,
+    "other": 14,
     "filtered_rejected": 7
   },
   "build": "v34-20260904-sixind"
