@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04 00:57:08",
+  "generated_at": "2026-09-04 01:33:24",
   "source": "WORKBUDDY 统一投资数据库 (NeoData / 腾讯自选股 / 通达信 实拉)",
   "levels_rule": "动态买卖点每日 17:15 按最新收盘价重算，且按【个股实际波动率 ATR14 + MA10 支撑 + 计划位】自适应：止损宽度=低波动 7%/中波动 10%/高波动 13%（不低于原硬止损，站上 MA10 抬至其下 1.5%）；目标=纪律B +8% 上限（高波动放宽至 +10%/+12%，且不低于自动化计划目标）。",
   "account": {
@@ -371,7 +371,10 @@
             "pa": false,
             "macd": false,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 905388.0,
+          "last_vol": 502917.0
         },
         "levels": {
           "entry_lo": null,
@@ -805,7 +808,10 @@
             "pa": false,
             "macd": false,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 4681722.0,
+          "last_vol": 2895001.0
         },
         "levels": {
           "entry_lo": null,
@@ -1255,7 +1261,10 @@
             "pa": false,
             "macd": false,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 425387.0,
+          "last_vol": 321542.0
         },
         "levels": {
           "entry_lo": 36.8,
@@ -1677,7 +1686,10 @@
             "pa": true,
             "macd": true,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 724044.0,
+          "last_vol": 1087120.0
         },
         "levels": {
           "entry_lo": 55.1,
@@ -2098,7 +2110,10 @@
             "pa": false,
             "macd": true,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 446812.0,
+          "last_vol": 323340.0
         },
         "levels": {
           "entry_lo": 19.65,
@@ -2534,7 +2549,10 @@
             "pa": true,
             "macd": true,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 332529.0,
+          "last_vol": 276044.0
         },
         "levels": {
           "entry_lo": 14.68,
@@ -2970,7 +2988,10 @@
             "pa": true,
             "macd": true,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 346342.0,
+          "last_vol": 406780.0
         },
         "levels": {
           "entry_lo": 73.51,
@@ -3405,7 +3426,10 @@
             "pa": true,
             "macd": true,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 1141150.0,
+          "last_vol": 1032919.0
         },
         "levels": {
           "entry_lo": 35.62,
@@ -3853,7 +3877,10 @@
             "pa": false,
             "macd": false,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 2603343.0,
+          "last_vol": 1695898.0
         },
         "levels": {
           "entry_lo": 31.64,
@@ -4288,7 +4315,10 @@
             "pa": false,
             "macd": false,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 905388.0,
+          "last_vol": 502917.0
         },
         "levels": {
           "entry_lo": 43.66,
@@ -4723,7 +4753,10 @@
             "pa": true,
             "macd": true,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 607218.0,
+          "last_vol": 536812.0
         },
         "levels": {
           "entry_lo": 25.23,
@@ -5171,7 +5204,10 @@
             "pa": true,
             "macd": false,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 357468.0,
+          "last_vol": 455577.0
         },
         "levels": {
           "entry_lo": 20.73,
@@ -5618,7 +5654,10 @@
             "pa": true,
             "macd": false,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 105584.0,
+          "last_vol": 72442.0
         },
         "levels": {
           "entry_lo": 54.16,
@@ -6054,7 +6093,10 @@
             "pa": true,
             "macd": true,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 180465.0,
+          "last_vol": 170522.0
         },
         "levels": {
           "entry_lo": 45.62,
@@ -6490,7 +6532,10 @@
             "pa": true,
             "macd": true,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 82420.0,
+          "last_vol": 68606.0
         },
         "levels": {
           "entry_lo": 26.92,
@@ -6926,7 +6971,10 @@
             "pa": true,
             "macd": true,
             "boll": true
-          }
+          },
+          "sky_vol": false,
+          "vol20": 292209.0,
+          "last_vol": 367964.0
         },
         "levels": {
           "entry_lo": 21.89,
@@ -7362,7 +7410,10 @@
             "pa": false,
             "macd": false,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 86612.0,
+          "last_vol": 48352.0
         },
         "levels": {
           "entry_lo": 324.46,
@@ -7789,7 +7840,10 @@
             "pa": true,
             "macd": false,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 1209551.0,
+          "last_vol": 938164.0
         },
         "levels": {
           "entry_lo": 10.65,
@@ -8245,7 +8299,10 @@
             "pa": true,
             "macd": true,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 3874486.0,
+          "last_vol": 3544468.0
         },
         "levels": {
           "entry_lo": 6.55,
@@ -8693,7 +8750,10 @@
             "pa": true,
             "macd": true,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 806292.0,
+          "last_vol": 912383.0
         },
         "levels": {
           "entry_lo": 5.85,
@@ -9141,7 +9201,10 @@
             "pa": true,
             "macd": true,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 382772.0,
+          "last_vol": 458205.0
         },
         "levels": {
           "entry_lo": 16.27,
@@ -9589,7 +9652,10 @@
             "pa": false,
             "macd": false,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 596284.0,
+          "last_vol": 470025.0
         },
         "levels": {
           "entry_lo": 12.03,
@@ -10037,7 +10103,10 @@
             "pa": true,
             "macd": false,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 1069079.0,
+          "last_vol": 1467636.0
         },
         "levels": {
           "entry_lo": 18.34,
@@ -10485,7 +10554,10 @@
             "pa": true,
             "macd": true,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 199370.0,
+          "last_vol": 285525.0
         },
         "levels": {
           "entry_lo": 3.16,
@@ -10920,7 +10992,10 @@
             "pa": true,
             "macd": true,
             "boll": true
-          }
+          },
+          "sky_vol": false,
+          "vol20": 442599.0,
+          "last_vol": 760238.0
         },
         "levels": {
           "entry_lo": 32.34,
@@ -11368,7 +11443,10 @@
             "pa": false,
             "macd": false,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 349721.0,
+          "last_vol": 145354.0
         },
         "levels": {
           "entry_lo": 27.82,
@@ -11816,7 +11894,10 @@
             "pa": true,
             "macd": true,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 359586.0,
+          "last_vol": 403012.0
         },
         "levels": {
           "entry_lo": 22.21,
@@ -12264,7 +12345,10 @@
             "pa": false,
             "macd": false,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 399004.0,
+          "last_vol": 210969.0
         },
         "levels": {
           "entry_lo": 15.81,
@@ -12712,7 +12796,10 @@
             "pa": true,
             "macd": true,
             "boll": true
-          }
+          },
+          "sky_vol": false,
+          "vol20": 128505.0,
+          "last_vol": 179255.0
         },
         "levels": {
           "entry_lo": 75.47,
@@ -13160,7 +13247,10 @@
             "pa": false,
             "macd": false,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 439556.0,
+          "last_vol": 431082.0
         },
         "levels": {
           "entry_lo": 3.72,
@@ -13608,7 +13698,10 @@
             "pa": false,
             "macd": false,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 117735.0,
+          "last_vol": 74974.0
         },
         "levels": {
           "entry_lo": 16.1,
@@ -14056,7 +14149,10 @@
             "pa": false,
             "macd": false,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 452026.0,
+          "last_vol": 418299.0
         },
         "levels": {
           "entry_lo": 40.93,
@@ -14504,7 +14600,10 @@
             "pa": false,
             "macd": false,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 334651.0,
+          "last_vol": 307387.0
         },
         "levels": {
           "entry_lo": 16.27,
@@ -14931,7 +15030,10 @@
             "pa": true,
             "macd": true,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 1977873.0,
+          "last_vol": 2045829.0
         },
         "levels": {
           "entry_lo": 12.43,
@@ -15352,7 +15454,10 @@
             "pa": true,
             "macd": true,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 639506.0,
+          "last_vol": 477349.0
         },
         "levels": {
           "entry_lo": 18.94,
@@ -15753,7 +15858,10 @@
             "pa": false,
             "macd": false,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 106551.0,
+          "last_vol": 68712.0
         },
         "levels": {
           "entry_lo": 7.93,
@@ -16180,7 +16288,10 @@
             "pa": false,
             "macd": false,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 240732.0,
+          "last_vol": 147306.0
         },
         "levels": {
           "entry_lo": 91.9,
@@ -16607,7 +16718,10 @@
             "pa": false,
             "macd": true,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 124843.0,
+          "last_vol": 99022.0
         },
         "levels": {
           "entry_lo": 33.83,
@@ -17034,7 +17148,10 @@
             "pa": true,
             "macd": true,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 1196047.0,
+          "last_vol": 2089894.0
         },
         "levels": {
           "entry_lo": 9.18,
@@ -17461,7 +17578,10 @@
             "pa": true,
             "macd": true,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 29074.0,
+          "last_vol": 19135.0
         },
         "levels": {
           "entry_lo": 11.1,
@@ -17888,7 +18008,10 @@
             "pa": true,
             "macd": true,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 1115617.0,
+          "last_vol": 1558420.0
         },
         "levels": {
           "entry_lo": 4.18,
@@ -18315,7 +18438,10 @@
             "pa": true,
             "macd": true,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 989449.0,
+          "last_vol": 1231605.0
         },
         "levels": {
           "entry_lo": 16.22,
@@ -18742,7 +18868,10 @@
             "pa": true,
             "macd": true,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 270853.0,
+          "last_vol": 296928.0
         },
         "levels": {
           "entry_lo": 32.68,
@@ -19169,7 +19298,10 @@
             "pa": true,
             "macd": true,
             "boll": true
-          }
+          },
+          "sky_vol": false,
+          "vol20": 718543.0,
+          "last_vol": 768716.0
         },
         "levels": {
           "entry_lo": 39.02,
@@ -19596,7 +19728,10 @@
             "pa": false,
             "macd": false,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 6434217.0,
+          "last_vol": 6510650.0
         },
         "levels": {
           "entry_lo": 8.65,
@@ -19997,7 +20132,10 @@
             "pa": false,
             "macd": false,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 12017234.0,
+          "last_vol": 5769160.0
         },
         "levels": {
           "entry_lo": 0.4,
@@ -20398,7 +20536,10 @@
             "pa": false,
             "macd": false,
             "boll": false
-          }
+          },
+          "sky_vol": false,
+          "vol20": 684594.0,
+          "last_vol": 369005.0
         },
         "levels": {
           "entry_lo": 7.86,
@@ -22150,7 +22291,10 @@
               "pa": false,
               "macd": false,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 425387.0,
+            "last_vol": 321542.0
           },
           "levels": {
             "entry_lo": 36.8,
@@ -22565,7 +22709,10 @@
               "pa": true,
               "macd": true,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 724044.0,
+            "last_vol": 1087120.0
           },
           "levels": {
             "entry_lo": 55.1,
@@ -22980,7 +23127,10 @@
               "pa": true,
               "macd": true,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 1977873.0,
+            "last_vol": 2045829.0
           },
           "levels": {
             "entry_lo": 12.43,
@@ -23456,7 +23606,10 @@
               "pa": true,
               "macd": false,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 105584.0,
+            "last_vol": 72442.0
           },
           "levels": {
             "entry_lo": 54.16,
@@ -23898,7 +24051,10 @@
               "pa": false,
               "macd": true,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 446812.0,
+            "last_vol": 323340.0
           },
           "levels": {
             "entry_lo": 19.65,
@@ -24340,7 +24496,10 @@
               "pa": false,
               "macd": false,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 106551.0,
+            "last_vol": 68712.0
           },
           "levels": {
             "entry_lo": 7.93,
@@ -24854,7 +25013,10 @@
               "pa": true,
               "macd": true,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 639506.0,
+            "last_vol": 477349.0
           },
           "levels": {
             "entry_lo": 18.94,
@@ -25270,7 +25432,10 @@
               "pa": false,
               "macd": false,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 240732.0,
+            "last_vol": 147306.0
           },
           "levels": {
             "entry_lo": 91.9,
@@ -25713,7 +25878,10 @@
               "pa": true,
               "macd": true,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 332529.0,
+            "last_vol": 276044.0
           },
           "levels": {
             "entry_lo": 14.68,
@@ -26155,7 +26323,10 @@
               "pa": true,
               "macd": true,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 180465.0,
+            "last_vol": 170522.0
           },
           "levels": {
             "entry_lo": 45.62,
@@ -26597,7 +26768,10 @@
               "pa": false,
               "macd": false,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 86612.0,
+            "last_vol": 48352.0
           },
           "levels": {
             "entry_lo": 324.46,
@@ -27039,7 +27213,10 @@
               "pa": true,
               "macd": true,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 82420.0,
+            "last_vol": 68606.0
           },
           "levels": {
             "entry_lo": 26.92,
@@ -27481,7 +27658,10 @@
               "pa": true,
               "macd": true,
               "boll": true
-            }
+            },
+            "sky_vol": false,
+            "vol20": 292209.0,
+            "last_vol": 367964.0
           },
           "levels": {
             "entry_lo": 21.89,
@@ -27923,7 +28103,10 @@
               "pa": true,
               "macd": true,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 346342.0,
+            "last_vol": 406780.0
           },
           "levels": {
             "entry_lo": 73.51,
@@ -28365,7 +28548,10 @@
               "pa": false,
               "macd": true,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 124843.0,
+            "last_vol": 99022.0
           },
           "levels": {
             "entry_lo": 33.83,
@@ -28808,7 +28994,10 @@
               "pa": true,
               "macd": true,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 1196047.0,
+            "last_vol": 2089894.0
           },
           "levels": {
             "entry_lo": 9.18,
@@ -29249,7 +29438,10 @@
               "pa": true,
               "macd": true,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 1115617.0,
+            "last_vol": 1558420.0
           },
           "levels": {
             "entry_lo": 4.18,
@@ -29690,7 +29882,10 @@
               "pa": true,
               "macd": true,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 29074.0,
+            "last_vol": 19135.0
           },
           "levels": {
             "entry_lo": 11.1,
@@ -30133,7 +30328,10 @@
               "pa": true,
               "macd": true,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 989449.0,
+            "last_vol": 1231605.0
           },
           "levels": {
             "entry_lo": 16.22,
@@ -30576,7 +30774,10 @@
               "pa": true,
               "macd": false,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 1209551.0,
+            "last_vol": 938164.0
           },
           "levels": {
             "entry_lo": 10.65,
@@ -31049,7 +31250,10 @@
               "pa": false,
               "macd": false,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 2603343.0,
+            "last_vol": 1695898.0
           },
           "levels": {
             "entry_lo": 31.64,
@@ -31573,7 +31777,10 @@
               "pa": true,
               "macd": true,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 1141150.0,
+            "last_vol": 1032919.0
           },
           "levels": {
             "entry_lo": 35.62,
@@ -32016,7 +32223,10 @@
               "pa": true,
               "macd": true,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 270853.0,
+            "last_vol": 296928.0
           },
           "levels": {
             "entry_lo": 32.68,
@@ -32459,7 +32669,10 @@
               "pa": true,
               "macd": true,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 806292.0,
+            "last_vol": 912383.0
           },
           "levels": {
             "entry_lo": 5.85,
@@ -32902,7 +33115,10 @@
               "pa": true,
               "macd": true,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 3874486.0,
+            "last_vol": 3544468.0
           },
           "levels": {
             "entry_lo": 6.55,
@@ -33344,7 +33560,10 @@
               "pa": true,
               "macd": true,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 382772.0,
+            "last_vol": 458205.0
           },
           "levels": {
             "entry_lo": 16.27,
@@ -33787,7 +34006,10 @@
               "pa": true,
               "macd": false,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 1069079.0,
+            "last_vol": 1467636.0
           },
           "levels": {
             "entry_lo": 18.34,
@@ -34249,7 +34471,10 @@
               "pa": false,
               "macd": false,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 905388.0,
+            "last_vol": 502917.0
           },
           "levels": {
             "entry_lo": 43.66,
@@ -34692,7 +34917,10 @@
               "pa": true,
               "macd": true,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 199370.0,
+            "last_vol": 285525.0
           },
           "levels": {
             "entry_lo": 3.16,
@@ -35135,7 +35363,10 @@
               "pa": false,
               "macd": false,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 596284.0,
+            "last_vol": 470025.0
           },
           "levels": {
             "entry_lo": 12.03,
@@ -35578,7 +35809,10 @@
               "pa": false,
               "macd": false,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 349721.0,
+            "last_vol": 145354.0
           },
           "levels": {
             "entry_lo": 27.82,
@@ -36061,7 +36295,10 @@
               "pa": true,
               "macd": true,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 607218.0,
+            "last_vol": 536812.0
           },
           "levels": {
             "entry_lo": 25.23,
@@ -36534,7 +36771,10 @@
               "pa": true,
               "macd": true,
               "boll": true
-            }
+            },
+            "sky_vol": false,
+            "vol20": 442599.0,
+            "last_vol": 760238.0
           },
           "levels": {
             "entry_lo": 32.34,
@@ -37038,7 +37278,10 @@
               "pa": true,
               "macd": true,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 359586.0,
+            "last_vol": 403012.0
           },
           "levels": {
             "entry_lo": 22.21,
@@ -37554,7 +37797,10 @@
               "pa": false,
               "macd": false,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 399004.0,
+            "last_vol": 210969.0
           },
           "levels": {
             "entry_lo": 15.81,
@@ -37997,7 +38243,10 @@
               "pa": false,
               "macd": false,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 117735.0,
+            "last_vol": 74974.0
           },
           "levels": {
             "entry_lo": 16.1,
@@ -38440,7 +38689,10 @@
               "pa": false,
               "macd": false,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 439556.0,
+            "last_vol": 431082.0
           },
           "levels": {
             "entry_lo": 3.72,
@@ -38903,7 +39155,10 @@
               "pa": true,
               "macd": true,
               "boll": true
-            }
+            },
+            "sky_vol": false,
+            "vol20": 128505.0,
+            "last_vol": 179255.0
           },
           "levels": {
             "entry_lo": 75.47,
@@ -39356,7 +39611,10 @@
               "pa": false,
               "macd": false,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 452026.0,
+            "last_vol": 418299.0
           },
           "levels": {
             "entry_lo": 40.93,
@@ -39819,7 +40077,10 @@
               "pa": false,
               "macd": false,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 6434217.0,
+            "last_vol": 6510650.0
           },
           "levels": {
             "entry_lo": 8.65,
@@ -40246,7 +40507,10 @@
               "pa": false,
               "macd": false,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 12017234.0,
+            "last_vol": 5769160.0
           },
           "levels": {
             "entry_lo": 0.4,
@@ -40673,7 +40937,10 @@
               "pa": false,
               "macd": false,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 684594.0,
+            "last_vol": 369005.0
           },
           "levels": {
             "entry_lo": 7.86,
@@ -41136,7 +41403,10 @@
               "pa": true,
               "macd": false,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 357468.0,
+            "last_vol": 455577.0
           },
           "levels": {
             "entry_lo": 20.73,
@@ -41589,7 +41859,10 @@
               "pa": true,
               "macd": true,
               "boll": true
-            }
+            },
+            "sky_vol": false,
+            "vol20": 718543.0,
+            "last_vol": 768716.0
           },
           "levels": {
             "entry_lo": 39.02,
@@ -42032,7 +42305,10 @@
               "pa": false,
               "macd": false,
               "boll": false
-            }
+            },
+            "sky_vol": false,
+            "vol20": 334651.0,
+            "last_vol": 307387.0
           },
           "levels": {
             "entry_lo": 16.27,
