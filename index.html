@@ -3017,7 +3017,7 @@ const CACHE_KEY='wb_picks_v1';
 const DATA_URL = "https://cdn.jsdelivr.net/gh/zhangjin1987/stock-dashboard-data@main/picks.json";
 const DATA_BASE = DATA_URL.replace(/picks\.json(\?.*)?$/, '');  // 数据目录基址（含末尾 /）
 // 构建时由 build_dashboard.py 注入：当前带时间戳数据文件名（URL 永远全新，根治 webview 缓存旧数据）
-const DATA_FILE = "picks.20260918_015235.json";
+const DATA_FILE = "picks.20260918_021242.json";
 let DATA_SRC="local"; // 'cdn' = jsDelivr 动态源；'local' = CloudStudio 本地快照回退
 // 2026-08-27(续)：带时间戳数据文件请求 —— 每次部署文件名不同，URL 全新，手机 webview 无法命中旧缓存
 async function _getJSON(url){
@@ -3029,20 +3029,29 @@ async function _getJSON(url){
   return null;
 }
 function _ts(f){ const m=(f||'').match(/(\d{8})_(\d{6})/); return m?Number(m[1]+m[2]):0; }
+// 指针探测(2026-09-18)：jsDelivr 的 Cloudflare(cdn.) 与 Fastly(fastly.) 后端缓存**互相独立**，
+// 实测同一时刻 cdn. 指针停在上一构建、fastly. 已是新构建，且 purge API 返回 ok 也不清 cdn 边缘
+// （app_version.json 为稳定文件名，s-maxage=43200=12h）。只探单一后端 → cdn 脏时页面被迫用旧数据。
+// 故两个后端并行探测，取时间戳最新者。
+async function _ptr(base){
+  try{
+    const r = await fetch(base + 'app_version.json?_=' + Date.now(), {cache:'no-store'});
+    if(r.ok){ const j = await r.json(); return j.data_file || null; }
+  }catch(e){ /* 忽略 */ }
+  return null;
+}
 async function fetchData(){
   // 基准：构建时注入的 DATA_FILE（随页面部署更新，不依赖 CDN 缓存时效）
   // ——根治 app_version.json 边缘缓存滞后导致看板拉到旧数据文件（2026-09-17）
   const buildFile = (typeof DATA_FILE === 'string' && DATA_FILE && DATA_FILE.indexOf('__BUILD') < 0) ? DATA_FILE : null;
   let dataFile = buildFile;
-  try{
-    const v = await fetch(DATA_BASE + 'app_version.json?_=' + Date.now(), {cache:'no-store'});
-    if(v.ok){
-      const j = await v.json();
-      const cdnFile = j.data_file || null;
-      // 仅当 CDN 指针时间戳比构建注入的更新时才采用（避免 CDN 缓存滞后拉到旧数据）
-      if(cdnFile && _ts(cdnFile) > _ts(buildFile)) dataFile = cdnFile;
-    }
-  }catch(e){ /* 忽略 */ }
+  // 候选 = 构建注入值 ∪ cdn 指针 ∪ fastly 指针，取时间戳最新（任一源脏都不影响）
+  const bases = [DATA_BASE];
+  const alt = DATA_BASE.replace('cdn.jsdelivr.net', 'fastly.jsdelivr.net');
+  if(alt !== DATA_BASE) bases.push(alt);
+  const cands = [buildFile].concat(await Promise.all(bases.map(_ptr)));
+  const best = cands.filter(Boolean).sort((a,b)=>_ts(b)-_ts(a))[0] || null;
+  if(best) dataFile = best;
   if(dataFile){
     const d = await _getJSON(DATA_BASE + dataFile);
     if(d){ DATA_SRC='cdn'; return d; }
