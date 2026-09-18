@@ -704,6 +704,21 @@
   .rule-card .rc-row{font-size:12px;line-height:1.6;padding:7px 0;border-bottom:1px dashed var(--line)}
   .rule-card .rc-row b{color:var(--accent)}
   .rule-card .rc-x{position:absolute;right:14px;top:12px;font-size:20px;color:var(--sub);cursor:pointer;font-weight:700}
+  /* 深度分析入口（灵感收藏·一键复刻）2026-09-19 */
+  .study-btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px}
+  .study-btn{flex:1 1 140px;display:flex;align-items:center;justify-content:center;gap:5px;
+    font-size:12px;font-weight:700;color:var(--accent);background:#f1f5f9;border:1px solid var(--line);
+    border-radius:9px;padding:9px 10px;cursor:pointer;text-align:center}
+  .study-btn:active{transform:scale(.97);background:#eef2ff}
+  .study-code{display:inline-block;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;
+    font-weight:800;letter-spacing:1px;background:#fff7ed;color:#c2410c;border:1px dashed #fdba74;
+    border-radius:6px;padding:2px 8px;margin:0 3px}
+  .study-ol{margin:6px 0 0;padding-left:18px;font-size:12px;line-height:1.75;color:var(--ink)}
+  .study-ol li{margin:2px 0}
+  .study-copy{margin-top:10px;width:100%;background:var(--accent);color:#fff;border:none;
+    border-radius:9px;padding:10px 0;font-size:13px;font-weight:800;cursor:pointer}
+  .study-copy:active{transform:scale(.98)}
+  .study-tip{font-size:11px;color:var(--sub);line-height:1.6;margin-top:8px}
   /* ---- H 预警通知中心（需求56-60：价格预警/持仓异动/大盘联动/推送）---- */
   .alerts{background:var(--card);border-radius:14px;margin-top:14px;box-shadow:var(--shadow);
     border:1px solid var(--line);overflow:hidden}
@@ -1018,6 +1033,15 @@
     <span class="rc-x" onclick="closeRule()">✕</span>
     <h3>🛡️ 风控硬规则说明</h3>
     <div id="rulePopBody"></div>
+  </div>
+</div>
+
+<!-- 深度分析入口弹窗（灵感收藏：企业估值全流程分析 / 卖方级深度研究）2026-09-19 -->
+<div class="rule-pop" id="studyPop" onclick="closeStudy(event)">
+  <div class="rule-card">
+    <span class="rc-x" onclick="closeStudy()">✕</span>
+    <h3 id="studyTitle">🔬 深度分析</h3>
+    <div id="studyBody"></div>
   </div>
 </div>
 
@@ -1613,10 +1637,12 @@ function openDetail(item){
     ? `<div class="dt-sec"><div class="dt-sec-h">📝 每日点评</div><div class="dt-note dt-pre">${esc(item.daily_note)}</div></div>` : '';
   const lessonSec=item.lesson
     ? `<div class="dt-sec"><div class="dt-sec-h">📜 案例复盘</div><div class="dt-note dt-pre">${esc(item.lesson)}</div></div>` : '';
+  // 深度分析入口（灵感收藏·一键复刻）：代入当前标的代码，置于结论之后、明细之前
+  const studySec=studySecHtml(item.quote_code||item.code, item.name);
   let bodyHtml;
   if(d){
     // 2026-09-03 排版反馈：每日点评/案例复盘提到最上方（结论先行），行情/技术/基本面随后
-    bodyHtml = dailySec + lessonSec + prof + renderDetail(d);
+    bodyHtml = dailySec + lessonSec + studySec + prof + renderDetail(d);
   }else if(item.status || item.outcome_pct!=null || (item.period_returns&&item.period_returns.T22!=null)){
     // 历史战绩兜底（2026-08-26）：已离场/不在当前推荐池的记录，展示复盘摘要而非空提示
     const pr=item.period_returns||{};
@@ -1626,13 +1652,14 @@ function openDetail(item){
       return `<span class="pr-item"><span class="pr-label">${lab}</span><span class="pr-val ${cls}">${pct(v)}</span></span>`;
     }).join('');
     const stTxt={win:'✅成功',loss:'❌失败',target:'🎯止盈',running:'🕐进行中',done:'✅已复盘',stopout:'⛔止损','no-quote':'⚠无行情'}[item.status]||'—';
-    bodyHtml = prof + dailySec + lessonSec + `<div class="dt-sec"><div class="dt-sec-h">📜 历史战绩（已离场/不在当前推荐池）</div>
+    bodyHtml = dailySec + lessonSec + studySec + prof + `<div class="dt-sec"><div class="dt-sec-h">📜 历史战绩（已离场/不在当前推荐池）</div>
       <div class="dt-line">状态：<b>${stTxt}</b>${item.pick_date?(' · 选股日 '+esc(item.pick_date)):''}</div>
       <div class="period-returns">${cells}</div>
       ${item.note?`<div class="rec-note">${esc(item.note)}</div>`:''}
     </div>`;
   }else{
-    bodyHtml = (prof + dailySec + lessonSec) || '<div class="dt-empty">该标的暂无每日点评详情（可能已离场或 K 线数据不足）</div>';
+    const _hasBase=!!(prof||dailySec||lessonSec);
+    bodyHtml = dailySec + lessonSec + studySec + prof + (_hasBase?'':'<div class="dt-empty">该标的暂无每日点评详情（可能已离场或 K 线数据不足）</div>');
   }
   document.getElementById('dtBody').innerHTML = bodyHtml;
   mask.style.display='block'; sheet.style.display='block';
@@ -2239,6 +2266,68 @@ function closeRule(ev){
   if(ev && ev.target !== ev.currentTarget) return;
   const pop=document.getElementById('rulePop');
   if(pop) pop.classList.remove('open');
+}
+
+// ---- 深度分析入口（灵感收藏·一键复刻）2026-09-19 ----
+// 两个收藏模板：企业估值全流程分析(口令 91532902) / 卖方级深度研究(口令 71180709)
+// 说明：模板正文存于 WorkBuddy 云端，本地不可读；此处按两类分析的行业标准框架重建骨架，
+//       并绑定官方复刻口令，用户可用口令一键复刻原模板，或直接复制代入该股的提示词执行。
+const STUDY_TPL={
+  val:{code:'91532902',title:'企业估值全流程分析',src:'贵州茅台(600519)',
+    steps:['商业模式与护城河','财务质量拆解（ROE 杜邦分解 / 毛利率 / 经营现金流 / 应收与存货）','未来 3 年盈利预测（收入 / 毛利率 / 净利）','DCF 绝对估值（WACC / 永续增长率 / FCFF）','相对估值（PE / PB / PS / EV-EBITDA，同业对标 + 历史分位）','三情景敏感性分析（悲观 / 中性 / 乐观）','安全边际与目标价区间','风险提示'],
+    prompt:t=>`请对 ${t.name}（${t.code}）执行「企业估值全流程分析」，严格按 8 步输出：①商业模式与护城河；②财务质量拆解（ROE 杜邦分解、毛利率、经营现金流、应收与存货）；③未来 3 年盈利预测（收入/毛利率/净利）；④DCF 绝对估值（给出 WACC、永续增长率、FCFF 关键假设）；⑤相对估值（PE/PB/PS/EV-EBITDA，同业对标 + 自身历史分位）；⑥三情景敏感性分析（悲观/中性/乐观）；⑦安全边际与目标价区间；⑧风险提示。数据来源标注通达信，所有结论不构成投资建议。`},
+  sell:{code:'71180709',title:'卖方级深度研究',src:'阳光电源',
+    steps:['投资评级与核心结论（一句话投资逻辑）','行业空间、景气度与核心驱动因素','竞争格局与市占率变化','公司护城河（技术 / 客户 / 成本）','收入与毛利率拆分 + 未来 3 年盈利预测','估值方法与目标价','催化剂与时间窗口','风险因素'],
+    prompt:t=>`请对 ${t.name}（${t.code}）执行「卖方级深度研究」，按标准卖方报告结构输出：①投资评级与核心结论（一句话投资逻辑）；②行业空间、景气度与核心驱动因素；③竞争格局与市占率变化；④公司护城河（技术/客户/成本）；⑤收入与毛利率拆分、未来 3 年盈利预测；⑥估值方法与目标价；⑦催化剂与时间窗口；⑧风险因素。数据来源标注通达信，所有结论不构成投资建议。`}
+};
+function studySecHtml(code,name){
+  if(!code) return '';
+  const c=esc(code), n=esc(name||code);
+  return `<div class="dt-sec"><div class="dt-sec-h">🔬 深度分析入口</div>`
+    +`<div class="dt-line" style="font-size:12px;color:var(--sub)">一键复刻灵感收藏模板，代入当前标的</div>`
+    +`<div class="study-btns">`
+    +`<div class="study-btn" onclick="openStudy('${c}','${n}','val')">💰 企业估值全流程</div>`
+    +`<div class="study-btn" onclick="openStudy('${c}','${n}','sell')">📊 卖方级深度研究</div>`
+    +`</div></div>`;
+}
+function openStudy(code,name,kind){
+  const t=STUDY_TPL[kind]; if(!t) return;
+  STATE._study={code:code,name:name||code,kind:kind};
+  const title=document.getElementById('studyTitle'), body=document.getElementById('studyBody');
+  if(title) title.textContent='🔬 '+t.title;
+  if(body){
+    const prompt=t.prompt({code:code,name:name||code});
+    body.innerHTML=
+      `<div class="rc-row"><b>标的：</b>${esc(name||code)}（${esc(code)}）</div>`
+      +`<div class="rc-row"><b>模板来源：</b>灵感收藏 · ${esc(t.src)}　一键复刻口令 <span class="study-code">${t.code}</span></div>`
+      +`<div class="rc-row"><b>分析框架（${t.steps.length} 步）：</b><ol class="study-ol">${t.steps.map(s=>'<li>'+esc(s)+'</li>').join('')}</ol></div>`
+      +`<div class="rc-row"><b>代入提示词：</b><div class="dt-note dt-pre">${esc(prompt)}</div></div>`
+      +`<button class="study-copy" id="studyCopyBtn" onclick="copyStudy()">📋 复制提示词 + 复刻口令</button>`
+      +`<div class="study-tip">用法①：复制后粘贴到 WorkBuddy 对话，即对该股执行此分析。用法②：复制口令，用电脑/小程序打开 WorkBuddy 一键复刻原模板。数据来源标注通达信，不构成投资建议。</div>`;
+  }
+  const pop=document.getElementById('studyPop'); if(pop) pop.classList.add('open');
+}
+function copyStudy(){
+  const s=STATE._study||{}, t=STUDY_TPL[s.kind||'val']; if(!t) return;
+  const prompt=t.prompt({code:s.code,name:s.name||s.code});
+  const txt=prompt+'\n\n【一键复刻口令】'+t.code+'（复制口令，用电脑/小程序打开 WorkBuddy 即可复刻「'+t.title+'」）';
+  const btn=document.getElementById('studyCopyBtn');
+  const done=()=>{ if(btn){ btn.textContent='✅ 已复制'; setTimeout(()=>{btn.textContent='📋 复制提示词 + 复刻口令';},1800); } };
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(txt).then(done,()=>_studyFallbackCopy(txt,done));
+  } else _studyFallbackCopy(txt,done);
+}
+function _studyFallbackCopy(txt,cb){
+  const ta=document.createElement('textarea'); ta.value=txt;
+  ta.style.position='fixed'; ta.style.left='-9999px'; ta.style.top='0';
+  document.body.appendChild(ta); ta.focus(); ta.select();
+  try{ document.execCommand('copy'); if(cb) cb(); }
+  catch(e){ showErr('复制失败，请长按选中文本手动复制'); }
+  document.body.removeChild(ta);
+}
+function closeStudy(ev){
+  if(ev && ev.target!==ev.currentTarget) return;
+  const pop=document.getElementById('studyPop'); if(pop) pop.classList.remove('open');
 }
 
 // H 预警通知中心（需求56-60：价格预警/持仓异动/大盘联动/推送）
@@ -3017,7 +3106,7 @@ const CACHE_KEY='wb_picks_v1';
 const DATA_URL = "https://cdn.jsdelivr.net/gh/zhangjin1987/stock-dashboard-data@main/picks.json";
 const DATA_BASE = DATA_URL.replace(/picks\.json(\?.*)?$/, '');  // 数据目录基址（含末尾 /）
 // 构建时由 build_dashboard.py 注入：当前带时间戳数据文件名（URL 永远全新，根治 webview 缓存旧数据）
-const DATA_FILE = "picks.20260918_165303.json";
+const DATA_FILE = "picks.20260919_014749.json";
 let DATA_SRC="local"; // 'cdn' = jsDelivr 动态源；'local' = CloudStudio 本地快照回退
 // 2026-08-27(续)：带时间戳数据文件请求 —— 每次部署文件名不同，URL 全新，手机 webview 无法命中旧缓存
 async function _getJSON(url){
