@@ -1067,7 +1067,7 @@
 </div>
 
 <script>
-const PAGE_VER = 'v36-20260919-study';
+const PAGE_VER = 'v37-20260919-study-orig';
 var STATE = { data:null, quotes:{}, filter:"all", sub:{time:"all",status:"all"}, view:"main", auto:true, search:"" };
 
 // ---- 全局错误捕获：任何 JS 错误都显示在顶部错误条，便于诊断 ----
@@ -2272,13 +2272,50 @@ function closeRule(ev){
 // 两个收藏模板：企业估值全流程分析(口令 91532902) / 卖方级深度研究(口令 71180709)
 // 说明：模板正文存于 WorkBuddy 云端，本地不可读；此处按两类分析的行业标准框架重建骨架，
 //       并绑定官方复刻口令，用户可用口令一键复刻原模板，或直接复制代入该股的提示词执行。
+// 深度分析模板（2026-09-19 升级为原版正文结构：章节/方法论均取自灵感收藏原文，非自建骨架）
 const STUDY_TPL={
-  val:{code:'91532902',title:'企业估值全流程分析',src:'贵州茅台(600519)',
-    steps:['商业模式与护城河','财务质量拆解（ROE 杜邦分解 / 毛利率 / 经营现金流 / 应收与存货）','未来 3 年盈利预测（收入 / 毛利率 / 净利）','DCF 绝对估值（WACC / 永续增长率 / FCFF）','相对估值（PE / PB / PS / EV-EBITDA，同业对标 + 历史分位）','三情景敏感性分析（悲观 / 中性 / 乐观）','安全边际与目标价区间','风险提示'],
-    prompt:t=>`请对 ${t.name}（${t.code}）执行「企业估值全流程分析」，严格按 8 步输出：①商业模式与护城河；②财务质量拆解（ROE 杜邦分解、毛利率、经营现金流、应收与存货）；③未来 3 年盈利预测（收入/毛利率/净利）；④DCF 绝对估值（给出 WACC、永续增长率、FCFF 关键假设）；⑤相对估值（PE/PB/PS/EV-EBITDA，同业对标 + 自身历史分位）；⑥三情景敏感性分析（悲观/中性/乐观）；⑦安全边际与目标价区间；⑧风险提示。数据来源标注通达信，所有结论不构成投资建议。`},
-  sell:{code:'71180709',title:'卖方级深度研究',src:'阳光电源',
-    steps:['投资评级与核心结论（一句话投资逻辑）','行业空间、景气度与核心驱动因素','竞争格局与市占率变化','公司护城河（技术 / 客户 / 成本）','收入与毛利率拆分 + 未来 3 年盈利预测','估值方法与目标价','催化剂与时间窗口','风险因素'],
-    prompt:t=>`请对 ${t.name}（${t.code}）执行「卖方级深度研究」，按标准卖方报告结构输出：①投资评级与核心结论（一句话投资逻辑）；②行业空间、景气度与核心驱动因素；③竞争格局与市占率变化；④公司护城河（技术/客户/成本）；⑤收入与毛利率拆分、未来 3 年盈利预测；⑥估值方法与目标价；⑦催化剂与时间窗口；⑧风险因素。数据来源标注通达信，所有结论不构成投资建议。`}
+  val:{code:'91532902',title:'企业估值全流程分析',src:'贵州茅台(600519.SH) · Enterprise Valuation Framework v2.0',
+    sample:'https://static.workbuddy.cn/workbuddy/playbook/cases/enterprise-valuation-moutai/moutai-valuation-report.html',
+    steps:[
+      '一、财务五维体检：1.1 盈利水平 / 1.2 成长动能（含 3 年 CAGR）/ 1.3 杠杆与偿债 / 1.4 现金造血能力 / 1.5 杜邦分解（ROE = 净利率 × 资产周转率 × 权益乘数）',
+      '二、Enterprise DCF 模型 · 2.1 核心假设：5 年预测期，营收增速 / EBIT 利润率 / 税率 / WACC 按保守-基准-乐观三情景列出并写依据',
+      '二 · 2.2 WACC 计算：Ke = Rf + β × ERP；税后 Kd = Kd ×(1 - T)；按目标 D/V 加权 → WACC（每个参数须注明取值依据）',
+      '二 · 2.3 基准情景 FCFF 逐年预测：NOPAT → +折旧摊销 → -资本开支 → -营运资本变动 = FCFF',
+      '二 · 2.4 终值（Key Value Driver Formula）：CV = NOPAT(T+1) × (1 - g/ROIC) / (WACC - g)，并给出隐含 EV/EBIT 交叉校验',
+      '二 · 2.5 企业价值汇总：显性期 FCFF 现值 + 终值现值 = EV（附各自占比）',
+      '三、股权价值推导：EV ± 净现金/有息负债 ± 少数股东权益等调整项 → 每股内在价值，对比现价给出溢价/折价',
+      '四、双变量敏感性分析：WACC × 永续增长率矩阵 + 三情景估值汇总（营收增速 / WACC / 企业价值 / 每股价值 / vs 现价）',
+      '五、相对估值法校验：5.1 可比公司乘数对比 → 5.1b PE(TTM) 历史分位带 → 5.2 EV/EBIT — ROIC 价值创造矩阵',
+      '六、综合研判：6.1 核心看点 → 6.2 主要风险 → 6.3 估值价格区间（防守观察位/中性偏低估/合理/偏高）→ 6.4 仓位取向 → 6.5 持续跟踪指标 + 免责声明'
+    ],
+    keypt:[
+      'WACC 参数校准参考（原版茅台取值）：Rf 2.70%（10 年期国债）、β 0.65、ERP 6.00%、Ke 6.60%、税前 Kd 3.00%、税率 25%、目标 D/V 2% → WACC 6.51%',
+      '终值口径：稳态投资率取 g/ROIC，须回算隐含 EV/EBIT 与同业对照，防止终值占比过高（原版终值占 EV 82.4%，属常态但需披露）',
+      '敏感性警示：WACC 每变动 ±1%、永续增长率 ±0.5%，估值结果可偏离 ±20% 以上，须以矩阵呈现而非单点结论',
+      '输出纪律：每章注明数据来源与截止日期；结论用「低估/合理/偏高」客观表述，禁止给出确定性买卖指令'
+    ],
+    prompt:t=>`请对 ${t.name}（${t.code}）执行「企业估值全流程分析」，严格按原版六章结构输出：\n一、财务五维体检（1.1 盈利水平 / 1.2 成长动能含 3 年 CAGR / 1.3 杠杆与偿债 / 1.4 现金造血能力 / 1.5 杜邦分解）；\n二、Enterprise DCF 模型：2.1 核心假设（5 年预测期，营收增速/EBIT 利润率/税率/WACC 三情景并写依据）；2.2 WACC 计算（Ke=Rf+β×ERP、税后 Kd、目标 D/V，每参数注明依据）；2.3 基准情景 FCFF 逐年预测（NOPAT→+折旧摊销→-资本开支→-营运资本变动）；2.4 终值用 Key Value Driver Formula：CV=NOPAT(T+1)×(1-g/ROIC)/(WACC-g)，并回算隐含 EV/EBIT 校验；2.5 企业价值汇总（含占比）；\n三、股权价值推导：EV ±净现金/有息负债 ±少数股东权益 → 每股内在价值 vs 现价；\n四、双变量敏感性分析（WACC × 永续增长率矩阵）+ 三情景估值汇总；\n五、相对估值校验（可比公司乘数 / PE(TTM) 历史分位带 / EV-EBIT—ROIC 价值创造矩阵）；\n六、综合研判（核心看点 / 主要风险 / 估值价格区间 / 仓位取向 / 持续跟踪指标）。\n要求：全部用表格呈现，每章注明数据来源与截止日期；敏感性须以矩阵给出；结论用「低估/合理/偏高」客观表述。数据来源标注通达信，所有结论不构成投资建议。`},
+  sell:{code:'71180709',title:'卖方级深度研究',src:'阳光电源(300274) · SELL-SIDE DEEP RESEARCH',
+    sample:'https://static.workbuddy.cn/workbuddy/playbook/cases/finance-sungrow-deep-research/output.html',
+    steps:[
+      '开篇定调：最新价/市值/PE 分位/ROE 行业排名 + 一句话本质（买这家公司本质买的是什么）+ 核心判断（中期 / 短期分开给结论）',
+      '一、商业模式：怎么赚钱 —— 业务拆分表（收入 / 占比 / 同比 / 毛利率 / 角色定位）',
+      '二、长期财务：营收与归母净利润 N 年 CAGR、毛利率与净利率爬坡轨迹（判断是戴维斯双击还是单腿）',
+      '三、业绩拐点深度解析（最关键的一节）：单季拆解营收 / 归母 / 扣非与同比，逐条归因（高基数 / 需求 / 汇兑 / 价格 / 减值等）',
+      '四、竞争格局：同业营收与归母对比、体量倍数、各自定位与相互挤压关系',
+      '五、核心投资逻辑（N 条）：每条须写「逻辑 → 数据支撑 → 影响路径 → 已被定价程度（未定价/部分定价/已充分定价）」',
+      '六、预期差（核心交付）：市场已经定价了什么 vs 可能形成超额收益或超预期损失的预期差（分偏空 / 双向 / 上行期权 / 筹码结构）',
+      '七、估值：方法选择（PE/PEG/PS/分部估值各自适用性与失真点）、当前历史分位、当前估值反映了什么预期',
+      '八、风险：短期（1-2 季度）与中期（1-2 年）分开列示，每条写明传导链条',
+      '投资结论：中期判断 + 短期判断（含更稳妥的打法与关注价位区间）+ 跟踪指标（须给出失效信号：若 X 发生则下修判断）+ 免责声明'
+    ],
+    keypt:[
+      '核心交付是「预期差」章节，不是罗列利好：原版用 Forward PE(33.3x) > TTM PE(25.6x) 反推一致预期尚未下修到位，这是可复制的判据',
+      '筹码结构必须单独提示：股东户数激增（散户化）、主力净流出、融资余额、主动偏股基金持仓变动 —— 高位散户化 + 高杠杆会放大杀跌动能',
+      '拐点期慎用 PEG：TTM 增速接近 0 时 PEG 失真，改用分部估值（成熟现金牛 / 高成长 / 低毛利业务分别给乘数区间）',
+      '结论纪律：中期与短期分开给，必须给出失效信号（若 X 则下修判断），禁止只讲利好不讲下行路径'
+    ],
+    prompt:t=>`请对 ${t.name}（${t.code}）执行「卖方级深度研究」，严格按原版九章 + 投资结论输出：\n开篇定调（最新价/市值/PE 分位/ROE 行业排名 + 一句话本质 + 核心判断，中期与短期分开）；\n一、商业模式：怎么赚钱（业务拆分表：收入/占比/同比/毛利率/角色定位）；\n二、长期财务（营收与归母 N 年 CAGR、毛利率与净利率爬坡轨迹）；\n三、业绩拐点深度解析（单季营收/归母/扣非与同比，逐条归因：高基数/需求/汇兑/价格/减值等）；\n四、竞争格局（同业营收与归母对比、体量倍数、定位与挤压关系）；\n五、核心投资逻辑 N 条，每条写「逻辑 → 数据支撑 → 影响路径 → 已被定价程度」；\n六、预期差（核心交付）：市场已定价什么 vs 未充分定价什么，分偏空/双向/上行期权/筹码结构四类；\n七、估值（方法选择与失真点、历史分位、反映了什么预期；拐点期慎用 PEG，必要时用分部估值）；\n八、风险（短期 1-2 季度 / 中期 1-2 年分开）；\n投资结论：中期判断 + 短期判断（含更稳妥打法与关注价位区间）+ 跟踪指标并给出失效信号。\n要求：用表格与数据说话；预期差章节是核心，必须给出可证伪的判据（如 Forward PE 与 TTM PE 的背离）；结论须中期短期分开并写失效信号。数据来源标注通达信，所有结论不构成投资建议。`}
 };
 function studySecHtml(code,name){
   if(!code) return '';
@@ -2297,13 +2334,16 @@ function openStudy(code,name,kind){
   if(title) title.textContent='🔬 '+t.title;
   if(body){
     const prompt=t.prompt({code:code,name:name||code});
+    const kp=(t.keypt||[]).map(s=>'<li>'+esc(s)+'</li>').join('');
     body.innerHTML=
       `<div class="rc-row"><b>标的：</b>${esc(name||code)}（${esc(code)}）</div>`
       +`<div class="rc-row"><b>模板来源：</b>灵感收藏 · ${esc(t.src)}　一键复刻口令 <span class="study-code">${t.code}</span></div>`
-      +`<div class="rc-row"><b>分析框架（${t.steps.length} 步）：</b><ol class="study-ol">${t.steps.map(s=>'<li>'+esc(s)+'</li>').join('')}</ol></div>`
+      +`<div class="rc-row"><b>原版章节结构（${t.steps.length} 章）：</b><ol class="study-ol">${t.steps.map(s=>'<li>'+esc(s)+'</li>').join('')}</ol></div>`
+      +(kp?`<div class="rc-row"><b>原版方法论要点：</b><ul class="study-ol" style="list-style:disc;padding-left:18px">${kp}</ul></div>`:'')
       +`<div class="rc-row"><b>代入提示词：</b><div class="dt-note dt-pre">${esc(prompt)}</div></div>`
       +`<button class="study-copy" id="studyCopyBtn" onclick="copyStudy()">📋 复制提示词 + 复刻口令</button>`
-      +`<div class="study-tip">用法①：复制后粘贴到 WorkBuddy 对话，即对该股执行此分析。用法②：复制口令，用电脑/小程序打开 WorkBuddy 一键复刻原模板。数据来源标注通达信，不构成投资建议。</div>`;
+      +(t.sample?`<div style="margin-top:8px"><a class="study-btn" style="display:block;text-align:center;text-decoration:none" href="${t.sample}" target="_blank" rel="noopener">📖 打开原版样例报告（${esc(t.src.split(' · ')[0])}）</a></div>`:'')
+      +`<div class="study-tip">用法①：复制后粘贴到 WorkBuddy 对话，即对该股执行此分析。用法②：复制口令，用电脑/小程序打开 WorkBuddy 一键复刻原模板。章节结构与方法论取自原版正文；数据来源标注通达信，不构成投资建议。</div>`;
   }
   const pop=document.getElementById('studyPop'); if(pop) pop.classList.add('open');
 }
@@ -3106,7 +3146,7 @@ const CACHE_KEY='wb_picks_v1';
 const DATA_URL = "https://cdn.jsdelivr.net/gh/zhangjin1987/stock-dashboard-data@main/picks.json";
 const DATA_BASE = DATA_URL.replace(/picks\.json(\?.*)?$/, '');  // 数据目录基址（含末尾 /）
 // 构建时由 build_dashboard.py 注入：当前带时间戳数据文件名（URL 永远全新，根治 webview 缓存旧数据）
-const DATA_FILE = "picks.20260919_015430.json";
+const DATA_FILE = "picks.20260919_021604.json";
 let DATA_SRC="local"; // 'cdn' = jsDelivr 动态源；'local' = CloudStudio 本地快照回退
 // 2026-08-27(续)：带时间戳数据文件请求 —— 每次部署文件名不同，URL 全新，手机 webview 无法命中旧缓存
 async function _getJSON(url){
