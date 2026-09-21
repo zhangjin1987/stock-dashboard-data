@@ -1,6 +1,6 @@
 {
   "build": "v37-20260919-study-orig",
-  "data_file": "picks.20260921_014244.json",
-  "generated_at": "2026-09-21 01:43:49",
+  "data_file": "picks.20260921_165310.json",
+  "generated_at": "2026-09-21 16:53:30",
   "note": "看板部署版本标记，index.html 比对 build 不一致则自动重载；data_file 为本次带时间戳的数据文件"
 }
