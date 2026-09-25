@@ -3146,7 +3146,7 @@ const CACHE_KEY='wb_picks_v1';
 const DATA_URL = "https://cdn.jsdelivr.net/gh/zhangjin1987/stock-dashboard-data@main/picks.json";
 const DATA_BASE = DATA_URL.replace(/picks\.json(\?.*)?$/, '');  // 数据目录基址（含末尾 /）
 // 构建时由 build_dashboard.py 注入：当前带时间戳数据文件名（URL 永远全新，根治 webview 缓存旧数据）
-const DATA_FILE = "picks.20260926_003817.json";
+const DATA_FILE = "picks.20260926_004435.json";
 let DATA_SRC="local"; // 'cdn' = jsDelivr 动态源；'local' = CloudStudio 本地快照回退
 // 2026-08-27(续)：带时间戳数据文件请求 —— 每次部署文件名不同，URL 全新，手机 webview 无法命中旧缓存
 async function _getJSON(url){
