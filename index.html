@@ -1918,6 +1918,7 @@ function renderPerf(){
     ${pf.ok?`<div class="pf-note ${pf.total_risk_pct>(pf.limits?.max_total_risk_pct||6)?'warn':'ok'}">仓位预算：敞口 ${pf.exposure_pct}% ｜ 组合总风险 <b>${pf.total_risk_pct}%</b>（上限 ${pf.limits?.max_total_risk_pct||6}%）｜ 全止损最坏权益 ¥${(pf.worst_case_equity||0).toLocaleString()}${pf.unknown_risk_count?` ｜ ${pf.unknown_risk_count} 仓无止损(风险未知)`:''}</div>`:''}
     ${(pf.warnings||[]).map(w=>`<div class="pf-note warn">${w}</div>`).join('')}
     ${ml.metrics?`<div class="pf-note ${omMet.verified===false?'warn':'ok'}">中线T+${ml.config?.hold_days||22}（策略真实口径·<b>仅已了结 n=${omMet.n??om.matured_n??'—'}</b>）：达标率<b>${omRate}%</b> ｜ 期望 <b>${num(omMet.expectancy_pct,'%')}</b> ｜ 胜率 ${num(omMet.win_rate,'%')} ｜ PF ${omMet.profit_factor||'—'} ｜ 结局 达标${om.hit_target}/止损${om.stopped}/移动止盈${om.trailed??'—'}/到期${om.expired}${om.holding?` ｜ 另有 ${om.holding} 只仍在22日窗口内(未计入达标率分母)`:''}</div>`:''}
+    ${ml.metrics_buy_only?`<div class="pf-note ${ml.metrics_buy_only.verified===false?'warn':'ok'}">信号分层（口径标注）：仅BUY可执行 n=${ml.metrics_buy_only.n} 期望 <b>${num(ml.metrics_buy_only.expectancy_pct,'%')}</b> ｜ 对照 WATCH/HOLD n=${ml.metrics_watch_only?.n??'—'} 期望 ${num(ml.metrics_watch_only?.expectancy_pct,'%')} ｜ 构成 BUY${ml.signal_mix?.all?.BUY??'—'}/WATCH${ml.signal_mix?.all?.WATCH??'—'}/HOLD${ml.signal_mix?.all?.HOLD??'—'}（WATCH/HOLD 非建仓语义·仅对照）${ml.metrics_buy_only.verified===false?' ⚠n<30 不得作为调参依据':''}</div>`:''}
     ${vn?`<div class="pf-note ok">虚拟净值（等权重叠持仓）：<b>${vn.total_return_pct>0?'+':''}${vn.total_return_pct}%</b>（回撤 ${vn.max_drawdown_pct}%）vs 沪深300 ${bm==null?'数据不足':(bm>0?'+':'')+bm+'%'} → 超额 <b>${(vn.total_return_pct!=null&&bm!=null)?(vn.total_return_pct-bm).toFixed(2)+'%':'—'}</b></div>`:''}
     ${rb?`<div class="pf-note ${(rb.wfa?.median_wfe!=null&&rb.wfa.median_wfe<0.5)?'warn':'ok'}">稳健性：WFA 中位WFE <b>${rb.wfa?.median_wfe??'—'}</b>（${rb.wfa?.verdict||'—'}）｜ 钝性：目标${rb.sensitivity?.目标阈值?.judge||'—'}/止损${rb.sensitivity?.止损宽度?.judge||'—'} ｜ 衰减：${rb.decay?.expectancy_change_pct==null?'—':(rb.decay.expectancy_change_pct>0?'+':'')+rb.decay.expectancy_change_pct+'%'}</div>`:''}
     ${(rb?.decay?.alerts||[]).filter(a=>a.indexOf('无衰减')<0).map(a=>`<div class="pf-note warn">${a}</div>`).join('')}
@@ -3146,7 +3147,7 @@ const CACHE_KEY='wb_picks_v1';
 const DATA_URL = "https://cdn.jsdelivr.net/gh/zhangjin1987/stock-dashboard-data@main/picks.json";
 const DATA_BASE = DATA_URL.replace(/picks\.json(\?.*)?$/, '');  // 数据目录基址（含末尾 /）
 // 构建时由 build_dashboard.py 注入：当前带时间戳数据文件名（URL 永远全新，根治 webview 缓存旧数据）
-const DATA_FILE = "picks.20260926_010516.json";
+const DATA_FILE = "picks.20260926_021316.json";
 let DATA_SRC="local"; // 'cdn' = jsDelivr 动态源；'local' = CloudStudio 本地快照回退
 // 2026-08-27(续)：带时间戳数据文件请求 —— 每次部署文件名不同，URL 全新，手机 webview 无法命中旧缓存
 async function _getJSON(url){
