@@ -900,6 +900,7 @@
   <!-- 账户总览（需求1/2）：大字号 + 红绿色块 -->
   <div class="acct" id="acct"></div>
   <!-- 绩效体检（P0-1 期望值/盈亏比/回撤/连败 + P0-2 样本量护栏 + P0-3 仓位预算） -->
+  <div class="perf-card" id="timingCard" style="display:none"></div>
   <div class="perf-card" id="perfCard" style="display:none"></div>
   <!-- 当日盈亏分时曲线（2026-08-26：Σ(分时价-昨收)×持仓） -->
   <div class="minute-card" id="minuteBox" style="display:none"></div>
@@ -1931,11 +1932,41 @@ function renderPerf(){
       <span class="pf-arrow" id="pfArrow">▸</span>
     </div>
     <div class="pf-detail" id="pfDetail" style="display:none">${detail}</div>`;
+  // ---- 核心仓 MA60 择时信号卡（新方向 2026-09-27：D:/stockdata/timing_state.json）----
+  const tm=STATE.data?.timing;
+  const tbox=document.getElementById('timingCard');
+  if(tbox){
+    if(!tm){ tbox.style.display='none'; }
+    else{
+      tbox.style.display='';
+      const hold=tm.signal==='HOLD';
+      const cls=hold?'ok':'warn';
+      tbox.innerHTML=`
+        <div class="pf-sum" onclick="toggleTiming()">
+          <span class="pf-t">🧭 核心仓择时（沪深300·MA60）</span>
+          <span class="pf-kpi">信号 <b>${tm.signal}</b> · 明日 <b>${hold?'持有':'转货基'}</b></span>
+          <span class="pf-arrow" id="tmArrow">▸</span>
+        </div>
+        <div class="pf-detail" id="tmDetail" style="display:none">
+          <div class="pf-note ${cls}">最新（${tm.updated} 收盘）：指数 <b>${tm.close}</b> vs MA60 <b>${tm.ma60}</b> → ${tm.signal_next_day}</div>
+          <div class="pf-note ${cls}">当前模拟持仓状态：<b>${tm.position_today}</b>（t 日收盘信号 → t+1 执行，无前视）</div>
+          <div class="pf-note ok">净值对比（2023-01 起）：择时 <b>${(tm.nav_timing*100-100).toFixed(1)}%</b>（回撤 ${tm.mdd_timing*100.toFixed(1)}%）vs 买入持有 ${(tm.nav_bh*100-100).toFixed(1)}%（回撤 ${tm.mdd_bh*100.toFixed(1)}%）</div>
+          <div class="pf-note dim">年化：择时 ${(tm.ann_timing*100).toFixed(2)}% vs 持有 ${(tm.ann_bh*100).toFixed(2)}% ｜ 回测依据见 backtest/reports/新方向结论 ｜ 纪律：信号翻转次日必须执行</div>
+        </div>`;
+    }
+  }
 }
 
 // 绩效体检 折叠/展开
 function togglePerf(){
   const d=document.getElementById('pfDetail'), a=document.getElementById('pfArrow');
+  if(!d) return;
+  const open = d.style.display!=='none';
+  d.style.display = open ? 'none' : '';
+  if(a) a.textContent = open ? '▸' : '▾';
+}
+function toggleTiming(){
+  const d=document.getElementById('tmDetail'), a=document.getElementById('tmArrow');
   if(!d) return;
   const open = d.style.display!=='none';
   d.style.display = open ? 'none' : '';
@@ -3148,7 +3179,7 @@ const CACHE_KEY='wb_picks_v1';
 const DATA_URL = "https://cdn.jsdelivr.net/gh/zhangjin1987/stock-dashboard-data@main/picks.json";
 const DATA_BASE = DATA_URL.replace(/picks\.json(\?.*)?$/, '');  // 数据目录基址（含末尾 /）
 // 构建时由 build_dashboard.py 注入：当前带时间戳数据文件名（URL 永远全新，根治 webview 缓存旧数据）
-const DATA_FILE = "picks.20260927_010934.json";
+const DATA_FILE = "picks.20260927_182619.json";
 let DATA_SRC="local"; // 'cdn' = jsDelivr 动态源；'local' = CloudStudio 本地快照回退
 // 2026-08-27(续)：带时间戳数据文件请求 —— 每次部署文件名不同，URL 全新，手机 webview 无法命中旧缓存
 async function _getJSON(url){
