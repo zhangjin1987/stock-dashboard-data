@@ -1691,6 +1691,14 @@ function isA3Pick(p){
   return false;
 }
 
+/* 研究观察清单展开/收起（默认收起，避免用户从中自行挑选） */
+function toggleRawPicks(){
+  STATE.showRawPicks=!STATE.showRawPicks;
+  render();
+  const el=document.getElementById('sec-raw')||document.getElementById('sec-buy');
+  if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+}
+
 function render(){
   const app=document.getElementById('app');
   if(!STATE.data){ app.innerHTML='<div class="empty">数据加载失败</div>'; return; }
@@ -1704,31 +1712,93 @@ function render(){
       html+=`<div class="sec" id="sec-pos"><div class="sec-h"><span class="bar"></span>我的真实持仓<span class="cnt">${h.length}</span></div>`;
       h.forEach(it=>{ try{ html+=cardHTML(it,'pos'); }catch(err){ html+='<div class="empty">持仓渲染失败：'+esc(it.name)+'（'+err.message+'）</div>'; } });
       html+='</div>';
+      // 2026-09-28：持仓后紧跟「出场纪律」（止损/目标/保本/到期四类触发）
+      try{ html+=exitGuardHTML(); }catch(err){ console.warn('exitGuard 渲染失败', err); }
     }
   }
-  // 推荐（问题7：用户已停用「中线潜力股」A3，屏蔽其选出的股票）
+  // 推荐（2026-09-28 改造）
+  // 背景：A1 主板三层过滤 / A2 投资大师圆桌 / 通达信→A1桥接 的技术面选股框架
+  // 已回测证伪（8 变体全不显著、α<0）并于 2026-09-28 停用。其原始输出不再是买入依据。
+  // 历史教训：用户 4 笔买入合规率 0%，全部为「无信号自主建仓」——而自主建仓的素材正是这张清单。
+  // 故：默认**收起**为「研究观察」，需手动展开；买入决策只认上方「今日唯一买入」。
   const A3Filter = p => !isA3Pick(p);
-  const picks=(STATE.data.picks||[]).filter(A3Filter);
-  const groups=[
-    {key:'buy', label:'买入推荐', cond:p=>p.category==='buy', id:'sec-buy'},
-    {key:'watch', label:'观察池', cond:p=>p.category==='watch', id:'sec-watch'},
-    {key:'other', label:'其他信号（持有/排除）', cond:p=>p.category==='hold'||p.category==='sell'||p.category==='reject', id:''},
-  ];
-  groups.forEach(g=>{
-    if(f!=='all' && f!==g.key) return;
-    let list=picks.filter(g.cond).filter(matchSearch);
-    list=applySub(list,'pick');
-    if(list.length){
-      html+=`<div class="sec${g.id?'" id="'+g.id:''}"><div class="sec-h"><span class="bar"></span>${g.label}<span class="cnt">${list.length}</span></div>`;
-      list.forEach(it=>{ try{ html+=cardHTML(it,'pick'); }catch(err){ html+='<div class="empty">渲染失败：'+esc(it.name)+'（'+err.message+'）</div>'; } });
-      html+='</div>';
-    }
-  });
+  const picksAll=(STATE.data.picks||[]).filter(A3Filter);
+  if(STATE.showRawPicks){
+    const groups=[
+      {key:'buy', label:'买入推荐（研究观察）', cond:p=>p.category==='buy', id:'sec-buy'},
+      {key:'watch', label:'观察池（研究观察）', cond:p=>p.category==='watch', id:'sec-watch'},
+      {key:'other', label:'其他信号（持有/排除）', cond:p=>p.category==='hold'||p.category==='sell'||p.category==='reject', id:''},
+    ];
+    groups.forEach(g=>{
+      if(f!=='all' && f!==g.key) return;
+      let list=picksAll.filter(g.cond).filter(matchSearch);
+      list=applySub(list,'pick');
+      if(list.length){
+        html+=`<div class="sec${g.id?'" id="'+g.id:''}"><div class="sec-h"><span class="bar"></span>${g.label}<span class="cnt">${list.length}</span></div>`;
+        list.forEach(it=>{ try{ html+=cardHTML(it,'pick'); }catch(err){ html+='<div class="empty">渲染失败：'+esc(it.name)+'（'+err.message+'）</div>'; } });
+        html+='</div>';
+      }
+    });
+  } else if(picksAll.length){
+    html+=`<div class="sec" id="sec-raw"><div class="sec-h"><span class="bar"></span>研究观察（未经把关）<span class="cnt">${picksAll.length}</span></div>`
+        + `<div style="padding:10px 12px;font-size:12px;line-height:1.6;opacity:.8">`
+        + `已收起 ${picksAll.length} 条各选股自动化的原始输出。其技术面框架<b>已回测证伪（8 变体全不显著、α&lt;0）</b>，`
+        + `相关自动化已停用。<br><b>不构成买入依据</b>——买入只认上方「今日唯一买入」。<br>`
+        + `<button onclick="toggleRawPicks()" style="margin-top:8px;padding:5px 12px;border-radius:6px;`
+        + `border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:inherit;font-size:12px">展开查看（仅供研究）</button>`
+        + `</div></div>`;
+  }
   app.innerHTML = html || '<div class="empty">'+(searching?'未找到匹配「'+esc(STATE.search)+'」的标的':'当前筛选无标的')+'</div>';
   renderAccount();
   renderPerf();
   renderTodo();
   renderDailyPick();
+}
+
+/* ===== 出场纪律提醒（2026-09-28 新增）=====
+   数据源：daily_pick.json 的 holdings 段（最终把关·持仓收口），含四类触发条件：
+   止损 / 目标①兑现 / 保本上移 / 22 日到期。
+   为什么加：原看板只展示持仓盈亏，不展示「何时该卖」。而纪律B 的期望值正来自
+   这四条兑现路径（止损→目标①→移动止盈→到期平仓）；缺了提示，用户极易被动持有。
+   ⚠ 涨跌配色遵循 A 股习惯：盈利红、亏损绿。 */
+function exitGuardHTML(){
+  const d=(STATE.data&&STATE.data.daily_pick)||{};
+  const hs=d.holdings||[];
+  if(!hs.length) return '';
+  const fired=[];
+  let s=('<div class="sec" id="sec-exit"><div class="sec-h"><span class="bar"></span>'
+        +'出场纪律<span class="cnt">'+hs.length+'</span></div>');
+  hs.forEach(x=>{
+    const tg=x.triggers||{};
+    const pnl=Number(x.pnl_pct||0);
+    const col=pnl>=0?'#d94a4a':'#2e9e5b';          // A股：涨红跌绿
+    const anyFire=tg.stop_hit||tg.target_hit||tg.expire_hit||tg.trail_hit;
+    if(anyFire) fired.push(x.name);
+    const chips=[];
+    if(tg.stop_hit)    chips.push('<span style="color:#2e9e5b">⚠ 已触止损</span>');
+    if(tg.target_hit)  chips.push('<span style="color:#d94a4a">⚠ 已触目标①</span>');
+    if(tg.expire_hit)  chips.push('<span style="color:#d98a1a">⚠ 已到期</span>');
+    if(tg.trail_hit)   chips.push('<span style="color:#d98a1a">⚠ 移动止盈触发</span>');
+    if(!anyFire && tg.breakeven_ready) chips.push('<span style="color:#d98a1a">可上移保本</span>');
+    if(!anyFire && !chips.length) chips.push('<span style="opacity:.6">未触发</span>');
+    s+=('<div style="margin:8px 0;padding:10px 12px;border-radius:10px;'
+       +'background:rgba(255,255,255,.05);border-left:3px solid '+(anyFire?'#d98a1a':'rgba(255,255,255,.25)')+'">'
+       +'<div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px">'
+       +'<b style="font-size:14px">'+esc(x.name)+' <span style="opacity:.55;font-weight:400;font-size:12px">'+esc(x.code)+'</span></b>'
+       +'<span style="font-size:13px;font-weight:600;color:'+col+'">'+(pnl>=0?'+':'')+pnl.toFixed(2)+'%</span>'
+       +'</div>'
+       +'<div style="margin-top:4px;font-size:11px;opacity:.65">现价 '+fmt(x.px)+' · 成本 '+fmt(x.cost)+' · '+x.qty+'股</div>'
+       +'<div style="margin-top:6px;font-size:12px;line-height:1.5">'+esc(x.watch||'—')+'</div>'
+       +'<div style="margin-top:5px;font-size:11px">'+chips.join(' ｜ ')+'</div>'
+       +'</div>');
+  });
+  if(fired.length){
+    s+=('<div style="margin-top:6px;font-size:12px;color:#d98a1a">⚠ '
+       +esc(fired.join('、'))+' 已触发出场条件，请按纪律执行，不要拖延。</div>');
+  }
+  s+='<div style="margin-top:6px;font-size:11px;opacity:.55">纪律B：浮盈≥7% 止损上移保本 → 保本后回撤5% 离场 → 22 交易日到期无条件平仓。</div>';
+  s+='</div>';
+  return s;
 }
 
 /* ===== 每日唯一推荐（最终把关输出，2026-09-11）=====
@@ -1741,8 +1811,11 @@ function renderDailyPick(){
   el.style.display='';
   const st=d.stats||{};
   const dk=(d.date||'')+'|'+(d.verdict||'');
-  // 2026-09-16 用户指示：统一默认折叠（不做「PICK 默认展开」），卡片只占一行；点标题行可展开
-  const foldedDefault=true;
+  // 折叠策略（2026-09-28 调整）：
+  //   PICK（含可执行指令）→ 默认**展开**，让用户第一眼看到完整执行参数；
+  //   NO_PICK（今日无操作）→ 保持折叠，只占一行，避免占位。
+  // 保留手动折叠：用户点标题行收起后，当天记住该选择。
+  const foldedDefault=!(d.verdict==='PICK' && d.pick);
   const folded=(STATE.dpKey===dk)?STATE.dpFolded:foldedDefault;
   el.dataset.dpKey=dk;
   const stale=d.stale?'<span class="dp-tag no">非当日</span>':'';
@@ -1919,8 +1992,8 @@ function renderPerf(){
     ${pf.ok?`<div class="pf-note ${pf.total_risk_pct>(pf.limits?.max_total_risk_pct||6)?'warn':'ok'}">仓位预算：敞口 ${pf.exposure_pct}% ｜ 组合总风险 <b>${pf.total_risk_pct}%</b>（上限 ${pf.limits?.max_total_risk_pct||6}%）｜ 全止损最坏权益 ¥${(pf.worst_case_equity||0).toLocaleString()}${pf.unknown_risk_count?` ｜ ${pf.unknown_risk_count} 仓无止损(风险未知)`:''}</div>`:''}
     ${(pf.warnings||[]).map(w=>`<div class="pf-note warn">${w}</div>`).join('')}
     ${ml.metrics?`<div class="pf-note ${omMet.verified===false?'warn':'ok'}">中线T+${ml.config?.hold_days||22}（策略真实口径·<b>仅已了结 n=${omMet.n??om.matured_n??'—'}</b>）：达标率<b>${omRate}%</b> ｜ 期望 <b>${num(omMet.expectancy_pct,'%')}</b> ｜ 胜率 ${num(omMet.win_rate,'%')} ｜ PF ${omMet.profit_factor||'—'} ｜ 结局 达标${om.hit_target}/止损${om.stopped}/移动止盈${om.trailed??'—'}/到期${om.expired}${om.holding?` ｜ 另有 ${om.holding} 只仍在22日窗口内(未计入达标率分母)`:''}</div>`:''}
-    ${ml.metrics_buy_only?`<div class="pf-note ${ml.metrics_buy_only.verified===false?'warn':'ok'}">信号分层（口径标注）：仅BUY可执行 n=${ml.metrics_buy_only.n} 期望 <b>${num(ml.metrics_buy_only.expectancy_pct,'%')}</b> ｜ 对照 WATCH/HOLD n=${ml.metrics_watch_only?.n??'—'} 期望 ${num(ml.metrics_watch_only?.expectancy_pct,'%')} ｜ 构成 BUY${ml.signal_mix?.all?.BUY??'—'}/WATCH${ml.signal_mix?.all?.WATCH??'—'}/HOLD${ml.signal_mix?.all?.HOLD??'—'}（WATCH/HOLD 非建仓语义·仅对照）${ml.metrics_buy_only.verified===false?' ⚠n<30 不得作为调参依据':''}</div>`
-    ${ml.assumptions?`<div class="pf-note">起点锚定：A态(Ref=选股日收盘)${ml.assumptions.anchor_mix?.A??'&#8212;'} / C态(晨写&#183;前一交易日收盘)${ml.assumptions.anchor_mix?.C??'&#8212;'} / 回退${ml.assumptions.anchor_mix?.F??'&#8212;'} ｜ 成交按 Ref 收盘价计，未含滑点与涨跌停不可成交</div>`:''}:''}
+    ${ml.metrics_buy_only?`<div class="pf-note ${ml.metrics_buy_only.verified===false?'warn':'ok'}">信号分层（口径标注）：仅BUY可执行 n=${ml.metrics_buy_only.n} 期望 <b>${num(ml.metrics_buy_only.expectancy_pct,'%')}</b> ｜ 对照 WATCH/HOLD n=${ml.metrics_watch_only?.n??'—'} 期望 ${num(ml.metrics_watch_only?.expectancy_pct,'%')} ｜ 构成 BUY${ml.signal_mix?.all?.BUY??'—'}/WATCH${ml.signal_mix?.all?.WATCH??'—'}/HOLD${ml.signal_mix?.all?.HOLD??'—'}（WATCH/HOLD 非建仓语义·仅对照）${ml.metrics_buy_only.verified===false?' ⚠n<30 不得作为调参依据':''}</div>`:''}
+    ${ml.assumptions?`<div class="pf-note">起点锚定：A态(Ref=选股日收盘)${ml.assumptions.anchor_mix?.A??'&#8212;'} / C态(晨写&#183;前一交易日收盘)${ml.assumptions.anchor_mix?.C??'&#8212;'} / 回退${ml.assumptions.anchor_mix?.F??'&#8212;'} ｜ 成交按 Ref 收盘价计，未含滑点与涨跌停不可成交</div>`:''}
     ${vn?`<div class="pf-note ok">虚拟净值（等权重叠持仓）：<b>${vn.total_return_pct>0?'+':''}${vn.total_return_pct}%</b>（回撤 ${vn.max_drawdown_pct}%）vs 沪深300 ${bm==null?'数据不足':(bm>0?'+':'')+bm+'%'} → 超额 <b>${(vn.total_return_pct!=null&&bm!=null)?(vn.total_return_pct-bm).toFixed(2)+'%':'—'}</b></div>`:''}
     ${rb?`<div class="pf-note ${(rb.wfa?.median_wfe!=null&&rb.wfa.median_wfe<0.5)?'warn':'ok'}">稳健性：WFA 中位WFE <b>${rb.wfa?.median_wfe??'—'}</b>（${rb.wfa?.verdict||'—'}）｜ 钝性：目标${rb.sensitivity?.目标阈值?.judge||'—'}/止损${rb.sensitivity?.止损宽度?.judge||'—'} ｜ 衰减：${rb.decay?.expectancy_change_pct==null?'—':(rb.decay.expectancy_change_pct>0?'+':'')+rb.decay.expectancy_change_pct+'%'}</div>`:''}
     ${(rb?.decay?.alerts||[]).filter(a=>a.indexOf('无衰减')<0).map(a=>`<div class="pf-note warn">${a}</div>`).join('')}
@@ -1950,7 +2023,7 @@ function renderPerf(){
         <div class="pf-detail" id="tmDetail" style="display:none">
           <div class="pf-note ${cls}">最新（${tm.updated} 收盘）：指数 <b>${tm.close}</b> vs MA60 <b>${tm.ma60}</b> → ${tm.signal_next_day}</div>
           <div class="pf-note ${cls}">当前模拟持仓状态：<b>${tm.position_today}</b>（t 日收盘信号 → t+1 执行，无前视）</div>
-          <div class="pf-note ok">净值对比（2023-01 起）：择时 <b>${(tm.nav_timing*100-100).toFixed(1)}%</b>（回撤 ${tm.mdd_timing*100.toFixed(1)}%）vs 买入持有 ${(tm.nav_bh*100-100).toFixed(1)}%（回撤 ${tm.mdd_bh*100.toFixed(1)}%）</div>
+          <div class="pf-note ok">净值对比（2023-01 起）：择时 <b>${(tm.nav_timing*100-100).toFixed(1)}%</b>（回撤 ${(tm.mdd_timing*100).toFixed(1)}%）vs 买入持有 ${(tm.nav_bh*100-100).toFixed(1)}%（回撤 ${(tm.mdd_bh*100).toFixed(1)}%）</div>
           <div class="pf-note dim">年化：择时 ${(tm.ann_timing*100).toFixed(2)}% vs 持有 ${(tm.ann_bh*100).toFixed(2)}% ｜ 回测依据见 backtest/reports/新方向结论 ｜ 纪律：信号翻转次日必须执行</div>
         </div>`;
     }
@@ -3179,7 +3252,7 @@ const CACHE_KEY='wb_picks_v1';
 const DATA_URL = "https://cdn.jsdelivr.net/gh/zhangjin1987/stock-dashboard-data@main/picks.json";
 const DATA_BASE = DATA_URL.replace(/picks\.json(\?.*)?$/, '');  // 数据目录基址（含末尾 /）
 // 构建时由 build_dashboard.py 注入：当前带时间戳数据文件名（URL 永远全新，根治 webview 缓存旧数据）
-const DATA_FILE = "picks.20260928_021200.json";
+const DATA_FILE = "picks.20260928_024025.json";
 let DATA_SRC="local"; // 'cdn' = jsDelivr 动态源；'local' = CloudStudio 本地快照回退
 // 2026-08-27(续)：带时间戳数据文件请求 —— 每次部署文件名不同，URL 全新，手机 webview 无法命中旧缓存
 async function _getJSON(url){
