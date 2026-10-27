@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-28 01:15:01",
+  "generated_at": "2026-10-28 01:31:23",
   "source": "WORKBUDDY 统一投资数据库 (NeoData / 腾讯自选股 / 通达信 实拉)",
   "levels_rule": "动态买卖点每日 17:15 按最新收盘价重算，且按【个股实际波动率 ATR14 + MA10 支撑 + 计划位】自适应：止损宽度=低波动 7%/中波动 10%/高波动 13%（不低于原硬止损，站上 MA10 抬至其下 1.5%）；目标=纪律B +8% 上限（高波动放宽至 +10%/+12%，且不低于自动化计划目标）。",
   "account": {
@@ -783,47 +783,6 @@
       "d_target": 23.88,
       "entry_derived": true,
       "basis_price": 21.71,
-      "basis_date": "2026-10-28",
-      "current": null,
-      "note_live": null,
-      "daily_note": "⚠️ 行情获取失败，本次沿用计划/参考买卖点，下次 17:15 同步自动刷新。",
-      "research": null,
-      "detail": null,
-      "industry": "",
-      "sector": "",
-      "intro": "",
-      "org_name": ""
-    },
-    {
-      "code": "sz.300945",
-      "quote_code": "sz.300945",
-      "name": "曼卡龙",
-      "signal": "BUY",
-      "category": "buy",
-      "signal_expired": false,
-      "conflict": false,
-      "horizon": null,
-      "source": "反转全市场扫描",
-      "lanes": [
-        "反转全市场扫描"
-      ],
-      "resonance": "single",
-      "automation_id": null,
-      "entry_lo": null,
-      "entry_hi": null,
-      "stop": 10.38,
-      "target1": 14.55,
-      "target2": null,
-      "ref_close": 11.12,
-      "pick_date": "2026-10-08",
-      "next_day": null,
-      "lesson": "失败案例：曼卡龙(sz.300945) None BUY，ref11.12→10.24(-7.91%)，触发止损。六指标印证：DIF<DEA，绿柱运行，空头占优；运行于布林带内（10.60–12.79，中轨 11.69），中性；K>D金叉状态，短线偏多；量能平稳 1.4×均量；ATR3.3%（六维 1/6·偏弱）。价格行为：现价10.24 较 ref11.12 -7.91%；距目标14.55 还差 42.1%；止损10.38 已破。教训：严格执行止损/买入区上沿≤选股日收盘/趋势前置于资金，避免接飞刀与追高。",
-      "d_entry_lo": 10.56,
-      "d_entry_hi": 11.01,
-      "d_stop": 10.01,
-      "d_target": 12.23,
-      "entry_derived": true,
-      "basis_price": 11.12,
       "basis_date": "2026-10-28",
       "current": null,
       "note_live": null,
@@ -8168,6 +8127,120 @@
       "org_name": "海尔智家股份有限公司"
     },
     {
+      "code": "sz.300039",
+      "quote_code": "sz.300039",
+      "name": "上海凯宝",
+      "signal": "WATCH",
+      "category": "watch",
+      "signal_expired": false,
+      "conflict": false,
+      "horizon": null,
+      "source": "反转全市场扫描",
+      "lanes": [
+        "反转全市场扫描"
+      ],
+      "resonance": "single",
+      "automation_id": null,
+      "entry_lo": null,
+      "entry_hi": null,
+      "stop": 4.419,
+      "target1": 6.44,
+      "target2": null,
+      "ref_close": 4.78,
+      "pick_date": "2026-10-27",
+      "next_day": null,
+      "lesson": "",
+      "d_entry_lo": 4.54,
+      "d_entry_hi": 4.73,
+      "d_stop": 4.3,
+      "d_target": 5.26,
+      "entry_derived": true,
+      "basis_price": 4.78,
+      "basis_date": "2026-10-28",
+      "current": null,
+      "note_live": null,
+      "daily_note": "⚠️ 行情获取失败，本次沿用计划/参考买卖点，下次 17:15 同步自动刷新。",
+      "research": null,
+      "detail": null,
+      "industry": ""
+    },
+    {
+      "code": "sz.300615",
+      "quote_code": "sz.300615",
+      "name": "欣天科技",
+      "signal": "WATCH",
+      "category": "watch",
+      "signal_expired": false,
+      "conflict": false,
+      "horizon": null,
+      "source": "反转全市场扫描",
+      "lanes": [
+        "反转全市场扫描"
+      ],
+      "resonance": "single",
+      "automation_id": null,
+      "entry_lo": null,
+      "entry_hi": null,
+      "stop": 9.493,
+      "target1": 19.52,
+      "target2": null,
+      "ref_close": 10.75,
+      "pick_date": "2026-10-27",
+      "next_day": null,
+      "lesson": "",
+      "d_entry_lo": 10.21,
+      "d_entry_hi": 10.64,
+      "d_stop": 9.68,
+      "d_target": 11.83,
+      "entry_derived": true,
+      "basis_price": 10.75,
+      "basis_date": "2026-10-28",
+      "current": null,
+      "note_live": null,
+      "daily_note": "⚠️ 行情获取失败，本次沿用计划/参考买卖点，下次 17:15 同步自动刷新。",
+      "research": null,
+      "detail": null,
+      "industry": ""
+    },
+    {
+      "code": "sh.600844",
+      "quote_code": "sh.600844",
+      "name": "金煤科技",
+      "signal": "WATCH",
+      "category": "watch",
+      "signal_expired": false,
+      "conflict": false,
+      "horizon": null,
+      "source": "反转全市场扫描",
+      "lanes": [
+        "反转全市场扫描"
+      ],
+      "resonance": "single",
+      "automation_id": null,
+      "entry_lo": null,
+      "entry_hi": null,
+      "stop": 2.554,
+      "target1": 4.31,
+      "target2": null,
+      "ref_close": 2.81,
+      "pick_date": "2026-10-27",
+      "next_day": null,
+      "lesson": "",
+      "d_entry_lo": 2.67,
+      "d_entry_hi": 2.78,
+      "d_stop": 2.53,
+      "d_target": 3.09,
+      "entry_derived": true,
+      "basis_price": 2.81,
+      "basis_date": "2026-10-28",
+      "current": null,
+      "note_live": null,
+      "daily_note": "⚠️ 行情获取失败，本次沿用计划/参考买卖点，下次 17:15 同步自动刷新。",
+      "research": null,
+      "detail": null,
+      "industry": ""
+    },
+    {
       "code": "sh.600227",
       "quote_code": "sh.600227",
       "name": "赤天化",
@@ -9614,6 +9687,47 @@
       "d_target": 6.73,
       "entry_derived": true,
       "basis_price": 6.12,
+      "basis_date": "2026-10-28",
+      "current": null,
+      "note_live": null,
+      "daily_note": "⚠️ 行情获取失败，本次沿用计划/参考买卖点，下次 17:15 同步自动刷新。",
+      "research": null,
+      "detail": null,
+      "industry": "",
+      "sector": "",
+      "intro": "",
+      "org_name": ""
+    },
+    {
+      "code": "sz.300945",
+      "quote_code": "sz.300945",
+      "name": "曼卡龙",
+      "signal": "WATCH",
+      "category": "watch",
+      "signal_expired": false,
+      "conflict": false,
+      "horizon": null,
+      "source": "反转全市场扫描",
+      "lanes": [
+        "反转全市场扫描"
+      ],
+      "resonance": "single",
+      "automation_id": null,
+      "entry_lo": null,
+      "entry_hi": null,
+      "stop": 10.38,
+      "target1": 14.55,
+      "target2": null,
+      "ref_close": 11.12,
+      "pick_date": "2026-10-08",
+      "next_day": null,
+      "lesson": "失败案例：曼卡龙(sz.300945) None BUY，ref11.12→10.24(-7.91%)，触发止损。六指标印证：DIF<DEA，绿柱运行，空头占优；运行于布林带内（10.60–12.79，中轨 11.69），中性；K>D金叉状态，短线偏多；量能平稳 1.4×均量；ATR3.3%（六维 1/6·偏弱）。价格行为：现价10.24 较 ref11.12 -7.91%；距目标14.55 还差 42.1%；止损10.38 已破。教训：严格执行止损/买入区上沿≤选股日收盘/趋势前置于资金，避免接飞刀与追高。",
+      "d_entry_lo": 10.56,
+      "d_entry_hi": 11.01,
+      "d_stop": 10.01,
+      "d_target": 12.23,
+      "entry_derived": true,
+      "basis_price": 11.12,
       "basis_date": "2026-10-28",
       "current": null,
       "note_live": null,
@@ -41536,7 +41650,7 @@
   ],
   "daily_pick": {
     "date": "2026-10-28",
-    "generated_at": "2026-10-28 01:08:58",
+    "generated_at": "2026-10-28 01:29:06",
     "verdict": "NO_PICK",
     "reason": "环境闸门关闭：沪深300 defense_check 4/5（强防守），历史统计该环境下新开仓胜率显著为负（圆桌 9/4-9/10 BUY 次日胜率 33%）。今日不推荐任何标的。（附：L1+L2 实际通过 0 只，个股层面亦无合格标的，双闸门独立否决。）",
     "pick": null,
@@ -42255,8 +42369,8 @@
     "by_automation": [
       {
         "name": "反转全市场扫描",
-        "total": 107,
-        "buy": 68,
+        "total": 110,
+        "buy": 67,
         "t3": -0.94,
         "t5": -1.32,
         "t7": -2.17,
@@ -42894,6 +43008,180 @@
     ],
     "records": [
       {
+        "name": "金煤科技",
+        "code": "sh.600844",
+        "quote_code": "sh.600844",
+        "pick_date": "2026-10-27",
+        "signal": "WATCH",
+        "automation": "反转全市场扫描",
+        "ref_close": 2.81,
+        "current_signal": "WATCH",
+        "conflict": false,
+        "conflict_dates": [],
+        "select_count": 1,
+        "history": [
+          {
+            "date": "2026-10-27",
+            "signal": "WATCH",
+            "ref_close": 2.81,
+            "automation_name": "反转全市场扫描",
+            "automation_id": null,
+            "lesson": null,
+            "reviewed": false,
+            "outcome_pct": null
+          }
+        ],
+        "td_pct": null,
+        "detail": null,
+        "days": 1,
+        "period_returns": {
+          "T1": null,
+          "T3": null,
+          "T5": null,
+          "T7": null,
+          "T10": null,
+          "T15": null,
+          "T22": null,
+          "max_gain": 0.0,
+          "min_ret": 0.0,
+          "max_drawdown": 0.0,
+          "t1_reached": false,
+          "stop_hit": false,
+          "win_days": 0,
+          "span_calendar": 0,
+          "exit_type": null,
+          "exit_day": null,
+          "exit_pct": null,
+          "peak_pct": 0.0,
+          "be_armed": false
+        },
+        "mid_target_hit": false,
+        "mid_partial": true,
+        "exit_type": null,
+        "exit_day": null,
+        "exit_pct": null,
+        "tgt_pct": 53.38,
+        "reviewed": false,
+        "status": "no-quote",
+        "outcome_pct": null
+      },
+      {
+        "name": "欣天科技",
+        "code": "sz.300615",
+        "quote_code": "sz.300615",
+        "pick_date": "2026-10-27",
+        "signal": "WATCH",
+        "automation": "反转全市场扫描",
+        "ref_close": 10.75,
+        "current_signal": "WATCH",
+        "conflict": false,
+        "conflict_dates": [],
+        "select_count": 1,
+        "history": [
+          {
+            "date": "2026-10-27",
+            "signal": "WATCH",
+            "ref_close": 10.75,
+            "automation_name": "反转全市场扫描",
+            "automation_id": null,
+            "lesson": null,
+            "reviewed": false,
+            "outcome_pct": null
+          }
+        ],
+        "td_pct": null,
+        "detail": null,
+        "days": 1,
+        "period_returns": {
+          "T1": null,
+          "T3": null,
+          "T5": null,
+          "T7": null,
+          "T10": null,
+          "T15": null,
+          "T22": null,
+          "max_gain": 0.0,
+          "min_ret": 0.0,
+          "max_drawdown": 0.0,
+          "t1_reached": false,
+          "stop_hit": false,
+          "win_days": 0,
+          "span_calendar": 0,
+          "exit_type": null,
+          "exit_day": null,
+          "exit_pct": null,
+          "peak_pct": 0.0,
+          "be_armed": false
+        },
+        "mid_target_hit": false,
+        "mid_partial": true,
+        "exit_type": null,
+        "exit_day": null,
+        "exit_pct": null,
+        "tgt_pct": 81.58,
+        "reviewed": false,
+        "status": "no-quote",
+        "outcome_pct": null
+      },
+      {
+        "name": "上海凯宝",
+        "code": "sz.300039",
+        "quote_code": "sz.300039",
+        "pick_date": "2026-10-27",
+        "signal": "WATCH",
+        "automation": "反转全市场扫描",
+        "ref_close": 4.78,
+        "current_signal": "WATCH",
+        "conflict": false,
+        "conflict_dates": [],
+        "select_count": 1,
+        "history": [
+          {
+            "date": "2026-10-27",
+            "signal": "WATCH",
+            "ref_close": 4.78,
+            "automation_name": "反转全市场扫描",
+            "automation_id": null,
+            "lesson": null,
+            "reviewed": false,
+            "outcome_pct": null
+          }
+        ],
+        "td_pct": null,
+        "detail": null,
+        "days": 1,
+        "period_returns": {
+          "T1": null,
+          "T3": null,
+          "T5": null,
+          "T7": null,
+          "T10": null,
+          "T15": null,
+          "T22": null,
+          "max_gain": 0.0,
+          "min_ret": 0.0,
+          "max_drawdown": 0.0,
+          "t1_reached": false,
+          "stop_hit": false,
+          "win_days": 0,
+          "span_calendar": 0,
+          "exit_type": null,
+          "exit_day": null,
+          "exit_pct": null,
+          "peak_pct": 0.0,
+          "be_armed": false
+        },
+        "mid_target_hit": false,
+        "mid_partial": true,
+        "exit_type": null,
+        "exit_day": null,
+        "exit_pct": null,
+        "tgt_pct": 34.73,
+        "reviewed": false,
+        "status": "no-quote",
+        "outcome_pct": null
+      },
+      {
         "name": "金螳螂",
         "code": "sz.002081",
         "quote_code": "sz.002081",
@@ -42904,12 +43192,22 @@
         "current_signal": "WATCH",
         "conflict": false,
         "conflict_dates": [],
-        "select_count": 1,
+        "select_count": 2,
         "history": [
           {
             "date": "2026-10-26",
             "signal": "WATCH",
             "ref_close": 4.08,
+            "automation_name": "反转全市场扫描",
+            "automation_id": null,
+            "lesson": null,
+            "reviewed": false,
+            "outcome_pct": null
+          },
+          {
+            "date": "2026-10-27",
+            "signal": "WATCH",
+            "ref_close": 4.0,
             "automation_name": "反转全市场扫描",
             "automation_id": null,
             "lesson": null,
@@ -42963,12 +43261,22 @@
         "current_signal": "WATCH",
         "conflict": false,
         "conflict_dates": [],
-        "select_count": 1,
+        "select_count": 2,
         "history": [
           {
             "date": "2026-10-26",
             "signal": "WATCH",
             "ref_close": 3.32,
+            "automation_name": "反转全市场扫描",
+            "automation_id": null,
+            "lesson": null,
+            "reviewed": false,
+            "outcome_pct": null
+          },
+          {
+            "date": "2026-10-27",
+            "signal": "WATCH",
+            "ref_close": 3.21,
             "automation_name": "反转全市场扫描",
             "automation_id": null,
             "lesson": null,
@@ -43022,12 +43330,22 @@
         "current_signal": "WATCH",
         "conflict": false,
         "conflict_dates": [],
-        "select_count": 1,
+        "select_count": 2,
         "history": [
           {
             "date": "2026-10-26",
             "signal": "WATCH",
             "ref_close": 22.0,
+            "automation_name": "反转全市场扫描",
+            "automation_id": null,
+            "lesson": null,
+            "reviewed": false,
+            "outcome_pct": null
+          },
+          {
+            "date": "2026-10-27",
+            "signal": "WATCH",
+            "ref_close": 21.4,
             "automation_name": "反转全市场扫描",
             "automation_id": null,
             "lesson": null,
@@ -43140,12 +43458,22 @@
         "current_signal": "WATCH",
         "conflict": false,
         "conflict_dates": [],
-        "select_count": 1,
+        "select_count": 2,
         "history": [
           {
             "date": "2026-10-26",
             "signal": "WATCH",
             "ref_close": 12.87,
+            "automation_name": "反转全市场扫描",
+            "automation_id": null,
+            "lesson": null,
+            "reviewed": false,
+            "outcome_pct": null
+          },
+          {
+            "date": "2026-10-27",
+            "signal": "WATCH",
+            "ref_close": 12.74,
             "automation_name": "反转全市场扫描",
             "automation_id": null,
             "lesson": null,
@@ -43199,12 +43527,22 @@
         "current_signal": "WATCH",
         "conflict": false,
         "conflict_dates": [],
-        "select_count": 1,
+        "select_count": 2,
         "history": [
           {
             "date": "2026-10-26",
             "signal": "WATCH",
             "ref_close": 1.67,
+            "automation_name": "反转全市场扫描",
+            "automation_id": null,
+            "lesson": null,
+            "reviewed": false,
+            "outcome_pct": null
+          },
+          {
+            "date": "2026-10-27",
+            "signal": "WATCH",
+            "ref_close": 1.61,
             "automation_name": "反转全市场扫描",
             "automation_id": null,
             "lesson": null,
@@ -43327,7 +43665,7 @@
         "current_signal": "WATCH",
         "conflict": false,
         "conflict_dates": [],
-        "select_count": 2,
+        "select_count": 3,
         "history": [
           {
             "date": "2026-10-23",
@@ -43343,6 +43681,16 @@
             "date": "2026-10-26",
             "signal": "WATCH",
             "ref_close": 5.71,
+            "automation_name": "反转全市场扫描",
+            "automation_id": null,
+            "lesson": null,
+            "reviewed": false,
+            "outcome_pct": null
+          },
+          {
+            "date": "2026-10-27",
+            "signal": "WATCH",
+            "ref_close": 5.54,
             "automation_name": "反转全市场扫描",
             "automation_id": null,
             "lesson": null,
@@ -43396,7 +43744,7 @@
         "current_signal": "WATCH",
         "conflict": false,
         "conflict_dates": [],
-        "select_count": 2,
+        "select_count": 3,
         "history": [
           {
             "date": "2026-10-23",
@@ -43412,6 +43760,16 @@
             "date": "2026-10-26",
             "signal": "WATCH",
             "ref_close": 4.19,
+            "automation_name": "反转全市场扫描",
+            "automation_id": null,
+            "lesson": null,
+            "reviewed": false,
+            "outcome_pct": null
+          },
+          {
+            "date": "2026-10-27",
+            "signal": "WATCH",
+            "ref_close": 4.02,
             "automation_name": "反转全市场扫描",
             "automation_id": null,
             "lesson": null,
@@ -43534,7 +43892,7 @@
         "current_signal": "WATCH",
         "conflict": false,
         "conflict_dates": [],
-        "select_count": 3,
+        "select_count": 4,
         "history": [
           {
             "date": "2026-10-22",
@@ -43560,6 +43918,16 @@
             "date": "2026-10-26",
             "signal": "WATCH",
             "ref_close": 8.35,
+            "automation_name": "反转全市场扫描",
+            "automation_id": null,
+            "lesson": null,
+            "reviewed": false,
+            "outcome_pct": null
+          },
+          {
+            "date": "2026-10-27",
+            "signal": "WATCH",
+            "ref_close": 8.15,
             "automation_name": "反转全市场扫描",
             "automation_id": null,
             "lesson": null,
@@ -43613,7 +43981,7 @@
         "current_signal": "WATCH",
         "conflict": false,
         "conflict_dates": [],
-        "select_count": 4,
+        "select_count": 5,
         "history": [
           {
             "date": "2026-10-21",
@@ -43649,6 +44017,16 @@
             "date": "2026-10-26",
             "signal": "WATCH",
             "ref_close": 6.23,
+            "automation_name": "反转全市场扫描",
+            "automation_id": null,
+            "lesson": null,
+            "reviewed": false,
+            "outcome_pct": null
+          },
+          {
+            "date": "2026-10-27",
+            "signal": "WATCH",
+            "ref_close": 6.07,
             "automation_name": "反转全市场扫描",
             "automation_id": null,
             "lesson": null,
@@ -43850,7 +44228,7 @@
         "current_signal": "WATCH",
         "conflict": false,
         "conflict_dates": [],
-        "select_count": 4,
+        "select_count": 5,
         "history": [
           {
             "date": "2026-10-21",
@@ -43886,6 +44264,16 @@
             "date": "2026-10-26",
             "signal": "WATCH",
             "ref_close": 5.8,
+            "automation_name": "反转全市场扫描",
+            "automation_id": null,
+            "lesson": null,
+            "reviewed": false,
+            "outcome_pct": null
+          },
+          {
+            "date": "2026-10-27",
+            "signal": "WATCH",
+            "ref_close": 5.6,
             "automation_name": "反转全市场扫描",
             "automation_id": null,
             "lesson": null,
@@ -43939,7 +44327,7 @@
         "current_signal": "WATCH",
         "conflict": false,
         "conflict_dates": [],
-        "select_count": 5,
+        "select_count": 6,
         "history": [
           {
             "date": "2026-10-20",
@@ -43985,6 +44373,16 @@
             "date": "2026-10-26",
             "signal": "WATCH",
             "ref_close": 8.36,
+            "automation_name": "反转全市场扫描",
+            "automation_id": null,
+            "lesson": null,
+            "reviewed": false,
+            "outcome_pct": null
+          },
+          {
+            "date": "2026-10-27",
+            "signal": "WATCH",
+            "ref_close": 8.14,
             "automation_name": "反转全市场扫描",
             "automation_id": null,
             "lesson": null,
@@ -44038,7 +44436,7 @@
         "current_signal": "WATCH",
         "conflict": false,
         "conflict_dates": [],
-        "select_count": 5,
+        "select_count": 6,
         "history": [
           {
             "date": "2026-10-20",
@@ -44084,6 +44482,16 @@
             "date": "2026-10-26",
             "signal": "WATCH",
             "ref_close": 5.08,
+            "automation_name": "反转全市场扫描",
+            "automation_id": null,
+            "lesson": null,
+            "reviewed": false,
+            "outcome_pct": null
+          },
+          {
+            "date": "2026-10-27",
+            "signal": "WATCH",
+            "ref_close": 4.97,
             "automation_name": "反转全市场扫描",
             "automation_id": null,
             "lesson": null,
@@ -44226,7 +44634,7 @@
         "current_signal": "WATCH",
         "conflict": false,
         "conflict_dates": [],
-        "select_count": 5,
+        "select_count": 6,
         "history": [
           {
             "date": "2026-10-20",
@@ -44272,6 +44680,16 @@
             "date": "2026-10-26",
             "signal": "WATCH",
             "ref_close": 6.88,
+            "automation_name": "反转全市场扫描",
+            "automation_id": null,
+            "lesson": null,
+            "reviewed": false,
+            "outcome_pct": null
+          },
+          {
+            "date": "2026-10-27",
+            "signal": "WATCH",
+            "ref_close": 6.67,
             "automation_name": "反转全市场扫描",
             "automation_id": null,
             "lesson": null,
@@ -44325,7 +44743,7 @@
         "current_signal": "WATCH",
         "conflict": false,
         "conflict_dates": [],
-        "select_count": 3,
+        "select_count": 4,
         "history": [
           {
             "date": "2026-10-19",
@@ -44351,6 +44769,16 @@
             "date": "2026-10-26",
             "signal": "WATCH",
             "ref_close": 5.67,
+            "automation_name": "反转全市场扫描",
+            "automation_id": null,
+            "lesson": null,
+            "reviewed": false,
+            "outcome_pct": null
+          },
+          {
+            "date": "2026-10-27",
+            "signal": "WATCH",
+            "ref_close": 5.51,
             "automation_name": "反转全市场扫描",
             "automation_id": null,
             "lesson": null,
@@ -44404,7 +44832,7 @@
         "current_signal": "WATCH",
         "conflict": false,
         "conflict_dates": [],
-        "select_count": 6,
+        "select_count": 7,
         "history": [
           {
             "date": "2026-10-19",
@@ -44460,6 +44888,16 @@
             "date": "2026-10-26",
             "signal": "WATCH",
             "ref_close": 3.65,
+            "automation_name": "反转全市场扫描",
+            "automation_id": null,
+            "lesson": null,
+            "reviewed": false,
+            "outcome_pct": null
+          },
+          {
+            "date": "2026-10-27",
+            "signal": "WATCH",
+            "ref_close": 3.52,
             "automation_name": "反转全市场扫描",
             "automation_id": null,
             "lesson": null,
@@ -45039,7 +45477,7 @@
         "current_signal": "WATCH",
         "conflict": false,
         "conflict_dates": [],
-        "select_count": 7,
+        "select_count": 8,
         "history": [
           {
             "date": "2026-10-16",
@@ -45110,6 +45548,16 @@
             "lesson": null,
             "reviewed": false,
             "outcome_pct": null
+          },
+          {
+            "date": "2026-10-27",
+            "signal": "WATCH",
+            "ref_close": 15.57,
+            "automation_name": "反转全市场扫描",
+            "automation_id": null,
+            "lesson": null,
+            "reviewed": false,
+            "outcome_pct": null
           }
         ],
         "td_pct": null,
@@ -45158,7 +45606,7 @@
         "current_signal": "WATCH",
         "conflict": false,
         "conflict_dates": [],
-        "select_count": 7,
+        "select_count": 8,
         "history": [
           {
             "date": "2026-10-16",
@@ -45229,6 +45677,16 @@
             "lesson": null,
             "reviewed": false,
             "outcome_pct": null
+          },
+          {
+            "date": "2026-10-27",
+            "signal": "WATCH",
+            "ref_close": 7.71,
+            "automation_name": "反转全市场扫描",
+            "automation_id": null,
+            "lesson": null,
+            "reviewed": false,
+            "outcome_pct": null
           }
         ],
         "td_pct": null,
@@ -45277,7 +45735,7 @@
         "current_signal": "WATCH",
         "conflict": false,
         "conflict_dates": [],
-        "select_count": 3,
+        "select_count": 4,
         "history": [
           {
             "date": "2026-10-15",
@@ -45303,6 +45761,16 @@
             "date": "2026-10-26",
             "signal": "WATCH",
             "ref_close": 10.09,
+            "automation_name": "反转全市场扫描",
+            "automation_id": null,
+            "lesson": null,
+            "reviewed": false,
+            "outcome_pct": null
+          },
+          {
+            "date": "2026-10-27",
+            "signal": "WATCH",
+            "ref_close": 9.68,
             "automation_name": "反转全市场扫描",
             "automation_id": null,
             "lesson": null,
@@ -45356,7 +45824,7 @@
         "current_signal": "WATCH",
         "conflict": false,
         "conflict_dates": [],
-        "select_count": 8,
+        "select_count": 9,
         "history": [
           {
             "date": "2026-10-15",
@@ -45432,6 +45900,16 @@
             "date": "2026-10-26",
             "signal": "WATCH",
             "ref_close": 3.44,
+            "automation_name": "反转全市场扫描",
+            "automation_id": null,
+            "lesson": null,
+            "reviewed": false,
+            "outcome_pct": null
+          },
+          {
+            "date": "2026-10-27",
+            "signal": "WATCH",
+            "ref_close": 3.4,
             "automation_name": "反转全市场扫描",
             "automation_id": null,
             "lesson": null,
@@ -45975,7 +46453,7 @@
         "current_signal": "WATCH",
         "conflict": false,
         "conflict_dates": [],
-        "select_count": 10,
+        "select_count": 11,
         "history": [
           {
             "date": "2026-10-13",
@@ -46071,6 +46549,16 @@
             "date": "2026-10-26",
             "signal": "WATCH",
             "ref_close": 5.7,
+            "automation_name": "反转全市场扫描",
+            "automation_id": null,
+            "lesson": null,
+            "reviewed": false,
+            "outcome_pct": null
+          },
+          {
+            "date": "2026-10-27",
+            "signal": "WATCH",
+            "ref_close": 5.54,
             "automation_name": "反转全市场扫描",
             "automation_id": null,
             "lesson": null,
@@ -46623,7 +47111,7 @@
         "current_signal": "WATCH",
         "conflict": false,
         "conflict_dates": [],
-        "select_count": 12,
+        "select_count": 13,
         "history": [
           {
             "date": "2026-10-09",
@@ -46739,6 +47227,16 @@
             "date": "2026-10-26",
             "signal": "WATCH",
             "ref_close": 2.44,
+            "automation_name": "反转全市场扫描",
+            "automation_id": null,
+            "lesson": null,
+            "reviewed": false,
+            "outcome_pct": null
+          },
+          {
+            "date": "2026-10-27",
+            "signal": "WATCH",
+            "ref_close": 2.38,
             "automation_name": "反转全市场扫描",
             "automation_id": null,
             "lesson": null,
@@ -46905,7 +47403,7 @@
         "current_signal": "WATCH",
         "conflict": false,
         "conflict_dates": [],
-        "select_count": 12,
+        "select_count": 13,
         "history": [
           {
             "date": "2026-10-09",
@@ -47026,6 +47524,16 @@
             "lesson": null,
             "reviewed": false,
             "outcome_pct": null
+          },
+          {
+            "date": "2026-10-27",
+            "signal": "WATCH",
+            "ref_close": 4.1,
+            "automation_name": "反转全市场扫描",
+            "automation_id": null,
+            "lesson": null,
+            "reviewed": false,
+            "outcome_pct": null
           }
         ],
         "td_pct": null,
@@ -47137,7 +47645,7 @@
         "current_signal": "WATCH",
         "conflict": false,
         "conflict_dates": [],
-        "select_count": 13,
+        "select_count": 14,
         "history": [
           {
             "date": "2026-10-08",
@@ -47263,6 +47771,16 @@
             "date": "2026-10-26",
             "signal": "WATCH",
             "ref_close": 8.95,
+            "automation_name": "反转全市场扫描",
+            "automation_id": null,
+            "lesson": null,
+            "reviewed": false,
+            "outcome_pct": null
+          },
+          {
+            "date": "2026-10-27",
+            "signal": "WATCH",
+            "ref_close": 8.75,
             "automation_name": "反转全市场扫描",
             "automation_id": null,
             "lesson": null,
@@ -47506,7 +48024,7 @@
         "current_signal": "WATCH",
         "conflict": false,
         "conflict_dates": [],
-        "select_count": 13,
+        "select_count": 14,
         "history": [
           {
             "date": "2026-10-08",
@@ -47637,6 +48155,16 @@
             "lesson": null,
             "reviewed": false,
             "outcome_pct": null
+          },
+          {
+            "date": "2026-10-27",
+            "signal": "WATCH",
+            "ref_close": 7.67,
+            "automation_name": "反转全市场扫描",
+            "automation_id": null,
+            "lesson": null,
+            "reviewed": false,
+            "outcome_pct": null
           }
         ],
         "td_pct": null,
@@ -47687,7 +48215,7 @@
         "current_signal": "WATCH",
         "conflict": false,
         "conflict_dates": [],
-        "select_count": 6,
+        "select_count": 7,
         "history": [
           {
             "date": "2026-10-08",
@@ -47743,6 +48271,16 @@
             "date": "2026-10-26",
             "signal": "WATCH",
             "ref_close": 5.69,
+            "automation_name": "反转全市场扫描",
+            "automation_id": null,
+            "lesson": null,
+            "reviewed": false,
+            "outcome_pct": null
+          },
+          {
+            "date": "2026-10-27",
+            "signal": "WATCH",
+            "ref_close": 5.57,
             "automation_name": "反转全市场扫描",
             "automation_id": null,
             "lesson": null,
@@ -47936,10 +48474,10 @@
         "signal": "BUY",
         "automation": "反转全市场扫描",
         "ref_close": 11.12,
-        "current_signal": "BUY",
+        "current_signal": "WATCH",
         "conflict": false,
         "conflict_dates": [],
-        "select_count": 2,
+        "select_count": 3,
         "history": [
           {
             "date": "2026-10-08",
@@ -47955,6 +48493,16 @@
             "date": "2026-10-09",
             "signal": "BUY",
             "ref_close": 11.42,
+            "automation_name": "反转全市场扫描",
+            "automation_id": null,
+            "lesson": null,
+            "reviewed": false,
+            "outcome_pct": null
+          },
+          {
+            "date": "2026-10-27",
+            "signal": "WATCH",
+            "ref_close": 10.02,
             "automation_name": "反转全市场扫描",
             "automation_id": null,
             "lesson": null,
@@ -48402,7 +48950,7 @@
         "current_signal": "WATCH",
         "conflict": false,
         "conflict_dates": [],
-        "select_count": 13,
+        "select_count": 14,
         "history": [
           {
             "date": "2026-10-08",
@@ -48528,6 +49076,16 @@
             "date": "2026-10-26",
             "signal": "WATCH",
             "ref_close": 4.55,
+            "automation_name": "反转全市场扫描",
+            "automation_id": null,
+            "lesson": null,
+            "reviewed": false,
+            "outcome_pct": null
+          },
+          {
+            "date": "2026-10-27",
+            "signal": "WATCH",
+            "ref_close": 4.42,
             "automation_name": "反转全市场扫描",
             "automation_id": null,
             "lesson": null,
@@ -95564,8 +96122,8 @@
   },
   "counts": {
     "holdings": 0,
-    "buy": 80,
-    "watch": 88,
+    "buy": 79,
+    "watch": 92,
     "other": 23,
     "filtered_rejected": 7
   },
