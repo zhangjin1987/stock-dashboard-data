@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06 01:39:10",
+  "generated_at": "2026-11-06 02:05:49",
   "source": "WORKBUDDY 统一投资数据库 (NeoData / 腾讯自选股 / 通达信 实拉)",
   "levels_rule": "动态买卖点每日 17:15 按最新收盘价重算，且按【个股实际波动率 ATR14 + MA10 支撑 + 计划位】自适应：止损宽度=低波动 7%/中波动 10%/高波动 13%（不低于原硬止损，站上 MA10 抬至其下 1.5%）；目标=纪律B +8% 上限（高波动放宽至 +10%/+12%，且不低于自动化计划目标）。",
   "account": {
@@ -96036,7 +96036,7 @@
   ],
   "daily_pick": {
     "date": "2026-11-06",
-    "generated_at": "2026-11-06 01:09:20",
+    "generated_at": "2026-11-06 01:47:36",
     "verdict": "NO_PICK",
     "reason": "无标的通过硬门槛。淘汰分布：",
     "pick": null,
@@ -96046,7 +96046,14 @@
       "hs300_chg250": -12.78,
       "defense_score": 3,
       "defense_level": "防守",
-      "env_gate": "open"
+      "env_gate": "open",
+      "intel_level": "中性偏多",
+      "intel_defensive": false,
+      "intel_closed": false,
+      "intel_stale": false,
+      "intel_age_days": 0,
+      "intel_reason": "情报等级=中性偏多（中性偏多(由11/05档维持——回撤）→ 不干预",
+      "gate_source": "none"
     },
     "stats": {
       "candidates": 0,
@@ -96069,7 +96076,7 @@
       "sig_age_days": 1,
       "can_execute": true,
       "env_gate": "open",
-      "gate_note": "环境闸门已开，4 只预算够 1 手可执行。⚠ 回测口径为 TOP15 等权、20 日持有、无单票止损——单只集中买入不等于策略。 ｜ ⚠ 篮子完整度仅 26.7%（4/15 只买得起 1 手，其余 11 只因单票预算 1336 元不足被剔除）→ 等权 TOP15 无法复制，实得篮子偏向低价股。 ｜ ⚠ 信号滞后 1 天（sig_date=2026-11-05，非今日）——生产者晚于本闸门触发，读数请按滞后一日理解。",
+      "gate_note": "环境闸门已开，4 只预算够 1 手可执行。⚠ 回测口径为 TOP15 等权、20 日持有、无单票止损——单只集中买入不等于策略。 ｜ ⚠ 篮子完整度 26.7%（4/15 只买得起 1 手，其余 11 只因单票预算 1336 元不足被剔除）。⚠ 与回测口径的差异说明：10 年复跑本身即「买不起即跳过」（填充率 13.4%、日均成交 1.8 只），故残缺属策略固有形态而非执行缺陷；但实得篮子偏向低价股，**不得从此篮子中抽 1 只当单票下注**。 ｜ ⚠ 信号滞后 1 天（sig_date=2026-11-05，非今日）——生产者晚于本闸门触发，读数请按滞后一日理解。",
       "risk_note": "赔率披露：2/15 只在 2ATR 止损（约 8-33% 幅度）下赔率 ≥1；六因子标的 ATR 中位 6.0%，散度大。回测本身**无单票止损**，靠 TOP15 分散在 20 个交易日内兑现。若坚持单票止损，须接受与回测不一致的结果，或改用 1.5ATR 紧档（odds_tight 字段）。｜引擎实证（2026-11-04 10年复跑）：名额填充率仅 13.4%、日均成交 1.8 只、均持仓约 40 只——该策略在小资金下本就只买得起极少数（买不起即跳过），故「5 只可执行」是正常形态，不是筛选缺陷；同理也**不能**从其中抽 1 只当单票下注。",
       "n_odds_ok": 2,
       "items": [
@@ -206097,7 +206104,7 @@
     }
   },
   "midline": {
-    "generated_at": "2026-11-06 01:34:19",
+    "generated_at": "2026-11-06 01:46:41",
     "config": {
       "hold_days": 22,
       "flat_band": 0.5,
@@ -206588,7 +206595,9 @@
         "matured": true,
         "anchor": "F",
         "max_gain_pct": 7.97,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -1.67,
+        "excess_pct": 4.24
       },
       {
         "code": "sz000811",
@@ -206609,7 +206618,9 @@
         "matured": true,
         "anchor": "C",
         "max_gain_pct": 10.69,
-        "legacy_hit": true
+        "legacy_hit": true,
+        "bench_ret_pct": 0.74,
+        "excess_pct": 4.41
       },
       {
         "code": "sh603757",
@@ -206630,7 +206641,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 11.43,
-        "legacy_hit": true
+        "legacy_hit": true,
+        "bench_ret_pct": -1.65,
+        "excess_pct": 1.65
       },
       {
         "code": "sh600968",
@@ -206651,7 +206664,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 8.33,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -1.61,
+        "excess_pct": 1.61
       },
       {
         "code": "sh605599",
@@ -206672,7 +206687,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 10.42,
-        "legacy_hit": true
+        "legacy_hit": true,
+        "bench_ret_pct": -2.44,
+        "excess_pct": 7.34
       },
       {
         "code": "sh603065",
@@ -206693,7 +206710,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 13.89,
-        "legacy_hit": true
+        "legacy_hit": true,
+        "bench_ret_pct": -3.21,
+        "excess_pct": 11.41
       },
       {
         "code": "sz000100",
@@ -206714,7 +206733,9 @@
         "matured": true,
         "anchor": "F",
         "max_gain_pct": 5.74,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -3.3,
+        "excess_pct": -5.21
       },
       {
         "code": "sz002475",
@@ -206735,7 +206756,9 @@
         "matured": true,
         "anchor": "C",
         "max_gain_pct": 0.11,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -1.5,
+        "excess_pct": -3.62
       },
       {
         "code": "sh601919",
@@ -206756,7 +206779,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 9.36,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -3.13,
+        "excess_pct": 11.13
       },
       {
         "code": "sz002555",
@@ -206777,7 +206802,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 0.0,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -4.87,
+        "excess_pct": -5.13
       },
       {
         "code": "sh600036",
@@ -206798,7 +206825,9 @@
         "matured": true,
         "anchor": "F",
         "max_gain_pct": 4.35,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -1.85,
+        "excess_pct": 3.7
       },
       {
         "code": "sh518880",
@@ -206819,7 +206848,9 @@
         "matured": true,
         "anchor": "F",
         "max_gain_pct": 0.0,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": 0.0,
+        "excess_pct": -9.03
       },
       {
         "code": "sh600690",
@@ -206840,7 +206871,9 @@
         "matured": true,
         "anchor": "F",
         "max_gain_pct": 8.72,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -1.05,
+        "excess_pct": 9.05
       },
       {
         "code": "sh512690",
@@ -206861,7 +206894,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 6.81,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -1.85,
+        "excess_pct": 0.68
       },
       {
         "code": "sz300015",
@@ -206882,7 +206917,9 @@
         "matured": true,
         "anchor": "F",
         "max_gain_pct": 8.16,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": 1.14,
+        "excess_pct": 6.86
       },
       {
         "code": "sh603118",
@@ -206903,7 +206940,9 @@
         "matured": true,
         "anchor": "C",
         "max_gain_pct": 10.02,
-        "legacy_hit": true
+        "legacy_hit": true,
+        "bench_ret_pct": 0.0,
+        "excess_pct": 10.02
       },
       {
         "code": "sz002966",
@@ -206924,7 +206963,9 @@
         "matured": true,
         "anchor": "C",
         "max_gain_pct": 10.51,
-        "legacy_hit": true
+        "legacy_hit": true,
+        "bench_ret_pct": -4.06,
+        "excess_pct": 14.1
       },
       {
         "code": "sh600219",
@@ -206945,7 +206986,9 @@
         "matured": true,
         "anchor": "C",
         "max_gain_pct": 8.46,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -3.13,
+        "excess_pct": 3.13
       },
       {
         "code": "sh601020",
@@ -206966,7 +207009,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 11.63,
-        "legacy_hit": true
+        "legacy_hit": true,
+        "bench_ret_pct": -2.47,
+        "excess_pct": 9.03
       },
       {
         "code": "sh600887",
@@ -206987,7 +207032,9 @@
         "matured": true,
         "anchor": "F",
         "max_gain_pct": 0.6,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -2.8,
+        "excess_pct": 1.68
       },
       {
         "code": "sh601601",
@@ -207008,7 +207055,9 @@
         "matured": true,
         "anchor": "C",
         "max_gain_pct": 15.82,
-        "legacy_hit": true
+        "legacy_hit": true,
+        "bench_ret_pct": -4.56,
+        "excess_pct": 14.59
       },
       {
         "code": "sz002317",
@@ -207029,7 +207078,9 @@
         "matured": true,
         "anchor": "C",
         "max_gain_pct": 2.12,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -3.68,
+        "excess_pct": -8.86
       },
       {
         "code": "sz002246",
@@ -207050,7 +207101,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 10.2,
-        "legacy_hit": true
+        "legacy_hit": true,
+        "bench_ret_pct": -0.88,
+        "excess_pct": 10.89
       },
       {
         "code": "sh600926",
@@ -207071,7 +207124,9 @@
         "matured": true,
         "anchor": "C",
         "max_gain_pct": 7.0,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -2.8,
+        "excess_pct": 6.24
       },
       {
         "code": "sh600598",
@@ -207092,7 +207147,9 @@
         "matured": true,
         "anchor": "C",
         "max_gain_pct": 8.4,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -0.65,
+        "excess_pct": 8.65
       },
       {
         "code": "sz002142",
@@ -207113,7 +207170,9 @@
         "matured": true,
         "anchor": "C",
         "max_gain_pct": 9.25,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -0.97,
+        "excess_pct": 8.97
       },
       {
         "code": "sh600547",
@@ -207134,7 +207193,9 @@
         "matured": true,
         "anchor": "C",
         "max_gain_pct": 1.31,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -2.92,
+        "excess_pct": -15.71
       },
       {
         "code": "sh601899",
@@ -207155,7 +207216,9 @@
         "matured": true,
         "anchor": "F",
         "max_gain_pct": 7.65,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -1.45,
+        "excess_pct": 3.72
       },
       {
         "code": "sh601288",
@@ -207176,7 +207239,9 @@
         "matured": true,
         "anchor": "C",
         "max_gain_pct": 4.87,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -1.86,
+        "excess_pct": 2.45
       },
       {
         "code": "sh601872",
@@ -207197,7 +207262,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 8.06,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": 0.57,
+        "excess_pct": 7.43
       },
       {
         "code": "sh600798",
@@ -207218,7 +207285,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 8.04,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -0.44,
+        "excess_pct": 8.44
       },
       {
         "code": "sh600276",
@@ -207239,7 +207308,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 0.0,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": 0.0,
+        "excess_pct": -5.05
       },
       {
         "code": "sh603661",
@@ -207260,7 +207331,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 1.8,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": 0.0,
+        "excess_pct": -0.88
       },
       {
         "code": "sz000683",
@@ -207281,7 +207354,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 6.25,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -1.72,
+        "excess_pct": -3.21
       },
       {
         "code": "sz000565",
@@ -207302,7 +207377,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 9.97,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": 1.01,
+        "excess_pct": 8.96
       },
       {
         "code": "sh601857",
@@ -207323,7 +207400,9 @@
         "matured": true,
         "anchor": "C",
         "max_gain_pct": 9.16,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -4.56,
+        "excess_pct": 13.1
       },
       {
         "code": "sz002015",
@@ -207344,7 +207423,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 9.57,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": 0.0,
+        "excess_pct": 7.81
       },
       {
         "code": "sh603967",
@@ -207365,7 +207446,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 1.19,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -6.25,
+        "excess_pct": 4.22
       },
       {
         "code": "sz003816",
@@ -207386,7 +207469,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 2.9,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -0.46,
+        "excess_pct": 2.88
       },
       {
         "code": "sz000783",
@@ -207407,7 +207492,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 3.43,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -2.8,
+        "excess_pct": -6.86
       },
       {
         "code": "sh605020",
@@ -207428,7 +207515,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 0.67,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -2.48,
+        "excess_pct": -8.9
       },
       {
         "code": "sz300627",
@@ -207449,7 +207538,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 0.52,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -6.15,
+        "excess_pct": -3.85
       },
       {
         "code": "sh600309",
@@ -207470,7 +207561,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 1.59,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -3.13,
+        "excess_pct": -6.87
       },
       {
         "code": "sz000768",
@@ -207491,7 +207584,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 8.93,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -1.67,
+        "excess_pct": 9.67
       },
       {
         "code": "sz002916",
@@ -207512,7 +207607,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 8.66,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -1.43,
+        "excess_pct": 9.43
       },
       {
         "code": "sh601058",
@@ -207533,7 +207630,9 @@
         "matured": true,
         "anchor": "C",
         "max_gain_pct": 9.59,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -0.3,
+        "excess_pct": 8.3
       },
       {
         "code": "sh600760",
@@ -207554,7 +207653,9 @@
         "matured": true,
         "anchor": "C",
         "max_gain_pct": 6.51,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -5.78,
+        "excess_pct": -0.43
       },
       {
         "code": "sh600031",
@@ -207575,7 +207676,9 @@
         "matured": true,
         "anchor": "C",
         "max_gain_pct": 2.75,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -2.84,
+        "excess_pct": -7.16
       },
       {
         "code": "sz002938",
@@ -207596,7 +207699,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 0.21,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -1.28,
+        "excess_pct": -8.04
       },
       {
         "code": "sh600660",
@@ -207617,7 +207722,9 @@
         "matured": true,
         "anchor": "C",
         "max_gain_pct": 1.34,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -8.22,
+        "excess_pct": 8.8
       },
       {
         "code": "sh600426",
@@ -207638,7 +207745,9 @@
         "matured": true,
         "anchor": "C",
         "max_gain_pct": 2.91,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -1.49,
+        "excess_pct": -7.6
       },
       {
         "code": "sh601339",
@@ -207659,7 +207768,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 0.0,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": 0.59,
+        "excess_pct": -8.54
       },
       {
         "code": "sh603466",
@@ -207680,7 +207791,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 11.11,
-        "legacy_hit": true
+        "legacy_hit": true,
+        "bench_ret_pct": 0.14,
+        "excess_pct": 5.42
       },
       {
         "code": "sz000651",
@@ -207701,7 +207814,9 @@
         "matured": true,
         "anchor": "C",
         "max_gain_pct": 3.25,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -5.99,
+        "excess_pct": 8.29
       },
       {
         "code": "sh601318",
@@ -207722,7 +207837,9 @@
         "matured": true,
         "anchor": "C",
         "max_gain_pct": 0.95,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -5.86,
+        "excess_pct": -1.34
       },
       {
         "code": "sh600601",
@@ -207743,7 +207860,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 9.98,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": 0.0,
+        "excess_pct": 6.97
       },
       {
         "code": "sh601088",
@@ -207764,7 +207883,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 6.64,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -7.81,
+        "excess_pct": 13.99
       },
       {
         "code": "sz002895",
@@ -207785,7 +207906,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 2.23,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -2.73,
+        "excess_pct": -4.26
       },
       {
         "code": "sz002545",
@@ -207806,7 +207929,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 2.63,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -2.08,
+        "excess_pct": -4.92
       },
       {
         "code": "sh601766",
@@ -207827,7 +207952,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 5.6,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -7.81,
+        "excess_pct": 12.61
       },
       {
         "code": "sz000333",
@@ -207848,7 +207975,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 0.61,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -5.79,
+        "excess_pct": -4.21
       },
       {
         "code": "sz300760",
@@ -207869,7 +207998,9 @@
         "matured": true,
         "anchor": "C",
         "max_gain_pct": 0.45,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -7.81,
+        "excess_pct": 4.66
       },
       {
         "code": "sh600900",
@@ -207890,7 +208021,9 @@
         "matured": true,
         "anchor": "C",
         "max_gain_pct": 3.8,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -7.81,
+        "excess_pct": 11.43
       },
       {
         "code": "sh603120",
@@ -207911,7 +208044,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 10.25,
-        "legacy_hit": true
+        "legacy_hit": true,
+        "bench_ret_pct": 0.3,
+        "excess_pct": 5.88
       },
       {
         "code": "sz000568",
@@ -207932,7 +208067,9 @@
         "matured": true,
         "anchor": "C",
         "max_gain_pct": 0.33,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -2.16,
+        "excess_pct": -7.84
       },
       {
         "code": "sz002415",
@@ -207953,7 +208090,9 @@
         "matured": true,
         "anchor": "C",
         "max_gain_pct": 0.0,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -8.61,
+        "excess_pct": 5.71
       },
       {
         "code": "sh600863",
@@ -207974,7 +208113,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 10.33,
-        "legacy_hit": true
+        "legacy_hit": true,
+        "bench_ret_pct": -6.22,
+        "excess_pct": 15.52
       },
       {
         "code": "sz002027",
@@ -207995,7 +208136,9 @@
         "matured": true,
         "anchor": "C",
         "max_gain_pct": 8.32,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -8.79,
+        "excess_pct": 16.79
       },
       {
         "code": "sh603125",
@@ -208016,7 +208159,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 5.42,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -4.56,
+        "excess_pct": -2.44
       },
       {
         "code": "sz002310",
@@ -208037,7 +208182,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 2.95,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -1.57,
+        "excess_pct": -5.6
       },
       {
         "code": "sh600150",
@@ -208058,7 +208205,9 @@
         "matured": true,
         "anchor": "C",
         "max_gain_pct": 0.0,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -0.66,
+        "excess_pct": -7.35
       },
       {
         "code": "sh600030",
@@ -208079,7 +208228,9 @@
         "matured": true,
         "anchor": "C",
         "max_gain_pct": 0.0,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -4.43,
+        "excess_pct": -3.58
       },
       {
         "code": "sz000636",
@@ -208100,7 +208251,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 8.06,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -0.44,
+        "excess_pct": 3.09
       },
       {
         "code": "sh600350",
@@ -208121,7 +208274,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 7.9,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -6.38,
+        "excess_pct": 13.51
       },
       {
         "code": "sh600941",
@@ -208142,7 +208297,9 @@
         "matured": true,
         "anchor": "C",
         "max_gain_pct": 4.93,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -9.3,
+        "excess_pct": 10.16
       },
       {
         "code": "sz002552",
@@ -208163,7 +208320,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 4.54,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -2.74,
+        "excess_pct": -13.35
       },
       {
         "code": "sh600025",
@@ -208184,7 +208343,9 @@
         "matured": true,
         "anchor": "C",
         "max_gain_pct": 8.9,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -5.86,
+        "excess_pct": 13.84
       },
       {
         "code": "sh600019",
@@ -208205,7 +208366,9 @@
         "matured": true,
         "anchor": "C",
         "max_gain_pct": 6.6,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -10.04,
+        "excess_pct": 14.38
       },
       {
         "code": "sz000021",
@@ -208226,7 +208389,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 4.83,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -2.3,
+        "excess_pct": -5.43
       },
       {
         "code": "sz000550",
@@ -208247,7 +208412,9 @@
         "matured": true,
         "anchor": "C",
         "max_gain_pct": 0.92,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -2.68,
+        "excess_pct": -5.3
       },
       {
         "code": "sz000538",
@@ -208268,7 +208435,9 @@
         "matured": true,
         "anchor": "C",
         "max_gain_pct": 5.82,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -10.16,
+        "excess_pct": 14.13
       },
       {
         "code": "sz001266",
@@ -208289,7 +208458,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 12.59,
-        "legacy_hit": true
+        "legacy_hit": true,
+        "bench_ret_pct": 0.83,
+        "excess_pct": 7.25
       },
       {
         "code": "sh600104",
@@ -208310,7 +208481,9 @@
         "matured": true,
         "anchor": "C",
         "max_gain_pct": 0.27,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -8.92,
+        "excess_pct": 1.95
       },
       {
         "code": "sz002150",
@@ -208331,7 +208504,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 4.47,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -4.28,
+        "excess_pct": -2.78
       },
       {
         "code": "sh600027",
@@ -208352,7 +208527,9 @@
         "matured": true,
         "anchor": "C",
         "max_gain_pct": 9.15,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -4.9,
+        "excess_pct": 13.42
       },
       {
         "code": "sh601111",
@@ -208373,7 +208550,9 @@
         "matured": true,
         "anchor": "C",
         "max_gain_pct": 2.04,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -11.06,
+        "excess_pct": 8.68
       },
       {
         "code": "sz000625",
@@ -208394,7 +208573,9 @@
         "matured": true,
         "anchor": "C",
         "max_gain_pct": 1.26,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -11.06,
+        "excess_pct": 9.94
       },
       {
         "code": "sh600888",
@@ -208415,7 +208596,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 1.66,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -4.49,
+        "excess_pct": -2.73
       },
       {
         "code": "sh603985",
@@ -208436,7 +208619,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 0.64,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -3.91,
+        "excess_pct": -3.09
       },
       {
         "code": "sz000858",
@@ -208457,7 +208642,9 @@
         "matured": true,
         "anchor": "C",
         "max_gain_pct": 8.17,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -9.59,
+        "excess_pct": 12.35
       },
       {
         "code": "sz002236",
@@ -208478,7 +208665,9 @@
         "matured": true,
         "anchor": "C",
         "max_gain_pct": 0.13,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -7.78,
+        "excess_pct": 0.79
       },
       {
         "code": "sh603903",
@@ -208499,7 +208688,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 4.3,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -2.12,
+        "excess_pct": -8.26
       },
       {
         "code": "sz000725",
@@ -208520,7 +208711,9 @@
         "matured": true,
         "anchor": "C",
         "max_gain_pct": 1.16,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -2.9,
+        "excess_pct": -4.08
       },
       {
         "code": "sh600196",
@@ -208541,7 +208734,9 @@
         "matured": true,
         "anchor": "C",
         "max_gain_pct": 4.8,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -9.51,
+        "excess_pct": 8.0
       },
       {
         "code": "sh605016",
@@ -208562,7 +208757,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 0.0,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -0.54,
+        "excess_pct": -6.45
       },
       {
         "code": "sz300105",
@@ -208583,7 +208780,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 0.14,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -4.03,
+        "excess_pct": -3.18
       },
       {
         "code": "sh600756",
@@ -208604,7 +208803,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 5.12,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -3.92,
+        "excess_pct": -1.34
       },
       {
         "code": "sh603988",
@@ -208625,7 +208826,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 0.0,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -4.03,
+        "excess_pct": -5.87
       },
       {
         "code": "sh600288",
@@ -208646,7 +208849,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 0.09,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -4.03,
+        "excess_pct": -4.62
       },
       {
         "code": "sh600882",
@@ -208667,7 +208872,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 12.92,
-        "legacy_hit": true
+        "legacy_hit": true,
+        "bench_ret_pct": -1.22,
+        "excess_pct": 8.49
       },
       {
         "code": "sz300019",
@@ -208688,7 +208895,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 12.76,
-        "legacy_hit": true
+        "legacy_hit": true,
+        "bench_ret_pct": -1.22,
+        "excess_pct": 8.35
       },
       {
         "code": "sh600436",
@@ -208709,7 +208918,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 14.99,
-        "legacy_hit": true
+        "legacy_hit": true,
+        "bench_ret_pct": -7.65,
+        "excess_pct": 22.61
       },
       {
         "code": "sz301026",
@@ -208730,7 +208941,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 5.51,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -1.5,
+        "excess_pct": -4.24
       },
       {
         "code": "sh603906",
@@ -208751,7 +208964,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 29.4,
-        "legacy_hit": true
+        "legacy_hit": true,
+        "bench_ret_pct": -0.54,
+        "excess_pct": 23.47
       },
       {
         "code": "sz002546",
@@ -208772,7 +208987,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 1.9,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -4.03,
+        "excess_pct": -1.04
       },
       {
         "code": "sz002698",
@@ -208793,7 +209010,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 0.44,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -4.03,
+        "excess_pct": -1.59
       },
       {
         "code": "sz301552",
@@ -208814,7 +209033,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 2.1,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -0.54,
+        "excess_pct": -3.18
       },
       {
         "code": "sh600602",
@@ -208835,7 +209056,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 0.78,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -0.54,
+        "excess_pct": -7.19
       },
       {
         "code": "sh603032",
@@ -208856,7 +209079,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 14.85,
-        "legacy_hit": true
+        "legacy_hit": true,
+        "bench_ret_pct": -1.5,
+        "excess_pct": 10.61
       },
       {
         "code": "sh603722",
@@ -208877,7 +209102,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 0.0,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": 0.39,
+        "excess_pct": -5.56
       },
       {
         "code": "sz000970",
@@ -208898,7 +209125,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 0.0,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": 0.0,
+        "excess_pct": -4.18
       },
       {
         "code": "sh603556",
@@ -208919,7 +209148,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 2.87,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -2.84,
+        "excess_pct": -3.11
       },
       {
         "code": "sh605090",
@@ -208940,7 +209171,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 2.42,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -4.03,
+        "excess_pct": -1.72
       },
       {
         "code": "sz000777",
@@ -208961,7 +209194,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 1.28,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -7.01,
+        "excess_pct": 1.72
       },
       {
         "code": "sz002490",
@@ -208982,7 +209217,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 9.79,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -4.03,
+        "excess_pct": 4.03
       },
       {
         "code": "sz002739",
@@ -209003,7 +209240,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 6.35,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -7.65,
+        "excess_pct": 12.56
       },
       {
         "code": "sz300157",
@@ -209024,7 +209263,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 2.19,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -5.42,
+        "excess_pct": -3.98
       },
       {
         "code": "sz300968",
@@ -209045,7 +209286,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 0.82,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -0.54,
+        "excess_pct": -8.27
       },
       {
         "code": "sh600578",
@@ -209066,7 +209309,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 3.26,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -8.18,
+        "excess_pct": 1.83
       },
       {
         "code": "sz002294",
@@ -209087,7 +209332,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 5.66,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -7.65,
+        "excess_pct": 9.04
       },
       {
         "code": "sz300453",
@@ -209108,7 +209355,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 5.76,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -7.65,
+        "excess_pct": 12.75
       },
       {
         "code": "sz300854",
@@ -209129,7 +209378,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 0.26,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -1.5,
+        "excess_pct": -8.14
       },
       {
         "code": "sz301665",
@@ -209150,7 +209401,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 5.17,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -5.42,
+        "excess_pct": -1.76
       },
       {
         "code": "sh600422",
@@ -209171,7 +209424,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 14.93,
-        "legacy_hit": true
+        "legacy_hit": true,
+        "bench_ret_pct": -4.35,
+        "excess_pct": 13.53
       },
       {
         "code": "sz000751",
@@ -209192,7 +209447,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 0.45,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -4.03,
+        "excess_pct": -2.78
       },
       {
         "code": "sh603496",
@@ -209213,7 +209470,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 2.96,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -6.98,
+        "excess_pct": 1.14
       },
       {
         "code": "sz300191",
@@ -209234,7 +209493,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 3.61,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -5.52,
+        "excess_pct": -4.57
       },
       {
         "code": "sz300444",
@@ -209255,7 +209516,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 11.98,
-        "legacy_hit": true
+        "legacy_hit": true,
+        "bench_ret_pct": -2.93,
+        "excess_pct": 9.31
       },
       {
         "code": "sz301158",
@@ -209276,7 +209539,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 2.19,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -7.11,
+        "excess_pct": -1.39
       },
       {
         "code": "sh600129",
@@ -209297,7 +209562,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 5.1,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -6.8,
+        "excess_pct": 1.96
       },
       {
         "code": "sz002605",
@@ -209318,7 +209585,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 7.25,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -7.11,
+        "excess_pct": 9.0
       },
       {
         "code": "sh600839",
@@ -209339,7 +209608,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 1.09,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -4.12,
+        "excess_pct": 0.85
       },
       {
         "code": "sz003020",
@@ -209360,7 +209631,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 5.55,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -4.2,
+        "excess_pct": -2.25
       },
       {
         "code": "sh600976",
@@ -209381,7 +209654,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 9.38,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -5.6,
+        "excess_pct": 12.23
       },
       {
         "code": "sz300181",
@@ -209402,7 +209677,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 3.85,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -7.25,
+        "excess_pct": 3.86
       },
       {
         "code": "sh601611",
@@ -209423,7 +209700,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 2.6,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -5.79,
+        "excess_pct": 0.63
       },
       {
         "code": "sh603928",
@@ -209444,7 +209723,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 29.46,
-        "legacy_hit": true
+        "legacy_hit": true,
+        "bench_ret_pct": -0.93,
+        "excess_pct": 23.92
       },
       {
         "code": "sz002828",
@@ -209465,7 +209746,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 2.86,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -4.75,
+        "excess_pct": -3.71
       },
       {
         "code": "sz002366",
@@ -209486,7 +209769,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 14.21,
-        "legacy_hit": true
+        "legacy_hit": true,
+        "bench_ret_pct": -0.8,
+        "excess_pct": 9.3
       },
       {
         "code": "sz000948",
@@ -209507,7 +209792,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 17.05,
-        "legacy_hit": true
+        "legacy_hit": true,
+        "bench_ret_pct": -4.8,
+        "excess_pct": 15.99
       },
       {
         "code": "sh603019",
@@ -209528,7 +209815,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 0.78,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": 0.0,
+        "excess_pct": -4.1
       },
       {
         "code": "sh603383",
@@ -209549,7 +209838,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 7.73,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -6.05,
+        "excess_pct": 8.39
       },
       {
         "code": "sz002582",
@@ -209570,7 +209861,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 2.98,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -6.36,
+        "excess_pct": 1.14
       },
       {
         "code": "sz300577",
@@ -209591,7 +209884,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 5.16,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -4.76,
+        "excess_pct": -1.99
       },
       {
         "code": "sz300663",
@@ -209612,7 +209907,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 8.09,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -3.4,
+        "excess_pct": 3.4
       },
       {
         "code": "sh600726",
@@ -209633,7 +209930,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 0.6,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -3.5,
+        "excess_pct": -3.75
       },
       {
         "code": "sh603106",
@@ -209654,7 +209953,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 6.77,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -7.68,
+        "excess_pct": -0.5
       },
       {
         "code": "sz000533",
@@ -209675,7 +209976,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 1.91,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -4.91,
+        "excess_pct": -4.35
       },
       {
         "code": "sz000779",
@@ -209696,7 +209999,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 2.86,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -4.91,
+        "excess_pct": -3.23
       },
       {
         "code": "sz301012",
@@ -209717,7 +210022,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 0.64,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -3.5,
+        "excess_pct": -3.06
       },
       {
         "code": "sz002498",
@@ -209738,7 +210045,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 5.72,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -3.5,
+        "excess_pct": -4.13
       },
       {
         "code": "sz300945",
@@ -209759,7 +210068,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 3.15,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -6.51,
+        "excess_pct": -0.14
       },
       {
         "code": "sh600126",
@@ -209780,7 +210091,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 1.7,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -4.91,
+        "excess_pct": 0.44
       },
       {
         "code": "sh603881",
@@ -209801,7 +210114,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 2.91,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -3.5,
+        "excess_pct": -2.0
       },
       {
         "code": "sz000815",
@@ -209822,7 +210137,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 9.91,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -3.5,
+        "excess_pct": 3.5
       },
       {
         "code": "sh600611",
@@ -209843,7 +210160,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 0.0,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -2.65,
+        "excess_pct": -3.26
       },
       {
         "code": "sz002112",
@@ -209864,7 +210183,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 3.55,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -2.84,
+        "excess_pct": -2.4
       },
       {
         "code": "sz002721",
@@ -209885,7 +210206,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 0.0,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -2.84,
+        "excess_pct": -2.86
       },
       {
         "code": "sz300937",
@@ -209906,7 +210229,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 1.13,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -2.65,
+        "excess_pct": -4.5
       },
       {
         "code": "sz001258",
@@ -209927,7 +210252,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 0.92,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -2.37,
+        "excess_pct": -6.31
       },
       {
         "code": "sh603327",
@@ -209948,7 +210275,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 2.38,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -3.98,
+        "excess_pct": -0.33
       },
       {
         "code": "sz002953",
@@ -209969,7 +210298,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 2.16,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -3.98,
+        "excess_pct": -2.85
       },
       {
         "code": "sz301439",
@@ -209990,7 +210321,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 0.66,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -2.56,
+        "excess_pct": -2.42
       },
       {
         "code": "sh600846",
@@ -210011,7 +210344,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 3.49,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -5.47,
+        "excess_pct": 0.44
       },
       {
         "code": "sz002379",
@@ -210032,7 +210367,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 0.68,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -1.23,
+        "excess_pct": -5.89
       },
       {
         "code": "sz301053",
@@ -210053,7 +210390,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 2.37,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -1.23,
+        "excess_pct": -6.99
       },
       {
         "code": "sh600744",
@@ -210074,7 +210413,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 0.67,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -5.5,
+        "excess_pct": -3.39
       },
       {
         "code": "sh600326",
@@ -210095,7 +210436,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 7.8,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -1.5,
+        "excess_pct": 3.91
       },
       {
         "code": "sz002229",
@@ -210116,7 +210459,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 3.23,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -1.46,
+        "excess_pct": -5.16
       },
       {
         "code": "sh600536",
@@ -210137,7 +210482,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 7.14,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -2.8,
+        "excess_pct": 4.58
       },
       {
         "code": "sh600829",
@@ -210158,7 +210505,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 3.63,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -1.57,
+        "excess_pct": -7.08
       },
       {
         "code": "sz300534",
@@ -210179,7 +210528,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 8.07,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": 0.0,
+        "excess_pct": 2.67
       },
       {
         "code": "sz000428",
@@ -210200,7 +210551,9 @@
         "matured": false,
         "anchor": "A",
         "max_gain_pct": 4.66,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -1.37,
+        "excess_pct": 6.03
       },
       {
         "code": "sh600644",
@@ -210221,7 +210574,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 0.36,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -1.66,
+        "excess_pct": -6.52
       },
       {
         "code": "sz002879",
@@ -210242,7 +210597,9 @@
         "matured": false,
         "anchor": "A",
         "max_gain_pct": 1.0,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -1.46,
+        "excess_pct": -4.1
       },
       {
         "code": "sz300996",
@@ -210263,7 +210620,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 10.61,
-        "legacy_hit": true
+        "legacy_hit": true,
+        "bench_ret_pct": -2.99,
+        "excess_pct": 8.07
       },
       {
         "code": "sh603277",
@@ -210284,7 +210643,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 1.47,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -1.66,
+        "excess_pct": -3.28
       },
       {
         "code": "sz300795",
@@ -210305,7 +210666,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 8.23,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -2.99,
+        "excess_pct": 2.99
       },
       {
         "code": "sh603137",
@@ -210326,7 +210689,9 @@
         "matured": false,
         "anchor": "A",
         "max_gain_pct": 3.86,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -1.46,
+        "excess_pct": -2.82
       },
       {
         "code": "sh601700",
@@ -210347,7 +210712,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 5.89,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -1.22,
+        "excess_pct": -8.3
       },
       {
         "code": "sz300317",
@@ -210368,7 +210735,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 0.27,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -1.13,
+        "excess_pct": -6.74
       },
       {
         "code": "sh600936",
@@ -210389,7 +210758,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 2.23,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -1.13,
+        "excess_pct": -5.4
       },
       {
         "code": "sz300214",
@@ -210410,7 +210781,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 3.48,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -1.13,
+        "excess_pct": -8.67
       },
       {
         "code": "sh600610",
@@ -210431,7 +210804,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 1.26,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -0.16,
+        "excess_pct": -7.25
       },
       {
         "code": "sz000595",
@@ -210452,7 +210827,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 1.96,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -3.07,
+        "excess_pct": -4.69
       },
       {
         "code": "sz300040",
@@ -210473,7 +210850,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 1.47,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -1.7,
+        "excess_pct": -4.16
       },
       {
         "code": "sz000037",
@@ -210494,7 +210873,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 1.51,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -0.68,
+        "excess_pct": -5.73
       },
       {
         "code": "sz002165",
@@ -210515,7 +210896,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 0.0,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": 1.71,
+        "excess_pct": -8.98
       },
       {
         "code": "sz300062",
@@ -210536,7 +210919,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 2.41,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -1.26,
+        "excess_pct": -6.35
       },
       {
         "code": "sh600468",
@@ -210557,7 +210942,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 1.26,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -1.26,
+        "excess_pct": -4.92
       },
       {
         "code": "sh600449",
@@ -210578,7 +210965,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 0.67,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": 1.71,
+        "excess_pct": -6.6
       },
       {
         "code": "sh605162",
@@ -210599,7 +210988,9 @@
         "matured": false,
         "anchor": "A",
         "max_gain_pct": 1.29,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": 0.2,
+        "excess_pct": -3.38
       },
       {
         "code": "sh600054",
@@ -210620,7 +211011,9 @@
         "matured": false,
         "anchor": "A",
         "max_gain_pct": 1.75,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": 0.2,
+        "excess_pct": 1.46
       },
       {
         "code": "sz000566",
@@ -210641,7 +211034,9 @@
         "matured": false,
         "anchor": "A",
         "max_gain_pct": 1.19,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": 0.24,
+        "excess_pct": -1.43
       },
       {
         "code": "sh603900",
@@ -210662,7 +211057,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 0.88,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -2.11,
+        "excess_pct": -6.47
       },
       {
         "code": "sz000721",
@@ -210683,7 +211080,9 @@
         "matured": false,
         "anchor": "A",
         "max_gain_pct": 4.88,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": 0.24,
+        "excess_pct": 3.8
       },
       {
         "code": "sh600227",
@@ -210704,7 +211103,9 @@
         "matured": false,
         "anchor": "A",
         "max_gain_pct": 0.9,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": 1.58,
+        "excess_pct": -4.59
       },
       {
         "code": "sh600272",
@@ -210725,7 +211126,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 12.98,
-        "legacy_hit": true
+        "legacy_hit": true,
+        "bench_ret_pct": 1.58,
+        "excess_pct": 5.75
       },
       {
         "code": "sh600881",
@@ -210746,7 +211149,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 1.2,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -0.81,
+        "excess_pct": -7.39
       },
       {
         "code": "sh603395",
@@ -210767,7 +211172,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 1.32,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -1.58,
+        "excess_pct": -7.72
       },
       {
         "code": "sh603567",
@@ -210788,7 +211195,9 @@
         "matured": false,
         "anchor": "A",
         "max_gain_pct": 4.51,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": 1.58,
+        "excess_pct": 2.52
       },
       {
         "code": "sz002081",
@@ -210809,7 +211218,9 @@
         "matured": false,
         "anchor": "A",
         "max_gain_pct": 15.93,
-        "legacy_hit": true
+        "legacy_hit": true,
+        "bench_ret_pct": 1.58,
+        "excess_pct": 14.35
       },
       {
         "code": "sz300039",
@@ -210830,7 +211241,9 @@
         "matured": false,
         "anchor": "A",
         "max_gain_pct": 3.35,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": 0.72,
+        "excess_pct": 2.0
       },
       {
         "code": "sz300615",
@@ -210851,7 +211264,9 @@
         "matured": false,
         "anchor": "A",
         "max_gain_pct": 5.21,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": 0.72,
+        "excess_pct": 0.86
       },
       {
         "code": "sh600844",
@@ -210872,7 +211287,9 @@
         "matured": false,
         "anchor": "A",
         "max_gain_pct": 3.2,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": 0.72,
+        "excess_pct": 0.35
       },
       {
         "code": "sh603801",
@@ -210893,7 +211310,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 0.69,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -0.62,
+        "excess_pct": -5.82
       },
       {
         "code": "sz002385",
@@ -210914,7 +211333,9 @@
         "matured": false,
         "anchor": "A",
         "max_gain_pct": 1.68,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": 1.77,
+        "excess_pct": -0.42
       },
       {
         "code": "sz000720",
@@ -210935,7 +211356,9 @@
         "matured": true,
         "anchor": "A",
         "max_gain_pct": 0.0,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": -0.62,
+        "excess_pct": -6.71
       },
       {
         "code": "sh600396",
@@ -210956,7 +211379,9 @@
         "matured": false,
         "anchor": "A",
         "max_gain_pct": 13.62,
-        "legacy_hit": true
+        "legacy_hit": true,
+        "bench_ret_pct": 2.4,
+        "excess_pct": 11.22
       },
       {
         "code": "sz002900",
@@ -210977,7 +211402,9 @@
         "matured": false,
         "anchor": "A",
         "max_gain_pct": 6.71,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": 2.4,
+        "excess_pct": 1.97
       },
       {
         "code": "sh605167",
@@ -210998,7 +211425,9 @@
         "matured": false,
         "anchor": "A",
         "max_gain_pct": 7.05,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": 2.4,
+        "excess_pct": 2.37
       },
       {
         "code": "sz002041",
@@ -211019,7 +211448,9 @@
         "matured": false,
         "anchor": "A",
         "max_gain_pct": 5.87,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": 2.4,
+        "excess_pct": 2.87
       },
       {
         "code": "sz300189",
@@ -211040,7 +211471,9 @@
         "matured": false,
         "anchor": "A",
         "max_gain_pct": 10.71,
-        "legacy_hit": true
+        "legacy_hit": true,
+        "bench_ret_pct": 2.4,
+        "excess_pct": 6.42
       },
       {
         "code": "sh600162",
@@ -211061,7 +211494,9 @@
         "matured": false,
         "anchor": "A",
         "max_gain_pct": 8.61,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": 2.4,
+        "excess_pct": 3.23
       },
       {
         "code": "sh600313",
@@ -211082,7 +211517,9 @@
         "matured": false,
         "anchor": "A",
         "max_gain_pct": 4.65,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": 2.61,
+        "excess_pct": 1.5
       },
       {
         "code": "sz000713",
@@ -211103,7 +211540,9 @@
         "matured": false,
         "anchor": "A",
         "max_gain_pct": 2.82,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": 2.61,
+        "excess_pct": 0.21
       },
       {
         "code": "sz300697",
@@ -211124,7 +211563,9 @@
         "matured": false,
         "anchor": "A",
         "max_gain_pct": 6.66,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": 2.61,
+        "excess_pct": 1.97
       },
       {
         "code": "sz000735",
@@ -211145,7 +211586,9 @@
         "matured": false,
         "anchor": "A",
         "max_gain_pct": 3.64,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": 2.61,
+        "excess_pct": 1.03
       },
       {
         "code": "sz000019",
@@ -211166,7 +211609,9 @@
         "matured": false,
         "anchor": "A",
         "max_gain_pct": 3.16,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": 2.61,
+        "excess_pct": 0.05
       },
       {
         "code": "sz300927",
@@ -211187,7 +211632,9 @@
         "matured": false,
         "anchor": "A",
         "max_gain_pct": 4.33,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": 0.0,
+        "excess_pct": 3.19
       },
       {
         "code": "sh600969",
@@ -211208,7 +211655,9 @@
         "matured": false,
         "anchor": "A",
         "max_gain_pct": 1.86,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": 0.0,
+        "excess_pct": 1.49
       },
       {
         "code": "sz002059",
@@ -211229,7 +211678,9 @@
         "matured": false,
         "anchor": "A",
         "max_gain_pct": 3.04,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": 0.0,
+        "excess_pct": 2.78
       },
       {
         "code": "sh600367",
@@ -211250,7 +211701,9 @@
         "matured": false,
         "anchor": "A",
         "max_gain_pct": 4.16,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": 0.0,
+        "excess_pct": 2.37
       },
       {
         "code": "sz000505",
@@ -211271,7 +211724,9 @@
         "matured": false,
         "anchor": "A",
         "max_gain_pct": 2.67,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": 0.0,
+        "excess_pct": 1.25
       },
       {
         "code": "sh600250",
@@ -211292,66 +211747,112 @@
         "matured": false,
         "anchor": "A",
         "max_gain_pct": 2.81,
-        "legacy_hit": false
+        "legacy_hit": false,
+        "bench_ret_pct": 0.0,
+        "excess_pct": 2.69
       }
     ]
   },
   "robustness": {
-    "generated_at": "2026-11-06 01:15:47",
+    "generated_at": "2026-11-06 01:49:01",
     "source": "perf/midline_metrics.json（中线T+22路径回测）",
-    "sample_n": 95,
+    "sample_n": 194,
     "wfa": {
       "ok": true,
       "folds": [
         {
           "fold": "60/40 切分",
-          "is_n": 57,
-          "oos_n": 38,
-          "is_expectancy": 0.435,
-          "oos_expectancy": -2.314,
-          "is_win": 54.4,
-          "oos_win": 39.5,
-          "wfe": -5.32
+          "is_n": 116,
+          "oos_n": 78,
+          "is_expectancy": -0.735,
+          "oos_expectancy": -4.268,
+          "is_win": 44.8,
+          "oos_win": 19.2,
+          "wfe": 5.8
         },
         {
           "fold": "滚动折1",
-          "is_n": 31,
-          "oos_n": 31,
-          "is_expectancy": 2.396,
-          "oos_expectancy": -1.339,
-          "is_win": 64.5,
-          "oos_win": 45.2,
-          "wfe": -0.56
+          "is_n": 64,
+          "oos_n": 64,
+          "is_expectancy": 0.309,
+          "oos_expectancy": -2.311,
+          "is_win": 54.7,
+          "oos_win": 32.8,
+          "wfe": -7.47
         },
         {
           "fold": "滚动折2",
-          "is_n": 62,
-          "oos_n": 31,
-          "is_expectancy": 0.502,
-          "oos_expectancy": -2.762,
-          "is_win": 54.8,
-          "oos_win": 38.7,
-          "wfe": -5.51
+          "is_n": 128,
+          "oos_n": 64,
+          "is_expectancy": -0.997,
+          "oos_expectancy": -4.325,
+          "is_win": 43.8,
+          "oos_win": 17.2,
+          "wfe": 4.34
         }
       ],
-      "median_wfe": -5.32,
+      "median_wfe": 4.34,
+      "verdict": "稳健(WFE≥0.5)",
+      "note": ""
+    },
+    "wfa_excess": {
+      "ok": true,
+      "folds": [
+        {
+          "fold": "60/40 切分",
+          "is_n": 116,
+          "oos_n": 78,
+          "is_expectancy": 2.743,
+          "oos_expectancy": -1.038,
+          "is_win": 57.8,
+          "oos_win": 32.1,
+          "wfe": -0.38
+        },
+        {
+          "fold": "滚动折1",
+          "is_n": 64,
+          "oos_n": 64,
+          "is_expectancy": 3.039,
+          "oos_expectancy": 2.205,
+          "is_win": 67.2,
+          "oos_win": 46.9,
+          "wfe": 0.73
+        },
+        {
+          "fold": "滚动折2",
+          "is_n": 128,
+          "oos_n": 64,
+          "is_expectancy": 2.627,
+          "oos_expectancy": -1.349,
+          "is_win": 57.0,
+          "oos_win": 29.7,
+          "wfe": -0.51
+        }
+      ],
+      "median_wfe": -0.38,
       "verdict": "疑似过拟合(WFE<0.3)",
       "note": ""
+    },
+    "excess_summary": {
+      "n": 194,
+      "avg_excess_pct": 1.298,
+      "excess_win_rate": 48.5,
+      "note": "超额=个股收益-同持仓窗口沪深300收益；正=跑赢基准，负=跑输"
     },
     "sensitivity": {
       "目标阈值": {
         "grid": {
           "8%": {
-            "达标率": 13.7,
-            "n": 65
+            "达标率": 6.7,
+            "n": 164
           },
           "10%": {
-            "达标率": 3.2,
-            "n": 22
+            "达标率": 1.5,
+            "n": 121
           },
           "12%": {
             "达标率": 0.0,
-            "n": 13
+            "n": 112
           }
         },
         "judge": "钝(平缓)"
@@ -211359,19 +211860,19 @@
       "持有期": {
         "grid": {
           "18天": {
-            "n": 53,
-            "expectancy": -1.783,
-            "win": 43.4
+            "n": 116,
+            "expectancy": -2.948,
+            "win": 29.3
           },
           "22天": {
-            "n": 58,
-            "expectancy": -1.453,
-            "win": 44.8
+            "n": 137,
+            "expectancy": -3.078,
+            "win": 27.7
           },
           "26天": {
-            "n": 61,
-            "expectancy": -0.889,
-            "win": 47.5
+            "n": 147,
+            "expectancy": -2.732,
+            "win": 29.9
           }
         },
         "note": "受已到期样本限制，样本少时仅方向性参考"
@@ -211379,16 +211880,16 @@
       "止损宽度": {
         "grid": {
           "-20%": {
-            "avg_R": -0.1,
-            "n": 95
+            "avg_R": -0.36,
+            "n": 194
           },
           "基准": {
-            "avg_R": -0.08,
-            "n": 95
+            "avg_R": -0.28,
+            "n": 194
           },
           "+20%": {
-            "avg_R": -0.07,
-            "n": 95
+            "avg_R": -0.24,
+            "n": 194
           }
         },
         "judge": "钝(平缓)"
@@ -211396,17 +211897,32 @@
     },
     "decay": {
       "ok": true,
-      "prev_n": 63,
-      "recent_n": 32,
-      "prev_expectancy": 0.187,
-      "recent_expectancy": -2.359,
-      "expectancy_change_pct": -1359.3,
-      "prev_win": 54.0,
-      "recent_win": 37.5,
-      "win_change_pct": -30.5,
+      "prev_n": 129,
+      "recent_n": 65,
+      "prev_expectancy": -1.055,
+      "recent_expectancy": -4.339,
+      "expectancy_change_pct": -311.2,
+      "prev_win": 43.4,
+      "recent_win": 16.9,
+      "win_change_pct": -61.0,
       "alerts": [
-        "⚠ 期望值衰减 -1359.3%（近 32 笔 -2.36% vs 前期 0.19%）→ 策略可能失效，检查市场状态是否切换",
-        "⚠ 胜率衰减 -30.5%（近 37.5% vs 前期 54.0%）"
+        "⚠ 期望值衰减 -311.2%（近 65 笔 -4.34% vs 前期 -1.06%）→ 策略可能失效，检查市场状态是否切换",
+        "⚠ 胜率衰减 -61.0%（近 16.9% vs 前期 43.4%）"
+      ]
+    },
+    "decay_excess": {
+      "ok": true,
+      "prev_n": 129,
+      "recent_n": 65,
+      "prev_expectancy": 2.597,
+      "recent_expectancy": -1.506,
+      "expectancy_change_pct": -158.0,
+      "prev_win": 56.6,
+      "recent_win": 29.2,
+      "win_change_pct": -48.3,
+      "alerts": [
+        "⚠ 期望值衰减 -158.0%（近 65 笔 -1.51% vs 前期 2.60%）→ 策略可能失效，检查市场状态是否切换",
+        "⚠ 胜率衰减 -48.3%（近 29.2% vs 前期 56.6%）"
       ]
     }
   },
