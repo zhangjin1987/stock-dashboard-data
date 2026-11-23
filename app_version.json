@@ -1,6 +1,6 @@
 {
   "build": "v39-20260926-anchor-mix",
-  "data_file": "picks.20261123_161359.json",
-  "generated_at": "2026-11-23 16:14:01",
+  "data_file": "picks.20261124_011257.json",
+  "generated_at": "2026-11-24 01:12:59",
   "note": "看板部署版本标记，index.html 比对 build 不一致则自动重载；data_file 为本次带时间戳的数据文件"
 }
