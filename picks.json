@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24 16:31:37",
+  "generated_at": "2026-11-24 16:32:49",
   "source": "WORKBUDDY 统一投资数据库 (NeoData / 腾讯自选股 / 通达信 实拉)",
   "levels_rule": "动态买卖点每日 17:15 按最新收盘价重算，且按【个股实际波动率 ATR14 + MA10 支撑 + 计划位】自适应：止损宽度=低波动 7%/中波动 10%/高波动 13%（不低于原硬止损，站上 MA10 抬至其下 1.5%）；目标=纪律B +8% 上限（高波动放宽至 +10%/+12%，且不低于自动化计划目标）。",
   "account": {
@@ -105706,48 +105706,8 @@
   },
   "market": {
     "updated": "2026-11-24",
-    "indices": [
-      {
-        "name": "上证指数",
-        "code": "sh000001",
-        "price": 3548.37,
-        "chg_pct": 0.27,
-        "up": 817,
-        "down": 1488
-      },
-      {
-        "name": "深证成指",
-        "code": "sz399001",
-        "price": 10423.6,
-        "chg_pct": -0.29,
-        "up": 1050,
-        "down": 1817
-      },
-      {
-        "name": "创业板指",
-        "code": "sz399006",
-        "price": 2278.99,
-        "chg_pct": -0.05,
-        "up": 585,
-        "down": 800
-      },
-      {
-        "name": "科创50",
-        "code": "sh000688",
-        "price": 1250.09,
-        "chg_pct": 1.81,
-        "up": 25,
-        "down": 23
-      }
-    ],
-    "breadth": {
-      "up": 1867,
-      "down": 3305,
-      "flat": null,
-      "limit_up": null,
-      "limit_down": null,
-      "total": null
-    },
+    "indices": [],
+    "breadth": null,
     "sectors_up": [],
     "sectors_down": [],
     "sector_flow": null,
@@ -105784,12 +105744,8 @@
       ],
       "note": "近5日持续上榜≥3日视为走强"
     },
-    "sentiment": {
-      "temp": 30.3,
-      "level": "谨慎",
-      "note": "跌多涨少，注意风险"
-    },
-    "source": "东方财富 push2delay"
+    "sentiment": null,
+    "source": null
   },
   "risk": {
     "rules": {
