@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27 00:40:34",
+  "generated_at": "2026-11-27 01:32:45",
   "source": "WORKBUDDY 统一投资数据库 (NeoData / 腾讯自选股 / 通达信 实拉)",
   "levels_rule": "动态买卖点每日 17:15 按最新收盘价重算，且按【个股实际波动率 ATR14 + MA10 支撑 + 计划位】自适应：止损宽度=低波动 7%/中波动 10%/高波动 13%（不低于原硬止损，站上 MA10 抬至其下 1.5%）；目标=纪律B +8% 上限（高波动放宽至 +10%/+12%，且不低于自动化计划目标）。",
   "account": {
@@ -49382,7 +49382,7 @@
       "ref_close": 12.01,
       "pick_date": "2026-11-02",
       "next_day": null,
-      "lesson": "",
+      "lesson": "观察案例：电工合金(sz.300697) None WATCH，ref12.01→11.07(-7.83%)，横盘/监控中未定论。六指标印证：DIF<DEA，绿柱运行，空头占优；运行于布林带内（10.73–13.02，中轨 11.88），中性；K>D金叉状态，短线偏多；量能平稳 1.2×均量；ATR4.0%（六维 1/6·偏弱）。价格行为：现价11.07 较 ref12.01 -7.83%；距目标17.85 还差 61.2%；止损11.07 已破。",
       "d_entry_lo": 10.52,
       "d_entry_hi": 10.96,
       "d_stop": 11.071,
@@ -104902,7 +104902,7 @@
   ],
   "daily_pick": {
     "date": "2026-11-27",
-    "generated_at": "2026-11-27 00:35:04",
+    "generated_at": "2026-11-27 01:31:00",
     "verdict": "NO_PICK",
     "reason": "候选池为空（0 只）：反转扫描器已于 2026-11-14 正式 CLOSED，不再写入 all_picks.json，本闸门当日无候选输入；个股层面未做审核（淘汰 0 只）。今日不推荐任何标的。",
     "pick": null,
@@ -104917,8 +104917,8 @@
       "intel_defensive": false,
       "intel_closed": false,
       "intel_stale": false,
-      "intel_age_days": 1,
-      "intel_reason": "情报等级=防守（防守·总仓≤25%·WATCH优先·）→ 不干预",
+      "intel_age_days": 0,
+      "intel_reason": "情报等级=防守（防守·总仓≤30%·WATCH优先·）→ 不干预",
       "gate_source": "none"
     },
     "stats": {
@@ -104928,24 +104928,48 @@
     },
     "sixfactor_combo": {
       "available": true,
-      "sig_date": "2026-11-25",
-      "bar_date": "2026-11-25",
+      "sig_date": "2026-11-26",
+      "bar_date": "2026-11-26",
       "strategy": "sixfactor_10y",
       "tier_desc": "深度熊市(HS300<MA120且MA120下行) → 2成仓",
-      "per_val": 1255.91,
+      "per_val": 1252.15,
       "n_signals": 15,
       "n_evaluated": 15,
-      "n_actionable": 5,
-      "n_buyable": 5,
-      "buyable_ratio": 33.3,
+      "n_actionable": 6,
+      "n_buyable": 6,
+      "buyable_ratio": 40.0,
       "sig_stale": true,
-      "sig_age_days": 2,
+      "sig_age_days": 1,
       "can_execute": true,
       "env_gate": "open",
-      "gate_note": "环境闸门已开，5 只预算够 1 手可执行。⚠ 回测口径为 TOP15 等权、20 日持有、无单票止损——单只集中买入不等于策略。 ｜ ⚠ 篮子完整度 33.3%（5/15 只买得起 1 手，其余 10 只因单票预算 1256 元不足被剔除）。⚠ 与回测口径的差异说明：10 年复跑本身即「买不起即跳过」（填充率 13.4%、日均成交 1.8 只），故残缺属策略固有形态而非执行缺陷；但实得篮子偏向低价股，**不得从此篮子中抽 1 只当单票下注**。 ｜ ⚠ 信号滞后 2 天（sig_date=2026-11-25，非今日）——生产者晚于本闸门触发，读数请按滞后一日理解。",
-      "risk_note": "赔率披露：0/15 只在 2ATR 止损（约 9-19% 幅度）下赔率 ≥1；六因子标的 ATR 中位 6.7%，散度大。回测本身**无单票止损**，靠 TOP15 分散在 20 个交易日内兑现。若坚持单票止损，须接受与回测不一致的结果，或改用 1.5ATR 紧档（odds_tight 字段）。｜引擎实证（2026-11-04 10年复跑）：名额填充率仅 13.4%、日均成交 1.8 只、均持仓约 40 只——该策略在小资金下本就只买得起极少数（买不起即跳过），故「5 只可执行」是正常形态，不是筛选缺陷；同理也**不能**从其中抽 1 只当单票下注。",
+      "gate_note": "环境闸门已开，6 只预算够 1 手可执行。⚠ 回测口径为 TOP15 等权、20 日持有、无单票止损——单只集中买入不等于策略。 ｜ ⚠ 篮子完整度 40.0%（6/15 只买得起 1 手，其余 9 只因单票预算 1252 元不足被剔除）。⚠ 与回测口径的差异说明：10 年复跑本身即「买不起即跳过」（填充率 13.4%、日均成交 1.8 只），故残缺属策略固有形态而非执行缺陷；但实得篮子偏向低价股，**不得从此篮子中抽 1 只当单票下注**。 ｜ ⚠ 信号滞后 1 天（sig_date=2026-11-26，非今日）——生产者晚于本闸门触发，读数请按滞后一日理解。",
+      "risk_note": "赔率披露：0/15 只在 2ATR 止损（约 10-16% 幅度）下赔率 ≥1；六因子标的 ATR 中位 6.8%，散度大。回测本身**无单票止损**，靠 TOP15 分散在 20 个交易日内兑现。若坚持单票止损，须接受与回测不一致的结果，或改用 1.5ATR 紧档（odds_tight 字段）。｜引擎实证（2026-11-04 10年复跑）：名额填充率仅 13.4%、日均成交 1.8 只、均持仓约 40 只——该策略在小资金下本就只买得起极少数（买不起即跳过），故「5 只可执行」是正常形态，不是筛选缺陷；同理也**不能**从其中抽 1 只当单票下注。",
       "n_odds_ok": 0,
       "items": [
+        {
+          "code": "sz301173",
+          "name": "毓恬冠佳",
+          "px": 22.36,
+          "pos52": 0.6,
+          "volratio": 1.44,
+          "ret60": -29.75,
+          "vol60": 2.17,
+          "atr": 1.133,
+          "atr_pct": 5.07,
+          "target1": 24.15,
+          "stop": 20.09,
+          "stop_atr": 2.0,
+          "stop_tight": 20.66,
+          "stop_tight_atr": 1.5,
+          "space_pct": 8.01,
+          "odds": 0.79,
+          "odds_tight": 1.05,
+          "odds_ok": false,
+          "one_lot_cost": 2238.91,
+          "affordable_lots": 0,
+          "buyable": false,
+          "actionable": false
+        },
         {
           "code": "sh603356",
           "name": "华菱精工",
@@ -104971,28 +104995,76 @@
           "actionable": true
         },
         {
-          "code": "sz301203",
-          "name": "国泰环保",
-          "px": 24.63,
-          "pos52": 4.2,
-          "volratio": 1.2,
-          "ret60": -28.02,
+          "code": "sh600463",
+          "name": "空港股份",
+          "px": 5.51,
+          "pos52": 1.1,
+          "volratio": 1.24,
+          "ret60": -33.93,
           "vol60": 2.23,
-          "atr": 1.15,
-          "atr_pct": 4.67,
-          "target1": 26.6,
-          "stop": 22.33,
-          "stop_atr": 2.0,
-          "stop_tight": 22.9,
+          "atr": 0.316,
+          "atr_pct": 5.74,
+          "target1": 5.95,
+          "stop": 4.88,
+          "stop_atr": 1.99,
+          "stop_tight": 5.04,
           "stop_tight_atr": 1.5,
-          "space_pct": 8.0,
-          "odds": 0.86,
-          "odds_tight": 1.14,
+          "space_pct": 7.99,
+          "odds": 0.7,
+          "odds_tight": 0.94,
           "odds_ok": false,
-          "one_lot_cost": 2466.2,
+          "one_lot_cost": 551.72,
+          "affordable_lots": 2,
+          "buyable": true,
+          "actionable": true
+        },
+        {
+          "code": "sz301287",
+          "name": "康力源",
+          "px": 28.23,
+          "pos52": 1.8,
+          "volratio": 0.91,
+          "ret60": -32.77,
+          "vol60": 2.25,
+          "atr": 1.552,
+          "atr_pct": 5.5,
+          "target1": 30.49,
+          "stop": 25.13,
+          "stop_atr": 2.0,
+          "stop_tight": 25.9,
+          "stop_tight_atr": 1.5,
+          "space_pct": 8.01,
+          "odds": 0.73,
+          "odds_tight": 0.97,
+          "odds_ok": false,
+          "one_lot_cost": 2826.67,
           "affordable_lots": 0,
           "buyable": false,
           "actionable": false
+        },
+        {
+          "code": "sz301113",
+          "name": "雅艺科技",
+          "px": 11.57,
+          "pos52": 1.0,
+          "volratio": 1.28,
+          "ret60": -33.43,
+          "vol60": 2.41,
+          "atr": 0.819,
+          "atr_pct": 7.08,
+          "target1": 12.5,
+          "stop": 9.93,
+          "stop_atr": 2.0,
+          "stop_tight": 10.34,
+          "stop_tight_atr": 1.5,
+          "space_pct": 8.04,
+          "odds": 0.57,
+          "odds_tight": 0.76,
+          "odds_ok": false,
+          "one_lot_cost": 1158.5,
+          "affordable_lots": 1,
+          "buyable": true,
+          "actionable": true
         },
         {
           "code": "sh603282",
@@ -105015,30 +105087,6 @@
           "odds_ok": false,
           "one_lot_cost": 1087.41,
           "affordable_lots": 1,
-          "buyable": true,
-          "actionable": true
-        },
-        {
-          "code": "sh600212",
-          "name": "绿能慧充",
-          "px": 3.63,
-          "pos52": 1.3,
-          "volratio": 1.14,
-          "ret60": -41.45,
-          "vol60": 2.44,
-          "atr": 0.206,
-          "atr_pct": 5.69,
-          "target1": 3.92,
-          "stop": 3.22,
-          "stop_atr": 1.99,
-          "stop_tight": 3.32,
-          "stop_tight_atr": 1.5,
-          "space_pct": 7.99,
-          "odds": 0.71,
-          "odds_tight": 0.94,
-          "odds_ok": false,
-          "one_lot_cost": 363.47,
-          "affordable_lots": 3,
           "buyable": true,
           "actionable": true
         },
@@ -105115,28 +105163,28 @@
           "actionable": false
         },
         {
-          "code": "sh605186",
-          "name": "健麾信息",
-          "px": 16.48,
-          "pos52": 1.7,
-          "volratio": 0.98,
-          "ret60": -35.83,
-          "vol60": 2.74,
-          "atr": 0.994,
-          "atr_pct": 6.03,
-          "target1": 17.8,
-          "stop": 14.49,
-          "stop_atr": 2.0,
-          "stop_tight": 14.99,
+          "code": "sz000820",
+          "name": "神雾节能",
+          "px": 2.4,
+          "pos52": 0.0,
+          "volratio": 0.75,
+          "ret60": -33.15,
+          "vol60": 2.88,
+          "atr": 0.163,
+          "atr_pct": 6.79,
+          "target1": 2.59,
+          "stop": 2.07,
+          "stop_atr": 2.03,
+          "stop_tight": 2.16,
           "stop_tight_atr": 1.5,
-          "space_pct": 8.01,
-          "odds": 0.66,
-          "odds_tight": 0.89,
+          "space_pct": 7.92,
+          "odds": 0.58,
+          "odds_tight": 0.79,
           "odds_ok": false,
-          "one_lot_cost": 1650.14,
-          "affordable_lots": 0,
-          "buyable": false,
-          "actionable": false
+          "one_lot_cost": 240.31,
+          "affordable_lots": 5,
+          "buyable": true,
+          "actionable": true
         },
         {
           "code": "sz301212",
@@ -105182,6 +105230,30 @@
           "odds_tight": 0.66,
           "odds_ok": false,
           "one_lot_cost": 3019.92,
+          "affordable_lots": 0,
+          "buyable": false,
+          "actionable": false
+        },
+        {
+          "code": "sz301040",
+          "name": "中环海陆",
+          "px": 15.96,
+          "pos52": 1.1,
+          "volratio": 1.14,
+          "ret60": -41.13,
+          "vol60": 3.17,
+          "atr": 1.265,
+          "atr_pct": 7.93,
+          "target1": 17.24,
+          "stop": 13.43,
+          "stop_atr": 2.0,
+          "stop_tight": 14.06,
+          "stop_tight_atr": 1.5,
+          "space_pct": 8.02,
+          "odds": 0.51,
+          "odds_tight": 0.67,
+          "odds_ok": false,
+          "one_lot_cost": 1598.07,
           "affordable_lots": 0,
           "buyable": false,
           "actionable": false
@@ -105233,78 +105305,6 @@
           "affordable_lots": 0,
           "buyable": false,
           "actionable": false
-        },
-        {
-          "code": "sz301228",
-          "name": "实朴检测",
-          "px": 30.18,
-          "pos52": 2.1,
-          "volratio": 1.2,
-          "ret60": -51.94,
-          "vol60": 4.14,
-          "atr": 2.504,
-          "atr_pct": 8.3,
-          "target1": 32.59,
-          "stop": 25.17,
-          "stop_atr": 2.0,
-          "stop_tight": 26.42,
-          "stop_tight_atr": 1.5,
-          "space_pct": 7.99,
-          "odds": 0.48,
-          "odds_tight": 0.64,
-          "odds_ok": false,
-          "one_lot_cost": 3021.92,
-          "affordable_lots": 0,
-          "buyable": false,
-          "actionable": false
-        },
-        {
-          "code": "sz000668",
-          "name": "荣丰控股",
-          "px": 11.58,
-          "pos52": 19.1,
-          "volratio": 0.86,
-          "ret60": -47.88,
-          "vol60": 4.37,
-          "atr": 0.767,
-          "atr_pct": 6.62,
-          "target1": 12.51,
-          "stop": 10.05,
-          "stop_atr": 1.99,
-          "stop_tight": 10.43,
-          "stop_tight_atr": 1.5,
-          "space_pct": 8.03,
-          "odds": 0.61,
-          "odds_tight": 0.81,
-          "odds_ok": false,
-          "one_lot_cost": 1159.51,
-          "affordable_lots": 1,
-          "buyable": true,
-          "actionable": true
-        },
-        {
-          "code": "sz301057",
-          "name": "汇隆新材",
-          "px": 13.74,
-          "pos52": 0.8,
-          "volratio": 0.93,
-          "ret60": -38.72,
-          "vol60": 4.73,
-          "atr": 1.338,
-          "atr_pct": 9.74,
-          "target1": 14.84,
-          "stop": 11.06,
-          "stop_atr": 2.0,
-          "stop_tight": 11.73,
-          "stop_tight_atr": 1.5,
-          "space_pct": 8.01,
-          "odds": 0.41,
-          "odds_tight": 0.55,
-          "odds_ok": false,
-          "one_lot_cost": 1375.79,
-          "affordable_lots": 0,
-          "buyable": false,
-          "actionable": false
         }
       ],
       "skipped": [],
@@ -105326,16 +105326,16 @@
   },
   "sixfactor_mirror": {
     "start_date": "2026-11-04",
-    "updated_at": "2026-11-25",
+    "updated_at": "2026-11-26",
     "mode": "shadow",
     "capital": 90923.4,
-    "cash": 73888.30789999996,
+    "cash": 72927.05989999995,
     "positions": {
       "sz002348": {
         "shares": 100,
         "entry": 7.05,
         "entry_date": "2026-11-04",
-        "hold_days": 13,
+        "hold_days": 14,
         "last_px": 7.35,
         "sell_due": "2026-12-03"
       },
@@ -105343,7 +105343,7 @@
         "shares": 100,
         "entry": 10.39,
         "entry_date": "2026-11-04",
-        "hold_days": 13,
+        "hold_days": 14,
         "last_px": 8.9,
         "sell_due": "2026-12-03"
       },
@@ -105351,7 +105351,7 @@
         "shares": 200,
         "entry": 5.3,
         "entry_date": "2026-11-05",
-        "hold_days": 12,
+        "hold_days": 13,
         "last_px": 4.55,
         "sell_due": "2026-12-04"
       },
@@ -105359,7 +105359,7 @@
         "shares": 100,
         "entry": 6.46,
         "entry_date": "2026-11-05",
-        "hold_days": 12,
+        "hold_days": 13,
         "last_px": 5.68,
         "sell_due": "2026-12-04"
       },
@@ -105367,7 +105367,7 @@
         "shares": 100,
         "entry": 8.24,
         "entry_date": "2026-11-06",
-        "hold_days": 11,
+        "hold_days": 12,
         "last_px": 7.11,
         "sell_due": "2026-12-05"
       },
@@ -105375,7 +105375,7 @@
         "shares": 100,
         "entry": 10.57,
         "entry_date": "2026-11-09",
-        "hold_days": 10,
+        "hold_days": 11,
         "last_px": 9.68,
         "sell_due": "2026-12-08"
       },
@@ -105383,7 +105383,7 @@
         "shares": 100,
         "entry": 9.36,
         "entry_date": "2026-11-10",
-        "hold_days": 9,
+        "hold_days": 10,
         "last_px": 9.01,
         "sell_due": "2026-12-09"
       },
@@ -105391,7 +105391,7 @@
         "shares": 200,
         "entry": 5.88,
         "entry_date": "2026-11-10",
-        "hold_days": 9,
+        "hold_days": 10,
         "last_px": 5.07,
         "sell_due": "2026-12-09"
       },
@@ -105399,7 +105399,7 @@
         "shares": 200,
         "entry": 4.55,
         "entry_date": "2026-11-10",
-        "hold_days": 9,
+        "hold_days": 10,
         "last_px": 4.01,
         "sell_due": "2026-12-09"
       },
@@ -105407,7 +105407,7 @@
         "shares": 100,
         "entry": 8.59,
         "entry_date": "2026-11-10",
-        "hold_days": 9,
+        "hold_days": 10,
         "last_px": 7.36,
         "sell_due": "2026-12-09"
       },
@@ -105415,7 +105415,7 @@
         "shares": 200,
         "entry": 4.28,
         "entry_date": "2026-11-13",
-        "hold_days": 7,
+        "hold_days": 8,
         "last_px": 3.82,
         "sell_due": "2026-12-12"
       },
@@ -105423,7 +105423,7 @@
         "shares": 100,
         "entry": 9.72,
         "entry_date": "2026-11-17",
-        "hold_days": 5,
+        "hold_days": 6,
         "last_px": 8.25,
         "sell_due": "2026-12-16"
       },
@@ -105431,7 +105431,7 @@
         "shares": 200,
         "entry": 4.5,
         "entry_date": "2026-11-20",
-        "hold_days": 2,
+        "hold_days": 3,
         "last_px": 4.36,
         "sell_due": "2026-12-19"
       },
@@ -105439,7 +105439,7 @@
         "shares": 200,
         "entry": 5.93,
         "entry_date": "2026-11-23",
-        "hold_days": 1,
+        "hold_days": 2,
         "last_px": 5.51,
         "sell_due": "2026-12-22"
       },
@@ -105447,7 +105447,7 @@
         "shares": 100,
         "entry": 10.05,
         "entry_date": "2026-11-23",
-        "hold_days": 1,
+        "hold_days": 2,
         "last_px": 9.75,
         "sell_due": "2026-12-22"
       },
@@ -105455,7 +105455,7 @@
         "shares": 100,
         "entry": 6.64,
         "entry_date": "2026-11-25",
-        "hold_days": 0,
+        "hold_days": 1,
         "last_px": 6.64,
         "sell_due": "2026-12-24"
       },
@@ -105463,12 +105463,20 @@
         "shares": 100,
         "entry": 10.81,
         "entry_date": "2026-11-25",
-        "hold_days": 0,
+        "hold_days": 1,
         "last_px": 10.81,
         "sell_due": "2026-12-24"
+      },
+      "sz000820": {
+        "shares": 400,
+        "entry": 2.4,
+        "entry_date": "2026-11-26",
+        "hold_days": 0,
+        "last_px": 2.4,
+        "sell_due": "2026-12-25"
       }
     },
-    "nav": 88406.31,
+    "nav": 88405.06,
     "nav_history": [
       {
         "date": "2026-11-04",
@@ -105525,6 +105533,10 @@
       {
         "date": "2026-11-25",
         "nav": 88406.31
+      },
+      {
+        "date": "2026-11-26",
+        "nav": 88405.06
       }
     ],
     "closed": [
@@ -105621,86 +105633,46 @@
       }
     ],
     "stats": {
-      "buys": 24,
+      "buys": 25,
       "sells": 7,
       "closed": 7,
       "win": 0
     },
     "regime_tier": 0.2,
     "tier_desc": "深度熊市(HS300<MA120且MA120下行) → 2成仓",
-    "last_bar_date": "2026-11-25",
+    "last_bar_date": "2026-11-26",
     "gate": {
       "closed": 7,
       "need": 30,
-      "nav_dev_pp": 3.04,
+      "nav_dev_pp": 3.32,
       "max_dev_pp": 3.0,
       "armed": false,
-      "note": "影子模式：清单仅记账，不构成下单指令。已了结 7/30 笔，净值偏离影子 3.04pp/≤3pp"
+      "note": "影子模式：清单仅记账，不构成下单指令。已了结 7/30 笔，净值偏离影子 3.32pp/≤3pp"
     },
     "orders": {
-      "date": "2026-11-25",
+      "date": "2026-11-26",
       "mode": "shadow",
-      "sell": [
-        {
-          "code": "sh600665",
-          "name": "天地源",
-          "shares": 400,
-          "price_ref": 2.41,
-          "amount": 964.0,
-          "pnl": -175.21,
-          "pnl_pct": -15.4,
-          "reason": "止损 -15%（前收 2.41 ≤ 2.41）"
-        },
-        {
-          "code": "sh600533",
-          "name": "栖霞建设",
-          "shares": 600,
-          "price_ref": 1.55,
-          "amount": 930.0,
-          "pnl": -189.12,
-          "pnl_pct": -16.92,
-          "reason": "止损 -15%（前收 1.55 ≤ 1.58）"
-        },
-        {
-          "code": "sh603578",
-          "name": "三星新材",
-          "shares": 100,
-          "price_ref": 7.63,
-          "amount": 763.0,
-          "pnl": -173.59,
-          "pnl_pct": -18.56,
-          "reason": "止损 -15%（前收 7.65 ≤ 7.94）"
-        }
-      ],
+      "sell": [],
       "buy": [
         {
-          "code": "sz300614",
-          "name": "百川畅银",
-          "shares": 100,
-          "price_ref": 6.64,
-          "amount": 664.86,
-          "pct_of_equity": 0.75,
-          "sell_due": "2026-12-24"
-        },
-        {
-          "code": "sh603356",
-          "name": "华菱精工",
-          "shares": 100,
-          "price_ref": 10.81,
-          "amount": 1082.41,
-          "pct_of_equity": 1.22,
-          "sell_due": "2026-12-24"
+          "code": "sz000820",
+          "name": "神雾节能",
+          "shares": 400,
+          "price_ref": 2.4,
+          "amount": 961.25,
+          "pct_of_equity": 1.09,
+          "sell_due": "2026-12-25"
         }
       ]
     },
     "snapshot": {
-      "equity": 88406.31,
-      "cash": 73888.31,
-      "mv": 14518.0,
-      "exposure_pct": 16.42,
+      "equity": 88405.06,
+      "cash": 72927.06,
+      "mv": 15478.0,
+      "exposure_pct": 17.51,
       "cap_pct": 20.0,
-      "per_val": 1178.78,
-      "n_pos": 17,
+      "per_val": 1178.75,
+      "n_pos": 18,
       "real_equity": 90923.4,
       "real_cash": 90923.4,
       "real_asof": "2026-11-26 收盘"
@@ -105714,7 +105686,7 @@
         "last_px": 5.51,
         "mv": 1102.0,
         "pnl_pct": -7.08,
-        "hold_days": 1,
+        "hold_days": 2,
         "sell_due": "2026-12-22"
       },
       {
@@ -105725,7 +105697,7 @@
         "last_px": 10.81,
         "mv": 1081.0,
         "pnl_pct": 0.0,
-        "hold_days": 0,
+        "hold_days": 1,
         "sell_due": "2026-12-24"
       },
       {
@@ -105736,7 +105708,7 @@
         "last_px": 5.07,
         "mv": 1014.0,
         "pnl_pct": -13.78,
-        "hold_days": 9,
+        "hold_days": 10,
         "sell_due": "2026-12-09"
       },
       {
@@ -105747,7 +105719,7 @@
         "last_px": 9.75,
         "mv": 975.0,
         "pnl_pct": -2.99,
-        "hold_days": 1,
+        "hold_days": 2,
         "sell_due": "2026-12-22"
       },
       {
@@ -105758,8 +105730,19 @@
         "last_px": 9.68,
         "mv": 968.0,
         "pnl_pct": -8.42,
-        "hold_days": 10,
+        "hold_days": 11,
         "sell_due": "2026-12-08"
+      },
+      {
+        "code": "sz000820",
+        "name": "神雾节能",
+        "shares": 400,
+        "entry": 2.4,
+        "last_px": 2.4,
+        "mv": 960.0,
+        "pnl_pct": 0.0,
+        "hold_days": 0,
+        "sell_due": "2026-12-25"
       },
       {
         "code": "sh600676",
@@ -105769,7 +105752,7 @@
         "last_px": 4.55,
         "mv": 910.0,
         "pnl_pct": -14.15,
-        "hold_days": 12,
+        "hold_days": 13,
         "sell_due": "2026-12-04"
       },
       {
@@ -105780,7 +105763,7 @@
         "last_px": 9.01,
         "mv": 901.0,
         "pnl_pct": -3.74,
-        "hold_days": 9,
+        "hold_days": 10,
         "sell_due": "2026-12-09"
       },
       {
@@ -105791,7 +105774,7 @@
         "last_px": 8.9,
         "mv": 890.0,
         "pnl_pct": -14.34,
-        "hold_days": 13,
+        "hold_days": 14,
         "sell_due": "2026-12-03"
       },
       {
@@ -105802,7 +105785,7 @@
         "last_px": 4.36,
         "mv": 872.0,
         "pnl_pct": -3.11,
-        "hold_days": 2,
+        "hold_days": 3,
         "sell_due": "2026-12-19"
       },
       {
@@ -105813,7 +105796,7 @@
         "last_px": 8.25,
         "mv": 825.0,
         "pnl_pct": -15.12,
-        "hold_days": 5,
+        "hold_days": 6,
         "sell_due": "2026-12-16"
       },
       {
@@ -105824,7 +105807,7 @@
         "last_px": 4.01,
         "mv": 802.0,
         "pnl_pct": -11.87,
-        "hold_days": 9,
+        "hold_days": 10,
         "sell_due": "2026-12-09"
       },
       {
@@ -105835,7 +105818,7 @@
         "last_px": 3.82,
         "mv": 764.0,
         "pnl_pct": -10.75,
-        "hold_days": 7,
+        "hold_days": 8,
         "sell_due": "2026-12-12"
       },
       {
@@ -105846,7 +105829,7 @@
         "last_px": 7.36,
         "mv": 736.0,
         "pnl_pct": -14.32,
-        "hold_days": 9,
+        "hold_days": 10,
         "sell_due": "2026-12-09"
       },
       {
@@ -105857,7 +105840,7 @@
         "last_px": 7.35,
         "mv": 735.0,
         "pnl_pct": 4.26,
-        "hold_days": 13,
+        "hold_days": 14,
         "sell_due": "2026-12-03"
       },
       {
@@ -105868,7 +105851,7 @@
         "last_px": 7.11,
         "mv": 711.0,
         "pnl_pct": -13.71,
-        "hold_days": 11,
+        "hold_days": 12,
         "sell_due": "2026-12-05"
       },
       {
@@ -105879,7 +105862,7 @@
         "last_px": 6.64,
         "mv": 664.0,
         "pnl_pct": 0.0,
-        "hold_days": 0,
+        "hold_days": 1,
         "sell_due": "2026-12-24"
       },
       {
@@ -105890,7 +105873,7 @@
         "last_px": 5.68,
         "mv": 568.0,
         "pnl_pct": -12.07,
-        "hold_days": 12,
+        "hold_days": 13,
         "sell_due": "2026-12-04"
       }
     ],
@@ -106809,94 +106792,94 @@
     ],
     "recent": [
       {
-        "date": "2026-11-26",
+        "date": "2026-11-27",
         "name": "大北农",
         "code": "sz.002385",
         "signal": "WATCH",
         "outcome_pct": null,
         "correct": null,
         "reviewed": false,
-        "lesson": "现价2.91 较 ref2.97 -2.02%；距目标3.68 还差 26.5%；止损2.83 未破 ｜ DIF>DEA，红柱运行，多头动能；运行于布林带内（2.85–3.05，中轨 2.95），中性；K>D金叉状态，短线偏多；量能平稳 0.9×均量；ATR2.7% ｜ 六维 2/6·偏弱"
+        "lesson": "现价2.90 较 ref2.97 -2.36%；距目标3.68 还差 26.9%；止损2.83 未破 ｜ DIF>DEA，红柱运行，多头动能；运行于布林带内（2.85–3.05，中轨 2.95），中性；K>D金叉状态，短线偏多；缩量 0.7×均量；ATR2.5% ｜ 六维 2/6·偏弱"
       },
       {
-        "date": "2026-11-26",
+        "date": "2026-11-27",
         "name": "登海种业",
         "code": "sz.002041",
         "signal": "WATCH",
         "outcome_pct": null,
         "correct": null,
         "reviewed": false,
-        "lesson": "现价8.07 较 ref8.35 -3.35%；距目标12.51 还差 55.0%；止损7.81 未破 ｜ DIF<DEA，绿柱运行，空头占优；运行于布林带内（7.86–9.10，中轨 8.48），中性；K>D金叉状态，短线偏多；量能平稳 0.9×均量；ATR3.4% ｜ 六维 1/6·偏弱"
+        "lesson": "现价8.20 较 ref8.35 -1.80%；距目标12.51 还差 52.6%；止损7.81 未破 ｜ DIF>DEA，红柱运行，多头动能；运行于布林带内（7.84–9.10，中轨 8.47），中性；K>D金叉状态，短线偏多；量能平稳 1.0×均量；ATR3.0% ｜ 六维 2/6·偏弱"
       },
       {
-        "date": "2026-11-26",
+        "date": "2026-11-27",
         "name": "神农种业",
         "code": "sz.300189",
         "signal": "WATCH",
         "outcome_pct": null,
         "correct": null,
         "reviewed": false,
-        "lesson": "现价4.70 较 ref4.76 -1.26%；距目标8.33 还差 77.2%；止损4.30 未破 ｜ DIF<DEA，绿柱运行，空头占优；运行于布林带内（4.38–5.57，中轨 4.97），中性；K>D金叉状态，短线偏多；放量 1.6×均量；ATR6.0% ｜ 六维 2/6·偏弱"
+        "lesson": "现价4.87 较 ref4.76 +2.31%；距目标8.33 还差 71.0%；止损4.30 未破 ｜ DIF>DEA，红柱运行，多头动能；运行于布林带内（4.38–5.57，中轨 4.97），中性；K>D金叉状态，短线偏多；量能平稳 1.5×均量；ATR5.5% ｜ 六维 3/6·中性"
       },
       {
-        "date": "2026-11-26",
+        "date": "2026-11-27",
         "name": "香江控股",
         "code": "sh.600162",
         "signal": "WATCH",
         "outcome_pct": null,
         "correct": null,
         "reviewed": false,
-        "lesson": "现价3.03 较 ref3.02 +0.33%；距目标5.90 还差 94.7%；止损2.61 未破 ｜ DIF>DEA，红柱运行，多头动能；运行于布林带内（2.79–3.52，中轨 3.16），中性；K<D死叉状态，短线偏弱；量能平稳 0.9×均量；ATR9.2% ｜ 六维 2/6·偏弱"
+        "lesson": "现价3.05 较 ref3.02 +0.99%；距目标5.90 还差 93.4%；止损2.61 未破 ｜ DIF>DEA，红柱运行，多头动能；运行于布林带内（2.78–3.52，中轨 3.15），中性；K<D死叉状态，短线偏弱；缩量 0.7×均量；ATR8.8% ｜ 六维 2/6·偏弱"
       },
       {
-        "date": "2026-11-26",
+        "date": "2026-11-27",
         "name": "农发种业",
         "code": "sh.600313",
         "signal": "WATCH",
         "outcome_pct": null,
         "correct": null,
         "reviewed": false,
-        "lesson": "现价5.28 较 ref5.59 -5.55%；距目标8.59 还差 62.7%；止损5.09 未破 ｜ DIF<DEA，绿柱运行，空头占优；运行于布林带内（5.21–6.02，中轨 5.62），中性；K<D死叉状态，短线偏弱；量能平稳 1.1×均量；ATR3.7% ｜ 六维 1/6·偏弱"
+        "lesson": "现价5.40 较 ref5.59 -3.40%；距目标8.59 还差 59.1%；止损5.09 未破 ｜ DIF>DEA，红柱运行，多头动能；运行于布林带内（5.20–6.03，中轨 5.61），中性；K>D金叉状态，短线偏多；量能平稳 1.4×均量；ATR3.3% ｜ 六维 2/6·偏弱"
       },
       {
-        "date": "2026-11-26",
+        "date": "2026-11-27",
         "name": "国投丰乐",
         "code": "sz.000713",
         "signal": "WATCH",
         "outcome_pct": null,
         "correct": null,
         "reviewed": false,
-        "lesson": "现价4.97 较 ref5.31 -6.40%；距目标7.60 还差 52.9%；止损4.94 未破 ｜ DIF<DEA，绿柱运行，空头占优；运行于布林带内（4.95–5.66，中轨 5.31），中性；K<D死叉状态，短线偏弱；量能平稳 1.0×均量；ATR2.8% ｜ 六维 1/6·偏弱"
+        "lesson": "现价5.01 较 ref5.31 -5.65%；距目标7.60 还差 51.7%；止损4.94 未破 ｜ DIF<DEA，绿柱运行，空头占优；运行于布林带内（4.91–5.66，中轨 5.29），中性；K<D死叉状态，短线偏弱；量能平稳 1.0×均量；ATR2.6% ｜ 六维 1/6·偏弱"
       },
       {
-        "date": "2026-11-26",
-        "name": "电工合金",
-        "code": "sz.300697",
-        "signal": "WATCH",
-        "outcome_pct": null,
-        "correct": null,
-        "reviewed": false,
-        "lesson": "现价11.12 较 ref12.01 -7.41%；距目标17.85 还差 60.5%；止损11.07 未破 ｜ DIF<DEA，绿柱运行，空头占优；运行于布林带内（10.85–13.01，中轨 11.93），中性；K>D金叉状态，短线偏多；放量 1.8×均量；ATR4.2% ｜ 六维 2/6·偏弱"
-      },
-      {
-        "date": "2026-11-26",
+        "date": "2026-11-27",
         "name": "深粮控股",
         "code": "sz.000019",
         "signal": "WATCH",
         "outcome_pct": null,
         "correct": null,
         "reviewed": false,
-        "lesson": "现价5.54 较 ref6.01 -7.82%；距目标8.46 还差 52.7%；止损5.53 未破 ｜ DIF<DEA，绿柱运行，空头占优；运行于布林带内（5.54–6.40，中轨 5.97），中性；J值-2超卖区，或有技术反弹；量能平稳 1.1×均量；ATR2.8% ｜ 六维 1/6·偏弱"
+        "lesson": "现价5.60 较 ref6.01 -6.82%；距目标8.46 还差 51.1%；止损5.53 未破 ｜ DIF<DEA，绿柱运行，空头占优；运行于布林带内（5.49–6.41，中轨 5.95），中性；K<D死叉状态，短线偏弱；量能平稳 1.0×均量；ATR2.7% ｜ 六维 1/6·偏弱"
       },
       {
-        "date": "2026-11-26",
+        "date": "2026-11-27",
         "name": "武汉凡谷",
         "code": "sz.002194",
         "signal": "WATCH",
         "outcome_pct": null,
         "correct": null,
         "reviewed": false,
-        "lesson": "现价8.82 较 ref8.96 -1.56%；距目标11.95 还差 35.5%；止损8.07 未破 ｜ DIF>DEA，红柱运行，多头动能；运行于布林带内（8.20–9.55，中轨 8.88），中性；K>D金叉状态，短线偏多；量能平稳 1.2×均量；ATR5.7% ｜ 六维 3/6·中性"
+        "lesson": "现价9.19 较 ref8.96 +2.57%；距目标11.95 还差 30.0%；止损8.07 未破 ｜ DIF>DEA，红柱运行，多头动能；运行于布林带内（8.20–9.57，中轨 8.88），中性；K>D金叉状态，短线偏多；放量 1.6×均量；ATR5.8% ｜ 六维 5/6·高置信"
+      },
+      {
+        "date": "2026-11-26",
+        "name": "电工合金",
+        "code": "sz.300697",
+        "signal": "WATCH",
+        "outcome_pct": -7.83,
+        "correct": null,
+        "reviewed": true,
+        "lesson": "观察案例：电工合金(sz.300697) None WATCH，ref12.01→11.07(-7.83%)，横盘/监控中未定论。六指标印证：DIF<DEA，绿柱运行，空头占优；运行于布林带内（10.73–13.02，中轨 11.88），中性；K>D金叉状态，短线偏多；量能平稳 1.2×均量；ATR4.0%（六维 1/6·偏弱）。价格行为：现价11.07 较 ref12.01 -7.83%；距目标17.85 还差 61.2%；止损11.07 已破。"
       },
       {
         "date": "2026-11-24",
@@ -125715,11 +125698,11 @@
         "exit_day": 14,
         "exit_pct": -7.82,
         "tgt_pct": 48.63,
-        "reviewed": false,
-        "status": "stopout",
-        "frozen_price": 11.071,
-        "note": "已破止损 ¥11.07，收益按止损价定格",
-        "outcome_pct": -7.82
+        "reviewed": true,
+        "correct": null,
+        "lesson": "观察案例：电工合金(sz.300697) None WATCH，ref12.01→11.07(-7.83%)，横盘/监控中未定论。六指标印证：DIF<DEA，绿柱运行，空头占优；运行于布林带内（10.73–13.02，中轨 11.88），中性；K>D金叉状态，短线偏多；量能平稳 1.2×均量；ATR4.0%（六维 1/6·偏弱）。价格行为：现价11.07 较 ref12.01 -7.83%；距目标17.85 还差 61.2%；止损11.07 已破。",
+        "status": "done",
+        "outcome_pct": -7.83
       },
       {
         "name": "深粮控股",
@@ -223345,7 +223328,7 @@
   },
   "backtest": null,
   "perf": {
-    "generated_at": "2026-11-26 00:47:40",
+    "generated_at": "2026-11-27 00:47:17",
     "config": {
       "initial_capital": 100000.0,
       "min_sample": 30,
@@ -223447,7 +223430,7 @@
     },
     "signal_overall": {
       "label": "全部信号(次日口径)",
-      "n": 244,
+      "n": 245,
       "verified": true,
       "note": "",
       "win_rate": 18.4,
@@ -223455,8 +223438,8 @@
       "avg_win": 5.87,
       "avg_loss": -8.12,
       "profit_factor": 0.17,
-      "expectancy_pct": -5.341,
-      "max_consec_loss": 75,
+      "expectancy_pct": -5.351,
+      "max_consec_loss": 76,
       "total_return_pct": -100.0,
       "max_drawdown_pct": -100.0,
       "nav_curve": [
@@ -223704,6 +223687,7 @@
         0.0,
         0.0,
         0.0,
+        0.0,
         0.0
       ]
     },
@@ -223856,16 +223840,16 @@
       },
       "反转全市场扫描": {
         "label": "反转全市场扫描",
-        "n": 152,
+        "n": 153,
         "verified": true,
         "note": "",
-        "win_rate": 6.6,
+        "win_rate": 6.5,
         "flat": 2,
         "avg_win": 7.24,
-        "avg_loss": -8.68,
+        "avg_loss": -8.67,
         "profit_factor": 0.06,
-        "expectancy_pct": -7.575,
-        "max_consec_loss": 75,
+        "expectancy_pct": -7.576,
+        "max_consec_loss": 76,
         "total_return_pct": -100.0,
         "max_drawdown_pct": -100.0,
         "nav_curve": [
@@ -224000,6 +223984,7 @@
           0.0001,
           0.0001,
           0.0001,
+          0.0,
           0.0,
           0.0,
           0.0,
@@ -224211,18 +224196,18 @@
       },
       "WATCH": {
         "label": "WATCH",
-        "n": 94,
+        "n": 95,
         "verified": true,
         "note": "",
-        "win_rate": 17.0,
+        "win_rate": 16.8,
         "flat": 5,
         "avg_win": 4.52,
-        "avg_loss": -8.66,
+        "avg_loss": -8.65,
         "profit_factor": 0.11,
-        "expectancy_pct": -6.185,
-        "max_consec_loss": 57,
-        "total_return_pct": -99.75,
-        "max_drawdown_pct": -99.79,
+        "expectancy_pct": -6.202,
+        "max_consec_loss": 58,
+        "total_return_pct": -99.77,
+        "max_drawdown_pct": -99.81,
         "nav_curve": [
           1.0,
           1.1118,
@@ -224282,43 +224267,44 @@
           0.1188,
           0.108,
           0.0949,
-          0.0867,
-          0.0759,
-          0.0683,
-          0.0634,
-          0.0565,
-          0.0506,
-          0.0443,
+          0.0875,
+          0.0799,
+          0.07,
+          0.0629,
+          0.0585,
+          0.0521,
+          0.0466,
           0.0409,
-          0.0388,
-          0.0364,
+          0.0377,
+          0.0357,
           0.0336,
-          0.0311,
-          0.0272,
+          0.0309,
+          0.0287,
           0.0251,
-          0.0226,
-          0.0189,
-          0.0173,
+          0.0231,
+          0.0208,
+          0.0175,
           0.016,
-          0.0141,
-          0.0121,
-          0.0106,
-          0.0093,
-          0.0083,
+          0.0148,
+          0.013,
+          0.0112,
+          0.0097,
+          0.0086,
           0.0076,
           0.007,
-          0.0063,
+          0.0065,
           0.0058,
-          0.0053,
-          0.0048,
+          0.0054,
+          0.0049,
           0.0045,
           0.0041,
-          0.0037,
-          0.0035,
-          0.0033,
+          0.0038,
+          0.0034,
+          0.0032,
           0.003,
-          0.0027,
-          0.0025
+          0.0028,
+          0.0025,
+          0.0023
         ]
       },
       "REJECT": {
@@ -224344,18 +224330,18 @@
       }
     },
     "r_multiple": {
-      "n": 219,
+      "n": 220,
       "verified": true,
       "avg_R": -0.73,
       "note": ""
     },
     "nav_comparison": {
       "alpha_vs_hs300": {
-        "signal_avg_return_pct": -5.341,
-        "bench_avg_next_day_pct": -0.585,
-        "alpha_pct": -4.756,
-        "n": 236,
-        "note": "基准=沪深300次日收益均值（匹配 236 天，缺失 8 天）",
+        "signal_avg_return_pct": -5.351,
+        "bench_avg_next_day_pct": -0.583,
+        "alpha_pct": -4.768,
+        "n": 237,
+        "note": "基准=沪深300次日收益均值（匹配 237 天，缺失 8 天）",
         "caveat": "信号等权复利总收益不可与区间基准直接比较（信号为重叠的次日持仓，连乘会虚高）；此处用'同期同日基准次日收益均值'作严谨对照"
       },
       "window": {
@@ -224365,7 +224351,7 @@
       "signal_equal_weight": {
         "total_return_pct": -100.0,
         "max_drawdown_pct": -100.0,
-        "n": 244,
+        "n": 245,
         "note": "每条信号等权1单位、按次日口径收益复利"
       },
       "real_account": {
@@ -224387,7 +224373,7 @@
       },
       {
         "scope": "全部信号",
-        "n": 244,
+        "n": 245,
         "verified": true,
         "note": ""
       },
@@ -224411,14 +224397,14 @@
       },
       {
         "scope": "反转全市场扫描",
-        "n": 152,
+        "n": 153,
         "verified": true,
         "note": ""
       }
     ]
   },
   "position": {
-    "generated_at": "2026-11-26 00:47:47",
+    "generated_at": "2026-11-27 00:47:29",
     "portfolio": {
       "ok": true,
       "capital": 100000.0,
@@ -224442,7 +224428,7 @@
     }
   },
   "midline": {
-    "generated_at": "2026-11-26 00:47:54",
+    "generated_at": "2026-11-27 00:53:24",
     "config": {
       "hold_days": 22,
       "flat_band": 0.5,
@@ -224457,10 +224443,10 @@
       "verified": true,
       "note": "",
       "win_rate": 27.2,
-      "avg_win": 6.94,
-      "avg_loss": -7.29,
+      "avg_win": 6.96,
+      "avg_loss": -7.25,
       "profit_factor": 0.38,
-      "expectancy_pct": -3.244,
+      "expectancy_pct": -3.242,
       "max_consec_loss": 28,
       "total_return_pct": -99.98,
       "max_drawdown_pct": -99.99
@@ -224471,10 +224457,10 @@
       "verified": true,
       "note": "",
       "win_rate": 27.2,
-      "avg_win": 6.94,
-      "avg_loss": -7.29,
+      "avg_win": 6.96,
+      "avg_loss": -7.25,
       "profit_factor": 0.38,
-      "expectancy_pct": -3.244,
+      "expectancy_pct": -3.242,
       "max_consec_loss": 28,
       "total_return_pct": -99.98,
       "max_drawdown_pct": -99.99
@@ -224486,12 +224472,12 @@
       "note": "",
       "win_rate": 26.2,
       "avg_win": 7.17,
-      "avg_loss": -6.84,
+      "avg_loss": -6.77,
       "profit_factor": 0.4,
-      "expectancy_pct": -2.966,
+      "expectancy_pct": -2.949,
       "max_consec_loss": 22,
-      "total_return_pct": -97.59,
-      "max_drawdown_pct": -98.2
+      "total_return_pct": -97.62,
+      "max_drawdown_pct": -98.23
     },
     "metrics_watch_only": {
       "label": "中线T+22·WATCH/HOLD(非建仓语义·仅对照)",
@@ -224499,12 +224485,12 @@
       "verified": true,
       "note": "",
       "win_rate": 28.1,
-      "avg_win": 6.74,
-      "avg_loss": -7.73,
+      "avg_win": 6.77,
+      "avg_loss": -7.71,
       "profit_factor": 0.36,
-      "expectancy_pct": -3.506,
+      "expectancy_pct": -3.518,
       "max_consec_loss": 28,
-      "total_return_pct": -99.09,
+      "total_return_pct": -99.15,
       "max_drawdown_pct": -99.37
     },
     "signal_mix": {
@@ -224527,8 +224513,8 @@
       "anchor_rule": "容差自适应：entry<2 元用 0.0015（ETF tick=0.001），否则 0.011（股票 tick=0.01）",
       "anchor_mix": {
         "A": 203,
-        "C": 38,
-        "F": 9
+        "C": 37,
+        "F": 10
       }
     },
     "outcome_mix": {
@@ -224547,354 +224533,344 @@
       "legacy_note": "legacy=同分母窗口内最大涨幅≥10%（旧口径），用于区分「真实未兑现」vs「纪律B提前兑现」"
     },
     "virtual_nav": {
-      "points": 69,
-      "final_nav": 0.8672,
-      "total_return_pct": -13.28,
-      "max_drawdown_pct": -18.87,
+      "points": 67,
+      "final_nav": 0.8606,
+      "total_return_pct": -13.94,
+      "max_drawdown_pct": -18.78,
       "series": [
         {
-          "date": "2026-08-11",
-          "nav": 1.0343,
-          "open_positions": 6
-        },
-        {
-          "date": "2026-08-12",
-          "nav": 1.0371,
-          "open_positions": 6
-        },
-        {
           "date": "2026-08-13",
-          "nav": 1.0346,
-          "open_positions": 7
+          "nav": 1.0256,
+          "open_positions": 8
         },
         {
           "date": "2026-08-14",
-          "nav": 1.0316,
+          "nav": 1.0227,
           "open_positions": 10
         },
         {
           "date": "2026-08-17",
-          "nav": 1.0564,
+          "nav": 1.0472,
           "open_positions": 15
         },
         {
           "date": "2026-08-18",
-          "nav": 1.0658,
+          "nav": 1.0566,
           "open_positions": 16
         },
         {
           "date": "2026-08-19",
-          "nav": 1.0514,
+          "nav": 1.0423,
           "open_positions": 18
         },
         {
           "date": "2026-08-20",
-          "nav": 1.0461,
+          "nav": 1.0371,
           "open_positions": 20
         },
         {
           "date": "2026-08-21",
-          "nav": 1.0463,
+          "nav": 1.0373,
           "open_positions": 18
         },
         {
           "date": "2026-08-24",
-          "nav": 1.0478,
+          "nav": 1.0387,
           "open_positions": 18
         },
         {
           "date": "2026-08-25",
-          "nav": 1.0462,
+          "nav": 1.0371,
           "open_positions": 18
         },
         {
           "date": "2026-08-26",
-          "nav": 1.053,
+          "nav": 1.0439,
           "open_positions": 16
         },
         {
           "date": "2026-08-27",
-          "nav": 1.055,
+          "nav": 1.0459,
           "open_positions": 16
         },
         {
           "date": "2026-08-28",
-          "nav": 1.0547,
+          "nav": 1.0456,
           "open_positions": 17
         },
         {
           "date": "2026-08-31",
-          "nav": 1.058,
+          "nav": 1.0489,
           "open_positions": 23
         },
         {
           "date": "2026-09-01",
-          "nav": 1.0632,
+          "nav": 1.054,
           "open_positions": 25
         },
         {
           "date": "2026-09-02",
-          "nav": 1.0509,
+          "nav": 1.0418,
           "open_positions": 26
         },
         {
           "date": "2026-09-03",
-          "nav": 1.0587,
+          "nav": 1.0495,
           "open_positions": 26
         },
         {
           "date": "2026-09-04",
-          "nav": 1.0675,
+          "nav": 1.0583,
           "open_positions": 27
         },
         {
           "date": "2026-09-07",
-          "nav": 1.0569,
+          "nav": 1.0477,
           "open_positions": 33
         },
         {
           "date": "2026-09-08",
-          "nav": 1.0666,
+          "nav": 1.0574,
           "open_positions": 35
         },
         {
           "date": "2026-09-09",
-          "nav": 1.0689,
+          "nav": 1.0596,
           "open_positions": 36
         },
         {
           "date": "2026-09-10",
-          "nav": 1.0634,
-          "open_positions": 32
+          "nav": 1.0545,
+          "open_positions": 37
         },
         {
           "date": "2026-09-11",
-          "nav": 1.0462,
-          "open_positions": 32
+          "nav": 1.0383,
+          "open_positions": 37
         },
         {
           "date": "2026-09-14",
-          "nav": 1.0417,
+          "nav": 1.0337,
           "open_positions": 32
         },
         {
           "date": "2026-09-15",
-          "nav": 1.0324,
+          "nav": 1.0245,
           "open_positions": 30
         },
         {
           "date": "2026-09-16",
-          "nav": 1.0271,
+          "nav": 1.0192,
           "open_positions": 31
         },
         {
           "date": "2026-09-17",
-          "nav": 1.018,
+          "nav": 1.0102,
           "open_positions": 30
         },
         {
           "date": "2026-09-18",
-          "nav": 1.0188,
+          "nav": 1.011,
           "open_positions": 29
         },
         {
           "date": "2026-09-21",
-          "nav": 1.021,
+          "nav": 1.0132,
           "open_positions": 32
         },
         {
           "date": "2026-09-22",
-          "nav": 1.0225,
+          "nav": 1.0147,
           "open_positions": 34
         },
         {
           "date": "2026-09-23",
-          "nav": 1.0183,
+          "nav": 1.0105,
           "open_positions": 36
         },
         {
           "date": "2026-09-24",
-          "nav": 1.0056,
+          "nav": 0.9979,
           "open_positions": 39
         },
         {
           "date": "2026-09-28",
-          "nav": 0.9917,
+          "nav": 0.9841,
           "open_positions": 68
         },
         {
           "date": "2026-09-29",
-          "nav": 0.9908,
+          "nav": 0.9833,
           "open_positions": 68
         },
         {
           "date": "2026-09-30",
-          "nav": 0.9991,
+          "nav": 0.9915,
           "open_positions": 71
         },
         {
           "date": "2026-10-08",
-          "nav": 1.0036,
+          "nav": 0.996,
           "open_positions": 73
         },
         {
           "date": "2026-10-09",
-          "nav": 1.0164,
+          "nav": 1.0087,
           "open_positions": 81
         },
         {
           "date": "2026-10-12",
-          "nav": 1.0137,
+          "nav": 1.006,
           "open_positions": 78
         },
         {
           "date": "2026-10-13",
-          "nav": 1.0124,
+          "nav": 1.0047,
           "open_positions": 80
         },
         {
           "date": "2026-10-14",
-          "nav": 1.0072,
+          "nav": 0.9995,
           "open_positions": 77
         },
         {
           "date": "2026-10-15",
-          "nav": 0.9847,
+          "nav": 0.9772,
           "open_positions": 72
         },
         {
           "date": "2026-10-16",
-          "nav": 0.9871,
+          "nav": 0.9795,
           "open_positions": 53
         },
         {
           "date": "2026-10-19",
-          "nav": 0.991,
+          "nav": 0.9834,
           "open_positions": 55
         },
         {
           "date": "2026-10-20",
-          "nav": 0.9944,
+          "nav": 0.9868,
           "open_positions": 54
         },
         {
           "date": "2026-10-21",
-          "nav": 0.994,
+          "nav": 0.9864,
           "open_positions": 57
         },
         {
           "date": "2026-10-22",
-          "nav": 0.9721,
+          "nav": 0.9647,
           "open_positions": 60
         },
         {
           "date": "2026-10-23",
-          "nav": 0.9746,
+          "nav": 0.9671,
           "open_positions": 56
         },
         {
           "date": "2026-10-26",
-          "nav": 0.9752,
+          "nav": 0.9677,
           "open_positions": 38
         },
         {
           "date": "2026-10-27",
-          "nav": 0.9537,
+          "nav": 0.9464,
           "open_positions": 42
         },
         {
           "date": "2026-10-28",
-          "nav": 0.9578,
+          "nav": 0.9505,
           "open_positions": 39
         },
         {
           "date": "2026-10-29",
-          "nav": 0.9382,
+          "nav": 0.9311,
           "open_positions": 39
         },
         {
           "date": "2026-10-30",
-          "nav": 0.9241,
+          "nav": 0.917,
           "open_positions": 33
         },
         {
           "date": "2026-11-02",
-          "nav": 0.942,
+          "nav": 0.9348,
           "open_positions": 32
         },
         {
           "date": "2026-11-03",
-          "nav": 0.9447,
+          "nav": 0.9374,
           "open_positions": 32
         },
         {
           "date": "2026-11-04",
-          "nav": 0.9602,
+          "nav": 0.9528,
           "open_positions": 28
         },
         {
           "date": "2026-11-05",
-          "nav": 0.9843,
+          "nav": 0.9767,
           "open_positions": 33
         },
         {
           "date": "2026-11-06",
-          "nav": 0.9744,
+          "nav": 0.9669,
           "open_positions": 37
         },
         {
           "date": "2026-11-09",
-          "nav": 0.9761,
+          "nav": 0.9686,
           "open_positions": 38
         },
         {
           "date": "2026-11-10",
-          "nav": 0.9846,
+          "nav": 0.977,
           "open_positions": 43
         },
         {
           "date": "2026-11-11",
-          "nav": 0.9905,
+          "nav": 0.9829,
           "open_positions": 49
         },
         {
           "date": "2026-11-12",
-          "nav": 0.9808,
+          "nav": 0.9733,
           "open_positions": 52
         },
         {
           "date": "2026-11-13",
-          "nav": 0.9607,
+          "nav": 0.9534,
           "open_positions": 53
         },
         {
           "date": "2026-11-16",
-          "nav": 0.9468,
+          "nav": 0.9396,
           "open_positions": 52
         },
         {
           "date": "2026-11-17",
-          "nav": 0.9307,
+          "nav": 0.9235,
           "open_positions": 51
         },
         {
           "date": "2026-11-18",
-          "nav": 0.9275,
+          "nav": 0.9204,
           "open_positions": 45
         },
         {
           "date": "2026-11-19",
-          "nav": 0.9078,
+          "nav": 0.9008,
           "open_positions": 38
         },
         {
           "date": "2026-11-20",
-          "nav": 0.882,
+          "nav": 0.8753,
           "open_positions": 21
         },
         {
           "date": "2026-11-23",
-          "nav": 0.8672,
+          "nav": 0.8606,
           "open_positions": 3
         }
       ],
@@ -224903,9 +224879,9 @@
     "benchmark": {
       "code": "sh000300",
       "period_return_pct": -15.13,
-      "window": "2026-08-11~2026-11-23",
-      "latest_trading_day": "2026-11-25",
-      "refetched_codes": 0,
+      "window": "2026-08-13~2026-11-23",
+      "latest_trading_day": "2026-11-26",
+      "refetched_codes": 250,
       "note": "沪深300同期（与虚拟净值窗口对齐）"
     },
     "detail": [
@@ -224919,7 +224895,7 @@
         "stop": 13.21,
         "target": 16.08,
         "exit_price": 16.08,
-        "exit_date": "2026-08-11",
+        "exit_date": "2026-08-13",
         "exit_reason": "达标(目标①)",
         "ret_pct": 12.37,
         "R": 1.61,
@@ -224927,7 +224903,7 @@
         "bars_used": 1,
         "matured": true,
         "anchor": "F",
-        "max_gain_pct": 19.57,
+        "max_gain_pct": 15.44,
         "legacy_hit": true,
         "bench_ret_pct": 0.0,
         "excess_pct": 12.37
@@ -224947,13 +224923,13 @@
         "ret_pct": 5.15,
         "R": 0.23,
         "hit_target": false,
-        "bars_used": 5,
+        "bars_used": 4,
         "matured": true,
-        "anchor": "C",
+        "anchor": "F",
         "max_gain_pct": 10.69,
         "legacy_hit": true,
-        "bench_ret_pct": 0.74,
-        "excess_pct": 4.41
+        "bench_ret_pct": 1.33,
+        "excess_pct": 3.82
       },
       {
         "code": "sh603757",
@@ -225125,19 +225101,19 @@
         "entry": 38.86,
         "stop": 34.974,
         "target": 41.969,
-        "exit_price": 41.0,
-        "exit_date": "2026-09-09",
+        "exit_price": 41.35,
+        "exit_date": "2026-09-11",
         "exit_reason": "到期平仓",
-        "ret_pct": 5.51,
-        "R": 0.55,
+        "ret_pct": 6.41,
+        "R": 0.64,
         "hit_target": false,
         "bars_used": 22,
         "matured": true,
         "anchor": "F",
         "max_gain_pct": 7.51,
         "legacy_hit": false,
-        "bench_ret_pct": -1.96,
-        "excess_pct": 7.47
+        "bench_ret_pct": -3.3,
+        "excess_pct": 9.71
       },
       {
         "code": "sh518880",
@@ -225148,19 +225124,19 @@
         "entry": 9.234,
         "stop": 8.4,
         "target": 9.973,
-        "exit_price": 9.041,
-        "exit_date": "2026-09-09",
+        "exit_price": 8.943,
+        "exit_date": "2026-09-11",
         "exit_reason": "到期平仓",
-        "ret_pct": -2.09,
-        "R": -0.23,
+        "ret_pct": -3.15,
+        "R": -0.35,
         "hit_target": false,
         "bars_used": 22,
         "matured": true,
         "anchor": "F",
         "max_gain_pct": 4.18,
         "legacy_hit": false,
-        "bench_ret_pct": -1.96,
-        "excess_pct": -0.13
+        "bench_ret_pct": -3.3,
+        "excess_pct": 0.15
       },
       {
         "code": "sh600690",
@@ -225171,19 +225147,19 @@
         "entry": 21.33,
         "stop": 19.197,
         "target": 23.036,
-        "exit_price": 21.3,
-        "exit_date": "2026-09-09",
+        "exit_price": 21.01,
+        "exit_date": "2026-09-11",
         "exit_reason": "到期平仓",
-        "ret_pct": -0.14,
-        "R": -0.01,
+        "ret_pct": -1.5,
+        "R": -0.15,
         "hit_target": false,
         "bars_used": 22,
         "matured": true,
         "anchor": "F",
-        "max_gain_pct": 4.97,
+        "max_gain_pct": 3.84,
         "legacy_hit": false,
-        "bench_ret_pct": -1.96,
-        "excess_pct": 1.82
+        "bench_ret_pct": -3.3,
+        "excess_pct": 1.8
       },
       {
         "code": "sh512690",
@@ -225194,19 +225170,19 @@
         "entry": 0.426,
         "stop": 0.383,
         "target": 0.46,
-        "exit_price": 0.426,
-        "exit_date": "2026-09-09",
+        "exit_price": 0.412,
+        "exit_date": "2026-09-11",
         "exit_reason": "到期平仓",
-        "ret_pct": 0.0,
-        "R": 0.0,
+        "ret_pct": -3.29,
+        "R": -0.33,
         "hit_target": false,
         "bars_used": 22,
         "matured": true,
         "anchor": "F",
         "max_gain_pct": 6.81,
         "legacy_hit": false,
-        "bench_ret_pct": -1.96,
-        "excess_pct": 1.96
+        "bench_ret_pct": -3.3,
+        "excess_pct": 0.01
       },
       {
         "code": "sz300015",
@@ -225217,19 +225193,19 @@
         "entry": 8.58,
         "stop": 7.722,
         "target": 9.266,
-        "exit_price": 8.24,
-        "exit_date": "2026-09-09",
+        "exit_price": 8.06,
+        "exit_date": "2026-09-11",
         "exit_reason": "到期平仓",
-        "ret_pct": -3.96,
-        "R": -0.4,
+        "ret_pct": -6.06,
+        "R": -0.61,
         "hit_target": false,
         "bars_used": 22,
         "matured": true,
         "anchor": "F",
-        "max_gain_pct": 5.71,
+        "max_gain_pct": 4.08,
         "legacy_hit": false,
-        "bench_ret_pct": -1.96,
-        "excess_pct": -2.0
+        "bench_ret_pct": -3.3,
+        "excess_pct": -2.76
       },
       {
         "code": "sh603118",
@@ -230662,44 +230638,44 @@
     ]
   },
   "robustness": {
-    "generated_at": "2026-11-20 01:00:23",
+    "generated_at": "2026-11-27 00:53:40",
     "source": "perf/midline_metrics.json（中线T+22路径回测）",
-    "sample_n": 233,
+    "sample_n": 250,
     "wfa": {
       "ok": true,
       "folds": [
         {
           "fold": "60/40 切分",
-          "is_n": 139,
-          "oos_n": 94,
-          "is_expectancy": -0.683,
-          "oos_expectancy": -4.981,
-          "is_win": 43.9,
-          "oos_win": 14.9,
-          "wfe": 7.29
+          "is_n": 150,
+          "oos_n": 100,
+          "is_expectancy": -1.563,
+          "oos_expectancy": -5.758,
+          "is_win": 36.7,
+          "oos_win": 13.0,
+          "wfe": 3.68
         },
         {
           "fold": "滚动折1",
-          "is_n": 77,
-          "oos_n": 77,
-          "is_expectancy": -0.022,
-          "oos_expectancy": -2.334,
-          "is_win": 53.2,
-          "oos_win": 27.3,
-          "wfe": 104.89
+          "is_n": 83,
+          "oos_n": 83,
+          "is_expectancy": -0.74,
+          "oos_expectancy": -3.056,
+          "is_win": 45.8,
+          "oos_win": 24.1,
+          "wfe": 4.13
         },
         {
           "fold": "滚动折2",
-          "is_n": 154,
-          "oos_n": 77,
-          "is_expectancy": -1.175,
-          "oos_expectancy": -4.746,
-          "is_win": 40.3,
-          "oos_win": 16.9,
-          "wfe": 4.04
+          "is_n": 166,
+          "oos_n": 83,
+          "is_expectancy": -1.897,
+          "oos_expectancy": -5.885,
+          "is_win": 34.9,
+          "oos_win": 12.0,
+          "wfe": 3.1
         }
       ],
-      "median_wfe": 7.29,
+      "median_wfe": 3.68,
       "verdict": "稳健(WFE≥0.5)",
       "note": ""
     },
@@ -230708,59 +230684,59 @@
       "folds": [
         {
           "fold": "60/40 切分",
-          "is_n": 139,
-          "oos_n": 94,
-          "is_expectancy": 3.043,
-          "oos_expectancy": -2.763,
-          "is_win": 59.0,
-          "oos_win": 21.3,
-          "wfe": -0.91
+          "is_n": 150,
+          "oos_n": 100,
+          "is_expectancy": 2.368,
+          "oos_expectancy": -3.821,
+          "is_win": 52.7,
+          "oos_win": 16.0,
+          "wfe": -1.61
         },
         {
           "fold": "滚动折1",
-          "is_n": 77,
-          "oos_n": 77,
-          "is_expectancy": 2.981,
-          "oos_expectancy": 2.31,
-          "is_win": 63.6,
-          "oos_win": 48.1,
-          "wfe": 0.77
+          "is_n": 83,
+          "oos_n": 83,
+          "is_expectancy": 2.874,
+          "oos_expectancy": 0.887,
+          "is_win": 59.0,
+          "oos_win": 39.8,
+          "wfe": 0.31
         },
         {
           "fold": "滚动折2",
-          "is_n": 154,
-          "oos_n": 77,
-          "is_expectancy": 2.64,
-          "oos_expectancy": -2.965,
-          "is_win": 55.8,
-          "oos_win": 20.8,
-          "wfe": -1.12
+          "is_n": 166,
+          "oos_n": 83,
+          "is_expectancy": 1.879,
+          "oos_expectancy": -3.994,
+          "is_win": 49.4,
+          "oos_win": 15.7,
+          "wfe": -2.13
         }
       ],
-      "median_wfe": -0.91,
+      "median_wfe": -1.61,
       "verdict": "疑似过拟合(WFE<0.3)",
       "note": ""
     },
     "excess_summary": {
-      "n": 233,
-      "avg_excess_pct": 0.765,
-      "excess_win_rate": 44.6,
+      "n": 250,
+      "avg_excess_pct": -0.029,
+      "excess_win_rate": 39.6,
       "note": "超额=个股收益-同持仓窗口沪深300收益；正=跑赢基准，负=跑输"
     },
     "sensitivity": {
       "目标阈值": {
         "grid": {
           "8%": {
-            "达标率": 6.0,
-            "n": 204
+            "达标率": 4.4,
+            "n": 221
           },
           "10%": {
-            "达标率": 1.7,
-            "n": 162
+            "达标率": 1.6,
+            "n": 183
           },
           "12%": {
             "达标率": 0.4,
-            "n": 153
+            "n": 174
           }
         },
         "judge": "钝(平缓)"
@@ -230768,19 +230744,19 @@
       "持有期": {
         "grid": {
           "18天": {
-            "n": 146,
-            "expectancy": -3.234,
-            "win": 26.0
+            "n": 156,
+            "expectancy": -3.955,
+            "win": 22.4
           },
           "22天": {
-            "n": 169,
-            "expectancy": -3.168,
-            "win": 26.0
+            "n": 179,
+            "expectancy": -4.008,
+            "win": 21.8
           },
           "26天": {
-            "n": 181,
-            "expectancy": -2.956,
-            "win": 27.6
+            "n": 197,
+            "expectancy": -3.806,
+            "win": 23.4
           }
         },
         "note": "受已到期样本限制，样本少时仅方向性参考"
@@ -230788,16 +230764,16 @@
       "止损宽度": {
         "grid": {
           "-20%": {
-            "avg_R": -0.4,
-            "n": 233
+            "avg_R": -0.51,
+            "n": 250
           },
           "基准": {
-            "avg_R": -0.32,
-            "n": 233
+            "avg_R": -0.41,
+            "n": 250
           },
           "+20%": {
-            "avg_R": -0.27,
-            "n": 233
+            "avg_R": -0.34,
+            "n": 250
           }
         },
         "judge": "钝(平缓)"
@@ -230805,32 +230781,32 @@
     },
     "decay": {
       "ok": true,
-      "prev_n": 155,
-      "recent_n": 78,
-      "prev_expectancy": -1.201,
-      "recent_expectancy": -4.832,
-      "expectancy_change_pct": -302.3,
-      "prev_win": 40.0,
-      "recent_win": 16.7,
-      "win_change_pct": -58.3,
+      "prev_n": 166,
+      "recent_n": 84,
+      "prev_expectancy": -1.897,
+      "recent_expectancy": -5.9,
+      "expectancy_change_pct": -211.0,
+      "prev_win": 34.9,
+      "recent_win": 11.9,
+      "win_change_pct": -65.9,
       "alerts": [
-        "⚠ 期望值衰减 -302.3%（近 78 笔 -4.83% vs 前期 -1.20%）→ 策略可能失效，检查市场状态是否切换",
-        "⚠ 胜率衰减 -58.3%（近 16.7% vs 前期 40.0%）"
+        "⚠ 期望值衰减 -211.0%（近 84 笔 -5.90% vs 前期 -1.90%）→ 策略可能失效，检查市场状态是否切换",
+        "⚠ 胜率衰减 -65.9%（近 11.9% vs 前期 34.9%）"
       ]
     },
     "decay_excess": {
       "ok": true,
-      "prev_n": 155,
-      "recent_n": 78,
-      "prev_expectancy": 2.608,
-      "recent_expectancy": -3.084,
-      "expectancy_change_pct": -218.2,
-      "prev_win": 55.5,
-      "recent_win": 20.5,
-      "win_change_pct": -63.0,
+      "prev_n": 166,
+      "recent_n": 84,
+      "prev_expectancy": 1.879,
+      "recent_expectancy": -4.02,
+      "expectancy_change_pct": -314.0,
+      "prev_win": 49.4,
+      "recent_win": 15.5,
+      "win_change_pct": -68.7,
       "alerts": [
-        "⚠ 期望值衰减 -218.2%（近 78 笔 -3.08% vs 前期 2.61%）→ 策略可能失效，检查市场状态是否切换",
-        "⚠ 胜率衰减 -63.0%（近 20.5% vs 前期 55.5%）"
+        "⚠ 期望值衰减 -314.0%（近 84 笔 -4.02% vs 前期 1.88%）→ 策略可能失效，检查市场状态是否切换",
+        "⚠ 胜率衰减 -68.7%（近 15.5% vs 前期 49.4%）"
       ]
     }
   },
